@@ -1,6 +1,12 @@
-2017-07-17
+2017-11-18
 
-In diesem Ordner sind alle tex-Dateien der IT-Empfehlungen enthalten, die für die Erzeugung des PDFs benötigt werden.
+This are the LaTeX source files for the IT-Empfehlungen fÃ¼r den nachhaltigen Umgang mit digitalen Daten in den Altertumswissenschaften by IANUS (https://www.ianus-fdz.de/it-empfehlungen/).
+
+A CC-BY-SA license applies
+
+Description of files and folders (German)
+
+In diesem Ordner sind alle tex-Dateien der IT-Empfehlungen enthalten, die fÃ¼r die Erzeugung des PDFs benÃ¶tigt werden.
 
 Kern ist die Datei IT-Empfehlungen.tex
 Dort werden mit dem include-Befehl (\include{}) weitere tex-Dateien eingebunden.
@@ -14,9 +20,9 @@ Aktuell sind dies:
 	glossar.tex
 	anhang.tex
     
-Da ich (Martina) mit TeXnicCenter arbeite, gibt es außerdem die Projektdatei IT-Empfehlungen.tcp, die alle oben genannten Dateien zu einem Projekt zusammenfasst.
+Da ich (Martina) mit TeXnicCenter arbeite, gibt es auÃŸerdem die Projektdatei IT-Empfehlungen.tcp, die alle oben genannten Dateien zu einem Projekt zusammenfasst.
 	
-Außerdem werden in diese Seiten weitere Seiten eingebunden, die sich in den Unterordnern befinden.
+AuÃŸerdem werden in diese Seiten weitere Seiten eingebunden, die sich in den Unterordnern befinden.
 Aktuelle Unterordner:
     dateiformate
 	methoden
@@ -24,7 +30,7 @@ Aktuelle Unterordner:
     
 Alle verwendeten Bilder befinden sich in dem Ordner:
 	bilder
-Damit klar ist, in welchem Kapitel die Bilder verwendet werden, steht als erstes ein Kürzel (ein paar Ausnahmen gibt es): 3D_Bump ist also ein Bild für das Kapitel über 3D und Virtual Reality. Hier folgt eine Auflistung der Kürzel und deren Auflösung:
+Damit klar ist, in welchem Kapitel die Bilder verwendet werden, steht als erstes ein KÃ¼rzel (ein paar Ausnahmen gibt es): 3D_Bump ist also ein Bild fÃ¼r das Kapitel Ã¼ber 3D und Virtual Reality. Hier folgt eine Auflistung der KÃ¼rzel und deren AuflÃ¶sung:
 3D - 3D und Virtual Reality
 audio - Audio
 datenbanken - Datenbanken
@@ -37,22 +43,22 @@ vektor - Vektorgrafiken
 video - Video
 web - Webseiten
     
-Zusätzlich befinden sich die Logos für das Deckblatt in dem Ordner:
+ZusÃ¤tzlich befinden sich die Logos fÃ¼r das Deckblatt in dem Ordner:
     deckblattLogos
 
-Die Bilder und Logos werden zusätzlich in dem Bildordner von IANUS abgelegt
+Die Bilder und Logos werden zusÃ¤tzlich in dem Bildordner von IANUS abgelegt
 
-Für die Erstellung einer PDF/A-1b-Datei wird die Datei IT-Empfehlungen.xmpdata benötigt, in der Metadaten zu den IT-Empfehlungen gespeichert sind.
+FÃ¼r die Erstellung einer PDF/A-1b-Datei wird die Datei IT-Empfehlungen.xmpdata benÃ¶tigt, in der Metadaten zu den IT-Empfehlungen gespeichert sind.
     
-Alle weiteren Dateien in diesem Ordner (diese ausgenommen) werden bei der Erzeugung des PDFs erstellt und könnten daher auch problemlos gelöscht werden.
+Alle weiteren Dateien in diesem Ordner (diese ausgenommen) werden bei der Erzeugung des PDFs erstellt und kÃ¶nnten daher auch problemlos gelÃ¶scht werden.
 
-In dem Ordner "Musterkapitel-Abschnitte" befinden sich die Dateien für das Musterkapitel und Auszüge einzelner Abschnitte aus vorhergehenden Versionen.
+In dem Ordner "Musterkapitel-Abschnitte" befinden sich die Dateien fÃ¼r das Musterkapitel und AuszÃ¼ge einzelner Abschnitte aus vorhergehenden Versionen.
 
-In dem Ordner "Abschnitte-web" befinden sich Abschnitte, die für das Web aufbereitet wurden und dort zum Download zur Verfügung stehen. Dazu gehören auch vollständige Dokumente, die unterschiedliche Versionen der IT-Empfehlungen darstellen.
+In dem Ordner "Abschnitte-web" befinden sich Abschnitte, die fÃ¼r das Web aufbereitet wurden und dort zum Download zur VerfÃ¼gung stehen. Dazu gehÃ¶ren auch vollstÃ¤ndige Dokumente, die unterschiedliche Versionen der IT-Empfehlungen darstellen.
 
-In dem Ordner "Kurzfassung" befinden sich die Dateien zur Erstellung der Kurzfassung der IT-Empfehlungen. Für die Kurzfassung der IT-Empfehlungen wurden die Dateien zu den Dateiformaten in einen Übersichtsteil und einen vertiefenden Teil aufgesplittet (z.B. 3d-uebersicht.tex und 3d.tex). In der vollständigen Fassung werden alle Dateien eingebunden, in der Kurzfassung nur die mit "-uebersicht". Auch die Inhalte in den Projektphasen wurden aufgesplittet, wobei dabei teilweise drei Dateien enstanden sind: dateiverwaltung.tex wurde z.B. zu dateiverwaltung.tex, dateiverwaltung-benennungVersionierung.tex und dateiverwaltung-praxis.tex. Der Grund dafür ist, dass der Teil mit einem praktischen Beispiel in der Kurzfassung ausgelassen wurde.
+In dem Ordner "Kurzfassung" befinden sich die Dateien zur Erstellung der Kurzfassung der IT-Empfehlungen. FÃ¼r die Kurzfassung der IT-Empfehlungen wurden die Dateien zu den Dateiformaten in einen Ãœbersichtsteil und einen vertiefenden Teil aufgesplittet (z.B. 3d-uebersicht.tex und 3d.tex). In der vollstÃ¤ndigen Fassung werden alle Dateien eingebunden, in der Kurzfassung nur die mit "-uebersicht". Auch die Inhalte in den Projektphasen wurden aufgesplittet, wobei dabei teilweise drei Dateien enstanden sind: dateiverwaltung.tex wurde z.B. zu dateiverwaltung.tex, dateiverwaltung-benennungVersionierung.tex und dateiverwaltung-praxis.tex. Der Grund dafÃ¼r ist, dass der Teil mit einem praktischen Beispiel in der Kurzfassung ausgelassen wurde.
 
 Die Datei zur Erstellung der Kurzfassung liegt in dem Ordner 'Kurzfassung' in dem Ordner der IT-Empfehlungen.
 
-Es wurden außerdem Hilfs-Labels eingefügt, da die Referenzen auf die Vollfassung verweisen.
+Es wurden auÃŸerdem Hilfs-Labels eingefÃ¼gt, da die Referenzen auf die Vollfassung verweisen.
 
