@@ -1,0 +1,114 @@
+\hyphenation{
+Mit-ar-bei-ter-da-tei
+Fund-da-tei
+Be-fund-da-tei
+Pro-jekt-da-tei
+}
+\paragraph{Übersicht}
+Datenbanksysteme (DBS) werden zur Strukturierung, Pflege und Verwaltung von Daten verwendet. Sie bestehen aus zwei Komponenten - einerseits aus der Datenbank, welche den logisch zusammengehörigen Datenbestand umfasst, sowie aus dem  Datenbankmanagementsystem (DBMS), der Datenbanksoftware, welche u.a. die Zugriffsrechte regelt und Vorkehrungen zur Datensicherheit gewährleistet. Es gibt verschiedene Datenbankmodelle, von denen relationale Datenbanksysteme am häufigsten verwendet und im Rahmen der IT Empfehlungen betrachtet werden. Dabei werden die Daten in Tabellen (Relationen) strukturiert, wobei Verweise von einer Tabelle auf eine andere möglich sind. Näheres zu Tabellen ist in dem Kapitel Tabellen ab Seite \pageref{tabellen} zu finden.
+
+\subparagraph{Langzeitformate}
+Für relationale Datenbanken wird eine Archivierung in Form eines Exports der Datenbankinhalte, der Strukturinformationen und weiterer Funktionalitäten in textbasierte Formate empfohlen, welche unabhängig vom verwendeten Datenbankmanagementsystem sind. Neben den Daten in den Tabellen müssen die Datenbankstrukturdefinitionen wie Attributdatentypen, Relationen zwischen den Tabellen und Formeln zwingend mit archiviert werden. Unabhängig vom gewählten Archivformat ist es nötig, die grafische Benutzeroberfläche zu dokumentieren, zum Beispiel in Form von Bildschirmfotos oder eines eventuell vorhandenen Benutzerhandbuches. Eine darüberhinaus gehende Erhaltung der Funktionalität ist zumeist nur mit Hilfe der technisch sehr aufwendigen Emulation möglich, bei der das ursprüngliche Datenbanksystem durch ein anderes System mit ähnlicher Funktionsweise ersetzt wird. Unabhängig von den vorgestellten Archivformaten ist der Umgang mit sogenannten Binary Large Objects (BLOBs). Dabei handelt es sich um intern gespeicherte Mediendateien, meistens Fotos, Zeichnungen, z. B. von Funden, oder PDF-Dokumente. Diese Medien müssen in jedem Fall exportiert, auf die dann externen Dateien muss referenziert und je nach Dateityp in für die Archivierung geeigneten Formaten gespeichert werden (siehe entsprechendes Dateiformatkapitel). Grundsätzlich wird von der Verwendung von BLOBs abgeraten und eine externe Speicherung von Medieninhalten empfohlen.
+
+Ein geeignetes Archivformat ist SQL (Structured Query Language), welches seit 1986 bei der ANSI standardisiert ist und seit 1987 ebenfalls als ISO/IEC 9075 zertifiziert ist. Seitdem wurde der SQL-Standard in sieben Revisionen weiter ausgebaut, wobei SQL:2011 die neueste Version ist. Jedoch wird dieser Standard in den verschiedenen Datenbanksystemen wie MySQL, PostgreSQL oder OracleDB unterschiedlich umgesetzt und erweitert. Daher gibt es je nach Datenbanksystem mehrere spezifische Befehle, welche über die Spezifikation des Standards hinausgehen. In Folge dessen sind die verschiedenen DBMS nicht vollständig kompatibel, weswegen eine exportierte Datenbank im SQL-Format nur dann problemlos und ohne zusätzlichen Aufwand importiert werden kann, wenn das ursprüngliche DBMS verwendet wird. Daher kann SQL für die Archivierung nur dann empfohlen werden, wenn ein einheitlicher ANSI-/ISO-Standard, z. B. SQL:2008, verwendet wird, welcher von DBMS-spezifischen Befehlen bereinigt ist. Der verwendete Standard muss dokumentiert werden. Der Vorteil in der Speicherung in SQL liegt in der gleichzeitigen Erhaltung der kompletten Daten, der Tabellen und ihrer Relationen zueinander, der Attributspezifikationen sowie der kompletten Metadaten. Nach einem Export, erhält man eine singuläre textbasierte Datei, welche sich mit relativ geringem Aufwand wiederherstellen lässt. Die Speicherung einer Datenbank in einem SQL-Skript erfolgt unter Angabe der SQL-Befehle, welche zum Import der Datenbankinhalte benötigt und ggf. für jeden Datensatz wiederholt werden müssen. Die damit einhergehende Redundanz erhöht die Datenmenge. Datenbanken aus geisteswissenschaftlichen Forschungsprojekten erreichen jedoch nur selten eine Größe, bei welcher dieser Nachteil zum Tragen kommt.
+
+XML eignet sich als Archivformat für Datenbanken aus Gründen der Systemunabhängigkeit, Standardisierung, Lesbarkeit und Erweiterbarkeit. Für die Speicherung der Datenbankinhalte kann XML uneingeschränkt empfohlen werden. Die Beschreibung der Datenbankstruktur sollte mithilfe einer entsprechenden XML-Schema-Definition (XSD) wie der Database Markup Language erfolgen. Alternativ kann die Datenbankstruktur im SQL-Format und als Entitäten-Relationen-Diagramm (ERD) gespeichert werden.
+
+Das 2008 initial vom schweizerischen Bundesarchiv entwickelte und im Rahmen des e-ARK-Projekts weiterentwickelte Format SIARD (Software Independent Archiving of Relational Databases) in der Version 2.0 beruht im Wesentlichen auf den beiden ISO-Standards XML gemäß ISO/IEC 19503:2005 und SQL:2008. Es vereinigt damit die Vorteile einer Datenhaltung in XML mit einer Dokumentation der Datenbankstruktur in SQL. Es ist als eCH-Standard offen und wird unter einer freien Lizenz zur Verfügung gestellt.
+
+Ein alternativer bewährter Ansatz zur Archivierung der Tabellen einer Datenbank ist der Export in das CSV-Format, welches besonders langlebig und weit verbreitet ist. Diese Methode ist technisch mit relativ geringem Aufwand verbunden, besitzt aber einen starken Fokus auf die Datenbankinhalte und geht daher mit einem vollständigen Verlust der Funktionalitäten und Datenbankstruktur einher. Infolgedessen ist es zwingend erforderlich, bei der Speicherung im CSV-Format zusätzlich die Datenbankstruktur in Form von strukturierten Diagrammen, wie dem Entitäten-Relationen-Diagramm (ERD) festzuhalten. Selbst dann ist die Datenbankstruktur nur teilweise und sehr aufwendig rekonstruierbar, weswegen das CSV-Format nur bei einer hybriden Lösung mit der Archivierung der Datenbankstruktur in einem geeigneten Format (z. B. SIARD, SQL, XML/DML) bei gleichzeitiger Speicherung der Daten im CSV-Format, empfohlen werden kann. Als Zeichenkodierung sollte UTF-8 verwendet werden, wobei RFC-4180-konform als Trennzeichen ein Komma (\emph{,}) und als Textbegrenzungszeichen das Anführungszeichen (\emph{''}) verwendet werden sollte. Mehr dazu ist in dem Kapitel Tabellen ab Seite \pageref{tabellen} zu finden.
+
+Bei der JavaScript Object Notation (JSON) handelt es sich um ein einfaches textbasiertes Datenformat, welches für einen schnellen Datentransfer im Internet entwickelt wurde und als RFC 7159 und ECMA-404 standardisiert ist. Es besitzt bei der Speicherung von Daten vergleichbare Vorteile wie XML, ist dabei aber wesentlich kompakter. Zur Zeit gibt es allerdings keinen Standard zur Beschreibung von Datenbankstrukturen in JSON, weswegen auch hier auf eine hybride Archivierungslösung mit der Speicherung der Datenbankinhalte in JSON und gleichzeitiger Speicherung der Datenbankstruktur in einem anderen Format (z. B. SIARD, SQL, XML/DML) zurückgegriffen werden muss.
+
+Die proprietären Dateiformate von Desktop-DBMS, wie Microsoft Access, dBASE oder FileMaker eignen sich nicht für die Archivierung, da die Formatspezifikationen nicht offen vorliegen und verschiedene Versionen oft nicht untereinander kompatibel sind. Ebenso verhält es sich mit den binären Exportformaten serverbasierter, relationaler DBMS, wie Oracles DMP-Format oder das komprimierte BAK-Format von PostgreSQL. Auch diese folgen keinem allgemeingültigen Standard, liegen nur als Binärdatei vor und sind teilweise proprietär. Eine spätere Nachnutzung ist eng an das jeweilige für alle Nutzer kostenpflichtige Produkt sowie spezielle Tools gebunden.
+
+ODB ist ein Container-Dateiformat des Programms, welche in LibreOffice und OpenOffice enthalten ist. ODB ist ein Teil vom OpenDocument Format (ODF) und wurde von einem technischen Komitee unter der Leitung der Organization for the Advancement of Structured Information Standards (OASIS) entwickelt und unter ISO/IEC 26300 standardisiert. Der ZIP-Container enthält verschiedene Dateien, die zum Betrieb der Datenbank erforderlich sind, wie persönliche Konfigurationsdateien, eine binäre Datei des Datenbankmanagementsystems HSQLDB mit den  Datenbankinhalten sowie der Datenbankstruktur und die XML-basierten Formulare und Reports. Aufgrund der binären Datenstruktur kann ODB nicht für die Langzeitarchivierung empfohlen werden.
+
+Keines der genannten und empfohlenen Formate unterstützt und enthält alle notwendigen Informationen und signifikanten Eigenschaften, die für die Archivierung und Nachnutzung einer Datenbank relevant sind. Und einige Informationen, etwa ein Handbuch zur Benutzung, müssen ohnehin gesondert gespeichert werden. Daher ist eine hybride Archivierungsstrategie erforderlich, welche verschiedene Dateien mit unterschiedlichen Dateiformaten umfasst. In der folgenden Tabelle werden die Kategorien von Informationen, welche von den für die Archivierung geeigneten Datenbankformate prinzipiell gespeichert werden können, durch Abkürzungen kenntlich gemacht: I = Datenbankinhalt, S = Datenbankstruktur, F = Funktionalitäten, B = Benutzung. Eine zusätzliche Übersicht ist in dem Abschnitt Vertiefung zu finden.
+
+\begin{center}
+	\begin{longtable}{l L{0.2\textwidth} p{0.6\textwidth}}
+			\toprule 
+		\multicolumn{2}{l}{Format} & Begründung \\
+		\midrule \endfirsthead
+		\multicolumn{3}{l}{\footnotesize Fortsetzung der vorhergehenden Seite}\\
+		\toprule
+		\multicolumn{2}{l}{Format} & Begründung \\ \midrule \endhead
+		\bottomrule \multicolumn{3}{r}{{\footnotesize Fortsetzung auf der nächsten Seite}} \\
+		\endfoot
+		\bottomrule 
+		\endlastfoot
+		
+		\multirow{3}{*}{\color{ForestGreen} \LARGE \checkmark} & SIARD, SIARD2 & SIARD ist offen, frei verfügbar und setzt auf die Standards SQL und XML. Der wesentliche Vorteil von SIARD liegt darin, dass sowohl die Datenbankstruktur als auch die Datenbankinhalte gemeinsam beschrieben und archiviert werden. Für die Archivierung sollte Version 2.0 verwendet werden. Speichert: I, S, F.\\
+			& SQL & Geeignet für die Langzeitarchivierung bei Verwendung eines offiziellen ISO/IEC 9075 Standards, z.B. SQL:2008. Daten, Datenbankstruktur und ein Großteil der Funktionalität bleiben erhalten. Der verwendete Standard muss dokumentiert sein. Speichert: I, S, F.\\
+		  & XML & XML bietet sich insbesondere zur Speicherung der Daten einer Datenbank an. Die Datenbankstruktur sollte mit Hilfe eines XSD-Schemas, wie DBML, beschrieben werden. Alternativ ist dies auch mithilfe einer SQL-Datei oder SIARD möglich. Speichert I und teilweise S.\\ \cmidrule(r){1-3}
+		\multirow{2}{*}{$\color{BurntOrange} \thicksim$} & CSV & Das CSV Format ist ein langlebiges, textbasiertes und weit verbreitetes Format. Bei dem Export von Datenbankinhalten in das CSV-Format gehen allerdings Informationen zur Datenbankstruktur und zu Funktionalitäten verloren, weshalb es nur bei einer gleichzeitigen Speicherung der Datenbankstruktur in einem anderen Format (z. B. SIARD, SQL, XML/DBML) zu empfehlen ist. Speichert: I.\\ 
+			& JSON & JSON bietet sich als Format zur strukturierten Speicherung von Datenbankinhalten an. Da es keine Standards zur Beschreibung der Datenbankstruktur im JSON Format gibt, muss diese gesondert in einem geeigneten Format (z. B. SIARD, SQL, XML/DBML) gespeichert werden. JSON bietet sich insbesondere für die Archivierung von Daten aus NoSQL Datenbanken an. Speichert: I.\\ \cmidrule(r){1-3}
+		\multirow{5}{*}{\LARGE \boldmath$\color{BrickRed} \times$}& MDB, ACCDB & Binäre, proprietäre Formate von Microsoft Access, die nicht zur Archivierung geeignet sind.\\
+		& FP5, FP7, FMP12 & Binäre, proprietäre Formate von FileMaker, die nicht zur Archivierung geeignet sind.\\
+		& ODB & Containerformat von OpenOffice, welches verschiedene XML-basierte Dateien, wie z.B. Formulare und Abfragen, und die binären Dateien mit den Inhalten und der Struktur der Datenbank enthält. ODB ist nicht zur Archivierung geeignet. Speichert: teilweise B.\\
+		& DBF & Binäres, proprietäres Format von dBASE, das nicht zur Archivierung geeignet ist.\\
+		& BAK, DB, DMP & Die verschiedenen, binären Exportformate von relationalen Datenbanksystemen sind für die Archivierung nicht geeignet.\\
+		\bottomrule    
+	\end{longtable}
+\end{center}
+
+
+\subparagraph{Dokumentation}
+Die Empfehlungen zur Dokumentation von Datenbanken orientieren sich an verschiedenen Standards, darunter SIARD Metadata Schema, Archival Data Description Mark-up Language (ADDML) und Database Markup Language (DBML). Allen Schemata gemein ist eine differenzierte Beschreibung der verschiedenen Ebenen eines Datenbanksystems. Dazu gehören Metadaten zur allgemeinen Beschreibung der Datenbank als auch spezifische Metadaten zur Beschreibung der hierarchisch aufgebauten Ebenen einer Datenbank: den in SQL Datenbanken vorkommenden Schemen, die mehrere Tabellen beinhalten, welche wiederum mit Hilfe von mehreren Attributen definiert werden können. 
+
+Weitergehende Dokumente, die zum Verständnis einer Datenbank, ihrer spezifischen Nutzung oder zur Eigenart der Inhalte notwendig sind, wie beispielsweise Benutzerhandbuch, Bildschirmfotos, ERD-Diagramme, Beschreibungen semantischer Konventionen (wie Wertelisten), Anforderungsanalysen oder Rechte- und Rollendokumentation sollten auf alle Fälle mit archiviert werden.
+
+Ergänzend zu den Metadaten, wie sie in dem Abschnitt Metadaten in der Anwendung ab Seite \pageref{Metadaten-anwendung} gelistet sind, sollten folgende minimale Metadaten zur nachhaltigen Beschreibung von Datenbanken aufgenommen werden.
+
+\begin{center}
+	\begin{longtable}{L{0.3\textwidth} p{0.6\textwidth}}
+			\toprule 
+		Metadatum & Beschreibung \\
+		\midrule \endfirsthead
+		\multicolumn{2}{l}{\footnotesize Fortsetzung der vorhergehenden Seite}\\
+		\toprule
+		Metadatum & Beschreibung \\ \midrule \endhead
+		\bottomrule \multicolumn{2}{r}{{\footnotesize Fortsetzung auf der nächsten Seite}} \\
+		\endfoot
+		\bottomrule 
+		\endlastfoot
+		
+		Datenbankname & Ansprache/Name der Datenbank\\
+		Beschreibung der Datenbank & Zusammenfassung über Zweck, Bedeutung und Inhalt der Datenbank\\
+		Sprache & Liste der Sprachen, in welchen die Daten eingegeben wurden sowie Sprachkennungen nach ISO 639 angeben.\\
+		Identifikator & Falls die Datenbank online öffentlich zugänglich ist, sollte ein persistenter Identifikator (z.B. DOI, URI) oder eine eindeutige Adresse (z.B. URL) angegeben werden.\\
+		Rechteinhaber & Personen, Institutionen oder Unternehmen, die Rechte an der Datenbankstruktur und/oder den Datenbankinhalten besitzen.\\
+		DBMS & Name des Datenbankmanagementsystems mit Versionsnummer mit der die Datenbank betrieben wurde.\\
+		Schemata Liste & Liste der Schemata innerhalb der Datenbank sofern vorhanden.\\
+		Benutzer & Liste der Benutzer und ihrer Rolle innerhalb der Datenbank.\\
+		Rolle & Liste der verschiedenen Rollen und Gruppen mit ihren definierten Zugriffsrechten.\\
+		Standard & Name und Version verwendeter Standards, etwa zur Definition des Datentyps eines Attributs, zur Dokumentation von Abfragen oder zu dem Datenbankformat, z.B. SQL:2008 oder SIARD 2.0.\\
+		Abgeleitete Dateien & Aus den Datenbankinhalten erzeugte Grafiken, Abbildungen, Diagramme müssen zusätzlich separat archiviert und gelistet werden.\\
+		Weitere Dateien & Liste weiterer Dokumente, die für das Verständnis und die Dokumentation einer Datenbank notwendig sind, wie beispielsweise ein ERD oder ein Benutzerhandbuch.\\
+		\midrule
+		Schema Metadatum & Beschreibung\\
+		Schema Name & Name des Schemas.\\
+		Schema Beschreibung & Bedeutung und Inhalt des Schemas.\\
+		Tabellenliste & Liste der Tabellen im Schema.\\
+		Funktion & Name und Art der Funktion (Gespeicherte Funktionen, Sichten).\\
+		Funktion Beschreibung & Beschreibung der Funktion hinsichtlich Sinn und Zweck.\\
+		Funktion Befehl & Befehle der Funktion nach einem einheitlich festgelegten Standard (Syntax Standard).\\
+		\midrule
+		Tabelle Metadatum & Beschreibung\\
+		Tabelle Name & Name der Tabelle.\\
+		Tabelle Beschreibung & Bedeutung und Inhalt der Tabelle.\\
+		Anzahl Datensätze & Anzahl der Datensätze in der Tabelle.\\
+		Attributliste & Liste der Attribute in der Tabelle.\\
+		\midrule
+		Attribut Metadatum & Beschreibung\\
+		Attribut Name & Name des Attributs.\\
+		Attribut Beschreibung & Bedeutung und Inhalt des Attributs. Wird das Attribut mit Hilfe von Einheiten, z. B. metrische Maßeinheiten, ausgedrückt, ist die Angabe der Einheit erforderlich.\\
+		Attribut Typ & Datentyp des Attributs nach einem einheitlich festgelegtem Standard (Syntax Standard) z. B. "`Integer"' nach SQL:2008.\\
+		Kontrolliertes Vokabular & Sofern für das Attribut eine Werteliste vorliegt oder ein Thesaurus verwendet wurde, ist dieses zu dokumentieren.\\
+		Attribut Schlüssel & Sofern es sich um ein Schlüsselattribut handelt, Benennung der Schlüsselart z. B. Primär- oder Fremdschlüssel. \\
+		Fremdschlüssel Referenz & Im Falle eines Fremdschlüssels Angabe des referenzierten Attributs mit Angabe der Tabelle und des Schemas. \\
+
+	  \bottomrule
+	\end{longtable}
+\end{center}

@@ -1,0 +1,92 @@
+%
+% Rekonstruktion
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%DAI%%ALT%%DAI%%ALT%%ALT%%ALT%%ALT%%ALT%%ALT%%ALT%%ALT%%ALT%%ALT%%ALT%%ALT%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Bitte beachten Sie, dass die Inhalte dieses Abschnittes den Inhalten des IT-Leitfadens des DAIs von 2011 entsprechen.
+\begin{center}
+\tib{\rule{0.9\textwidth}{0.2mm}}\vspace{3mm}
+\end{center}
+
+\paragraph{3D-Modelle}
+Einfache 3D-Modelle sind relativ schnell angelegt und können zur visuellen Kommunikation einen erheblichen Beitrag leisten. Nach Auswertung erster Forschungs- oder Grabungsergebnisse entstehen oft erste, vereinfachte Massenmodelle, die z. B. der Erläuterung von Rekonstruktionsideen dienen können. Es ist dann kein Problem, die erstellten Volumina in georeferenzierte Systeme, wie beispielsweise Google Earth zu integrieren oder in präzisere Geländemodelle einzubauen. Im Verlaufe des Projektes wird das 3D-Modell in der Regel immer differenzierter ausgearbeitet und es werden mehr Datensätze und Informationen angehängt, in dem einzelne Gebäudeteile und Räume differenziert dargestellt, Bauteile ausgearbeitet, u.U. Bilder, Geodaten, Befund-Daten und Literaturhinweise angehängt und schließlich die zur Visualisierung notwendigen Texturen und Lichtquellen sowie dynamische und statische Schnitte generiert werden. Derart komplexe Aufgaben erfordern eine gut durchdachte Datenverwaltung, da ihr Verwaltungs- und Pflegeaufwand exponentiell zur Datenmenge anwächst. Deshalb ist es wichtig, sich vor Anlegen eines 3D-Modells über die Ziele, die verwirklicht werden sollen, klar zu werden. Wenn z.B. ein Modell nur benötigt wird, um einige Perspektiven für eine Publikation zu visualisieren, genügt es, die Kubatur des Gebäudes zu erstellen, sie zu texturieren, Lichtquellen zu setzen und Ansichtsdefinitionen festzulegen. Dementsprechend gering bleibt der Sicherungs- und Dokumentationsaufwand. Je genauer der Auftraggeber eines 3D-Modells die Ziele, zur Verwendung des Modells definiert, desto geringer kann der Aufwand der Datenerstellung und Datenhaltung gehalten werden. 
+
+Deshalb sind Mindestanforderungen bei der Auftragsvergabe nur auf sehr niedrigem Niveau möglich. Zurzeit beschränken sich diese Forderungen in der Regel auf die Sicherung in einem gut dokumentierten Format wie z.B. dxf oder Wavefront OBJ-Dateien, mit allen Nachteilen, die sich dabei aus einer eventuellen Datenkonvertierung ergeben.
+
+\paragraph{Praxis}
+Es ist derzeit verbreitet, die Wahl der Software dem Zufall zu überlassen: Softwarekenntnisse des Bearbeiters, das Vorhandensein von Software oder die Frage, welche Software preiswert zu erwerben ist, bestimmen meist die Wahl.
+
+Das bedeutet zwar nicht, dass eine spätere Entscheidung für eine andere Software zu totalem Datenverlust führen muss, denn grundsätzlich ist die Konvertierung beinahe jedes Zeichenformates in ein anderes möglich. Dies ist jedoch häufig mit erheblichen Informationsverlusten oder/und gewaltigem Arbeits- und Kostenaufwand verbunden.
+
+Wurde ein Modell beispielsweise in einer Visualisierungssoftware wie Rhino, Maya oder 3ds Max erstellt, so haben die Objekte hauptsächlich Metainformationen hinsichtlich Geometrie und Textur. Mit dieser Software sind sehr hochwertige Bilder und Animationen generierbar, die Verwaltung hinsichtlich bautechnisch sinnvoller  Einheiten wie Wände und Fenster ist dagegen nicht vorgesehen und ist deshalb schwierig, zeitaufwändig und umständlich.
+
+Architektursoftware bietet erhebliche Vorteile hinsichtlich der Datenverwaltung, da  Objekte von vornherein in üblichen Klassifizierungen, wie Wänden, Decken, Stützen, Böden und Öffnungen usw. verarbeitet werden können. Die Eingabe ist aufwändig, da sie parametrisch erfolgt. Sie bietet aber den Vorteil der Nachvollziehbarkeit. Außerdem besteht die Möglichkeit, zwischen verschiedenen Maßstäben hin- und herzuschalten und standardmäßig 2D-Schnitte und -Grundrisse darzustellen bzw. zu exportieren. Nachteile liegen vor allem im Preis der Anschaffung und der Notwendigkeit regelmäßig upzudaten, verlustfreier Datentransfer ist - wenn überhaupt - meist nur innerhalb der Produktgruppe des selben Software- Entwicklers möglich. Standardisierte Objekte wie Wände sind starr definiert und können nicht frei modelliert werden, eine verformungsgetreue Darstellung ist damit nicht möglich. Allerdings ist in den meisten Fällen eine verformungsgetreue Nachbildung des Baukörpers im Modell nicht nötig und verkompliziert unnötig die Geometrie und vergrößert die Datenbanken.
+
+Offene Systeme wie AutoCad, VectorWorks und MicroStation bieten viele Vorteile hinsichtlich der Konvertierbarkeit und haben Schnittstellen zu beinahe jeder Art von Software. Sie ermöglichen jedoch meist keine normierten Klassifizierungen (Wände, Türen etc), es sei denn, es wird eine spezifische Applikation (z.B. für Architektur oder GIS) verwendet. Diese Vorgabe muss daher vor Anlegen des 3D-Modells festgelegt werden. Diese Systeme haben neben den genannten Vorteilen vor allem den Vorzug, weit verbreitet, gut dokumentiert und als Schulungsversionen relativ kostengünstig zu sein. Nachteile liegen in der Datenverwaltung und dem Bearbeitungskomfort.
+
+Ein wichtiges Kriterium stellt ein gut dokumentiertes und leicht lesbares Format dar, das sämtliche Erfordernisse des Projekts mit einem Datenformat erfüllt. Ein gut dokumentiertes Format ist dabei unbedingt einem proprietären Binärformat, welches außer von einer kleinen Community nicht genutzt wird, vorzuziehen.
+
+Wegen ihrer Verbreitung und den ubiquitär verfügbaren Importern sollte als erstes die Verwendung der ASCII-Version von DXF oder eines reinen Wavefront OBJ-Files in Betracht gezogen werden.
+
+Zudem sollte das Datenformat rekursives Laden von Daten ermöglichen, also die Zerlegung eines Modells in mehrere Dateien, die dann wiederum an ein datenbankunabhängiges Bauwerksinformationssystem angehängt werden können.
+
+
+\subparagraph{Auswahl geeigneter Software}Bei den 3D-Architekturmodellen im archäologischen Kontext ist es sinnvoll, drei Kategorien zu unterscheiden:
+
+\begin{itemize}
+	\item 1. Arbeitsmodelle
+	\item 2. Visualisierungsmodelle
+	\item 3. Interaktive Modelle
+\end{itemize}
+
+
+Arbeitsmodelle müssen maßstäblich und ggfls. auch georeferenziert sein. Dabei können sehr unterschiedliche Fragestellungen im Vordergrund stehen, z. B. stadträumliche oder topografische Beziehungen, Massenermittlungen, bei Einzelbefundrekonstruktionen aufgrund eines Versturzes z.B auch Lagebestimmungen, statische und konstruktive Bedingungen, bis hin zu einfachen Licht- und- Schatten- Untersuchungen. Aus solchen Modellen sollten maßstäbliche und vermaßbare technische Pläne generierbar sein, die der Kommunikation exakt nachvollziehbarer Zusammenhänge wie Höhen, Längen, Breiten und Massen dienen. Die Geometrie kann hierbei stark vereinfacht sein, grundsätzlich gilt dabei, dass Genauigkeit und Nachvollziehbarkeit vor Schönheit stehen sollte. Je nach gewünschter (mess- und abfragbarer) Informationsdichte des Modells sollte sorgfältig überlegt werden, welche Software bei welchem Arbeitsaufwand die gewünschten Standards bietet. Je nach Komplexität der angestrebten Informationsdichte besonders bei Rekonstruktionsmodellen ist zusätzlich zu beachten, dass auch der Zeichner zumindest architektonische Vorkenntnisse haben sollte.
+
+Geeignete Software sind vor allem Architekturprogramme, wie z.B. Archicad, AutocadArchitectural, Nemetschek, Spirit usw. aber auch offene Systeme wie Microstation, Vectorworks und AutoCad. Architekturprogramme bringen logische Klassifizierungen, wie Wände, Stützen, Unterzüge, Treppen, Fenster, Dächer etc. mit sich, die Eingabe erfolgt dabei parametrisch und alle Parameter sind in Projekt-Datenbanken erfasst. Ob solche Datenbanken nur programmintern abgefragt oder wie sie in geeignete übergreifende Systeme exportiert werden können, muss sorgfältig geklärt werden.  
+
+Mit allen diesen Programmen lassen sich auch mehr oder weniger realistische Bilder generieren, häufig jedoch nur von mäßiger Qualität. Die Modellierung hochkomplexer geometrischer Körper, wie z. B. eines korinthischen Kapitells, ist jedoch kaum möglich. 
+
+Bei Visualisierungsmodellen ist vor allem Art und Qualität der angestrebten Visualisierung zunächst zu klären. Dabei gilt ,je höher die Qualität, desto höher der Arbeitsaufwand und die aufzuwendenden Kosten. Von einfachen Modellen ohne Textur bis hin zu fotorealistischen Bildern ist heute alles möglich. Für fotorealistische Bilder ,wenn diese nicht als animierte Szenen gewünscht werden, kann auch überlegt werden, ob eine Kombination von Einzelbildsynthese und Bildmontage in einem Bildbearbeitungsprogramm (z.B. Photoshop) einfacher und schneller zum Ergebnis führt.
+
+Zur Anwendung können sehr einfache, z.T. auch Freewareprogramme kommen, wenn das Interesse in erster Linie der Geometrie gilt und diese eine überschaubare Polygon - Anzahl umfasst. Sollen anspruchsvolle, realistische oder gar fotorealistische Szenen erstellt werden, ist die Wahl einer professionellen Visualisierungs- Software ratsam. Da Visualisierungsprogramme in erster Linie der Erstellung maßstabloser, möglichst ansprechender Bilder dienen, ist präzises, maßstäbliches Zeichnen nur bedingt möglich. Die Definition der Körper erfolgt bei den einfacheren Programmen über ihre absolute Geometrie, bei aufwändigen Programmen wie Rhino, Cinema4d, MAYA oder 3dsMAx über Parameter für die Ausgangsgeometrie und ggfls. verschiedene Modifikatoren für Geometrie und Animation.
+
+In Visualisierungsprogrammen ist - mit entsprechendem Aufwand - die Herstellung jeder denkbaren Qualität von Bildern, sowohl hinsichtlich der Auflösung wie der Detailqualität und des Realismus, möglich. Außerdem können Filmszenen generiert werden, die z.B. für die Visualisierung der Funktionsweise von Maschinen, für dynamische Schnitte oder die Darstellung von Bauabläufen sehr sinnvoll sein können. 
+
+Da das Erstellen fotorealistischer Bilder mit 3d-Software hochkomplex ist, ist eine Verknüpfung mit bau-, geo- oder grabungsspezifischen Datenbanken nicht sinnvoll. Es gilt ganz allgemein der Satz: Schönheit und/oder visuelle Aussage vor Genauigkeit. Solche Modelle dienen allein der visuellen Kommunikation über Standbilder und Filme. 
+
+Interaktive Modelle können mit Datenbanken verknüpft werden. Diese sind ohne Programmierkenntnisse bislang kaum sinnvoll erstellbar. Es stellt sich dabei  - abgesehen von der Qualität der verknüpften Datenbanken und ihren Fragestellungen - vor allem das Problem der Ladezeiten. Deshalb sind besondere Render- Engines unverzichtbar, die Geometrie und Texturen mit intelligenten Algorithmen reduzieren, je nachdem, ob sich diese im Vorder-, Mittel- oder Hintergrund befinden. 
+
+In der Regel werden solche Modelle von einem Team aus Zeichnern und Programmierern erstellt. Wegen der sehr spezifischen Anforderungen an die Benutzeroberflächen und den Workflow ist auch an Personen mit Kenntnissen in der Erstellung von 3d-Spielen und/oder Webdesigner zu denken. 
+
+Allgemein gilt die Prämisse: Workflow, einfache Steuerung, Übersichtlichkeit und intuitive Verständlichkeit der Oberfläche. Komplexe Inhalte können über Links abgefragt werden und sollten nicht auf der Oberfläche platziert sein.
+
+\subparagraph{Auswahl der Hardware} Bei der Erstellung von 3d- Modellen sind naturgemäß sehr hohe Anforderungen an die grafische Rechenleistung zu stellen. Aufwändige Visualisierungsarbeiten erfordern eine entsprechend gute Ausstattung mit Hard- und Software, die teuer ist. Beim Echtzeit- Rendering im virtuellen 3d- Raum müssen riesige Datenmengen in sehr kurzer Zeit bearbeitet werden. Dabei sind Einzelplatz- Rechner meist auf die Render- Parameter, wie sie für eine gute Performance in 3d- Spielen erforderlich sind, ausgelegt. Sie sind für die Produktion hochwertig texturierter Einzelbilder oder Filme nicht geeignet. Man spricht heutzutage von Render- Farmen und Netzwerk- Rendering. Das bedeutet, das Rechenleistungen auf viele Prozessoren in einem Netzwerk verteilt werden können. Dabei stellt sich die Frage, ob solche Konstellationen vom Administrator zu gewährleisten sind. Außerdem muss die Software Netzwerkrendering unterstützen. Multiple Grafikprozessoren, Multikern- Hauptprozessoren und adäquat ausgelegte Arbeitsspeicher sind sinnvoll (z.B. 128 GB). Dabei ist darauf zu achten, dass die Hardware auch vom Betriebssystem unterstützt wird (speziell beim Arbeitsspeicher: Windows hat hier bislang die größten Nachteile) und von der eingesetzten 3d- Software gleichermaßen sinnvoll verwaltet werden kann. Riesige Festplatten sind nur bei der Erstellung von Filmen notwendig. Hier empfiehlt sich die Auslagerung auf externe Medien. Wegen der umfangreichen Paletten ist ein großer Monitor mit zusätzlichem Kontrollmonitor unverzichtbar. 
+
+
+%##############################################################
+\paragraph{Quellen}
+\begin{flushleft}
+Da Software- und Hardwaremärkte sehr dynamisch sind, ist es empfehlenswert, sich in aktuellen, Zeitschriften zu informieren, z.B. \url{http://utils.exeter.ac.uk/german/media/archited.html} und Messen, wie die Bautec zu besuchen. 
+
+Außerdem kann man sich auf Wikipedia.de eine gute Orientierung über die diversen Probleme bei der Erstellung von 3d- Modellen verschaffen. Dort finden sich auch Links zu weiterführender Literatur die i.d. Regel recht aktuell sind: \url{http://de.wikipedia.org/wiki/} Kategorie:Bildsynthese, sehr empfehlenswert ist auch der Artikel: \url{http://de.wikipedia.org/wiki/Grafik-Engine} 
+
+Viele Software- Hersteller unterhalten eigene Foren oder verweisen zumindest auf ihren Seiten auf User- Foren, z.B.: \url{http://www.autodesk.de/}. 
+
+%XXX Alter Inhalt; Kommentare vor URL sind grob eingetragen
+Gerade im Bereich der 3d-Modellierung gibt es viele einschlägige Foren, z.B.:
+3D-Ring: \urllist{http://www.3d-ring.de/forum.php}
+3Dlinks: \urllist{http://www.3dlinks.com/} 
+Grafiker: \urllist{http://www.grafiker.de/forum/forumdisplay.php?f=39}
+3Dcenter: \urllist{http://www.forum-3dcenter.org/vbulletin/} 
+3Dcafe: \urllist{http://www.3dcafe.com/}
+
+Zur spezifischen Problemstellung interaktiver oder Web- basierter Modelle: 
+ki-smile: \urllist{http://www.ki-smile.de/kismile/view145,11,1424.html} 
+garybeene: \urllist{http://www.garybeene.com/3d/3d-pure.htm}
+
+Quality management systems - Requirements(Iso- Norm) Edition: 4 ; Stage: 60.60 ; TC 176/SC 2 ICS: 03.120.10 Beuth- Verlag,Berlin
+
+nestor edition 5: Langzeiterhaltung von 3D-Röntgen-Computertomographien in der Archäologischen Denkmalpflege. Sayer-Degen, Leila (2012) \url{http://files.dnb.de/nestor/edition/05-sayer-degen.pdf}
+\end{flushleft}

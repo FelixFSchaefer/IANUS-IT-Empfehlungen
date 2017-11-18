@@ -1,0 +1,137 @@
+\documentclass[a4paper]{report}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[latin1]{inputenc}  
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}           
+\usepackage[ngerman]{babel}
+
+%Tabellenspezifisches
+\usepackage{booktabs}
+\usepackage{multirow}
+
+%Diverse Symbole
+\usepackage{amssymb}
+
+%Zur Anpassung der Titelformatierung
+\usepackage{titlesec}
+
+%Um ein Index zu erstellen
+\usepackage{makeidx}
+\makeindex
+%Einträge in verschiedene Ebenen sind möglich
+%\index{Haupteintrag}
+%\index{Haupteintrag!Untereintrag}
+%\index{Haupteintrag!Untereintrag!Unteruntereintrag}
+%Verweis auf ganze Textabschnitte:
+%\index{Neurobiologie|(}
+% TEXT
+%\index{Neurobiologie|)}
+%Sortierung von Sonderzeichen oder Symbolen:
+%\index{Summe@$\sum$} vorne wie sortiert wird, nach dem @ was ausgegeben wird
+
+\usepackage[hyphens]{url}
+\usepackage[pdfa]{hyperref}
+\usepackage{bookmark}
+
+\usepackage[acronym, toc, section, nonumberlist]{glossaries}
+\makeglossaries
+
+\input{glossar}
+
+\title{IT-Empfehlungen für den nachhaltigen Umgang mit digitalen Daten in den Altertumswissenschaften}
+\author{MUSTERKAPITEL}
+\date{IANUS\\
+Version 0.1\\ 
+\today}
+
+%Auch subsubsections sollen ins Inhaltsverzeichnis
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+%Silbentrennung für das ganze Dokument (max. 300 Wörter!)
+\hyphenation{
+Aus-zeich-nungs-spra-che
+Ge-ne-ra-tions-ver-lust
+Digi-ta-li-sa-te
+Digi-ta-li-sierung
+Schärfe-leis-tung
+Auf-lösung
+un-kom-pri-mier-te
+Farb-räu-me
+}
+
+\begin{document}
+
+\newcommand{\urllist}[1]{\linebreak \hspace*{0.1cm} {\parbox[c]{0.9\textwidth}{\itshape \url{#1}}}}
+%\newcommand{Achtung}[1]{\parbox[c]{1.1\width}{#1}}
+
+
+%Formatierung der Überschriften
+\definecolor{ianusGrau}{cmyk}{0.07, 0, 0, 0.25}
+\definecolor{ianusBlau}{cmyk}{0.851, 0.561, 0, 0.42}
+\newcommand{\hsp}{\hspace{20pt}}
+%\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{ianusGrau}{|}\hsp}{0pt}{\Huge\bfseries}
+\titleformat{\chapter}[hang]{\huge\sffamily\color{ianusBlau}}{\thechapter\hspace{5pt}\textcolor{ianusGrau}{\bfseries |}\hspace{20pt}}{0pt}{\huge\sffamily\color{ianusBlau}}
+\titlespacing*{\chapter}{0pt}{-\topskip}{10pt}
+
+\titleformat*{\section}{\Large\sffamily\color{ianusBlau}}
+\titleformat*{\subsection}{\large\sffamily\color{ianusBlau}}
+\titleformat*{\subsubsection}{\sffamily\color{ianusBlau}}
+\titleformat*{\paragraph}{\bfseries\sffamily\color{ianusBlau}}
+\titleformat*{\subparagraph}{\bfseries\color{ianusBlau}}
+
+\maketitle
+%\newpage
+%Wenn man einen Abstract haben möchte...
+%Allerdings soll er Vorbemerkung heißen.
+%Kann man beliebig oft wiederholen
+%\renewcommand{\abstractname}{Vorbemerkung}
+%\begin{abstract}% deutsche Fassung
+%  Das vorliegende Dokument beschreibt verbindliche Vorgaben, die archäologische Forschungstätigkeiten von der Projektkonzeption, über die Antragstellung, Durchführung, Publikation/Präsentation und langfristige Datenvorhaltung im Zusammenhang mit dem Einsatz von Informationstechniken einhalten müssen. Der begleitend dazu herausgegebene Praxisratgeber gibt einführende Hintergrundinformationen und beschreibt mögliche Verfahrensabläufe zur Umsetzung der Vorgaben in die Praxis.
+%
+%Es wird angestrebt, die hier aufgestellten Kriterien für die Datenverarbeitung archäologischen Quellmaterials in den nationalen und internationalen Kontext zu stellen und Übereinstimmung in den Kernfragen zu erreichen, um Erhalt und Austauschbarkeit der Forschungsdaten sicherzustellen. Zu diesem Zweck existiert eine bewusst allgemein gehaltene Fassung des Leitfadens. Über die Kernfragen hinausgehende Vorgaben einzelner Institutionen können in jeweils eigenen Dokumenten spezifiziert und veröffentlicht werden.
+%
+%Sowohl Vorgaben als auch Praxisratgeber werden regelmäßig auf ihre Aktualität hin überprüft und der sich ändernden technischen Entwicklung sowie Erkenntnissen und Erfordernissen aus dem Praxisbetrieb angepasst; die aktuelle Fassung kann auf der Website des DAI abgerufen werden: \url{http://www.dainst.org/de/project/it-leitfaden?ft=all}
+%
+%Fachbegriffe werden im Glossar erklärt.
+%
+%Allen Personen die durch Ihre Hinweise, Kommentare und Anregungen direkt oder indirekt an dem vorliegenden Dokument mitgewirkt haben sei an dieser Stelle herzlich gedankt.
+%\end{abstract}
+
+%\begin{abstract}
+%\end{abstract}
+%\newpage
+%\tableofcontents
+%\newpage
+
+%\chapter{Einleitung}
+%\input{einleitung}
+%
+%\chapter{Projektphasen}
+%\input{projektphasen}
+
+\chapter{Dateiformate}
+Unterscheidung zwischen Einzeldateien (Datentypen) (einzelne atomare Dateien) und Datensets (zusammenhängende Dateien, wie etwa eine Datenbank, die ja aus mehreren Tabellen besteht). 
+
+	\input{musterkapitel}
+%	\input{komplexedateiformate}
+
+%\chapter{Methoden}
+%\input{methoden}
+%
+%
+%\appendix
+%\input{anhang}
+%
+%\glsaddall
+%
+%\chapter{Glossar}
+%\glstocfalse
+%\renewcommand{\glossaryname}{}
+%\printglossaries
+%
+%\chapter{Index}
+%\printindex
+%
+
+\end{document}

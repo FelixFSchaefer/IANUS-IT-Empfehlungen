@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<objekt typ="muenze">
+	<material>Silber</material>
+	<gewicht einheit="gramm">16,96</gewicht>
+	<groesse einheit="mm">24-28</groesse>
+	<avers>Kopf der Athena</avers>
+	<revers>ΑΘΕ. Eule</revers>
+</objekt>

@@ -1,0 +1,806 @@
+\renewcommand*{\glspostdescription}{} %Entfernt den Punkt am Ende
+
+%+++++++++++ ALT ++++++++++++++++
+%Generell: es gibt ein Glossar und danach auch noch eine Liste mit Akronymen. Die Liste der Akronyme verlinkt auf das Glossar. Das Glossar verlinkt NICHT auf die Akronyme!
+
+%Für Akronyme ohne Glossareintrag (falls das überhaupt eintritt)
+%\newcommand{\acr}[2]{\newacronym{#1}{#1}{#2}}
+%Für Akronyme mit Glossareintrag
+%\newcommand{\acrg}[3]{\newglossaryentry{#1-gl}{name={#2 (#1)}, description={#3}} \newacronym[description={\glslink{#1-gl}{#2}}]{#1}{#1}{#2 \protect\glsadd{glos:#1-gl}}}
+
+%Für Akronyme im Glossar
+\newcommand{\glosacr}[3]{\newglossaryentry{#1-gl}{name={#1}, description={{\bfseries(#2)} #3}}}
+%Für Glossareinträge ohne Akronyme, (Sonderzeichen?) oder sonstigem
+\newcommand{\glos}[2]{\newglossaryentry{#1-gl}{name={#1}, description={#2}}}
+
+%Für Glossareinträge mit vielen Spezialfällen
+%ACHTUNG!: Als das Label muss mit -gl enden, da das Nachschlagen im Glossar sonst nicht funktioniert. 
+%\newglossaryentry{<Label>, Name ohne Sonderzeichen, z.B.: Archaeologe-gl}{name={z.B. Archäologe}, description={..}, sort={Wie der Begriff sortiert werden soll; z.B.: Archaeologe}, plural={Wenn Plural nicht mit s gebildet wird; z.B.: Archäologen}, symbol={Wenn man ein Symbol verwenden möchte}}
+%Verwendung (auch für Akronyme)
+%\gls{Label} - normal
+%\glspl{Label} - Pluralvariante
+%\Gls{Label} - Am Anfang groß
+%\Glspl{Label} - Die Pluralvariante, groß
+%\glslink{Label}{Alternativer Text} - Ein alternativer Text verweist auf den Glossareintrag
+
+%Verwendung für Verweis auf andere Glossareinträge mit und ohne Verwendung von den Akronymen
+\newcommand{\ingls}[1]{\glslink{#1-gl}{#1}}
+
+%\gls muss auch neu definiert werden, da das Label immer auf -gl endet)
+\renewcommand*{\gls}[1]{\glslink{#1-gl}{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%A
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\glosacr{AAC}{Advanced Audio Coding}{ist ein Audiocodec, der als Nachfolger von MP3 im Rahmen von MPEG-2 und MPEG-4 spezifiziert wurde. AAC ist unter ISO/IEC 13818-7 und 14496-3 standardisiert. Der Codec verwendet eine verlustbehaftete Kompression.}
+
+\glos{Abtastrate}{bezeichnet die Zeitintervalle, also die Häufigkeit, in der ein analoges Signal bei der Digitalisierung gemessen wird. Je kleiner das Zeitintervall, desto größer die Abtastrate. Die Abtastrate wird üblicherweise in Kilohertz (kHz) angegeben.}
+
+\glos{Abtasttiefe}{bezeichnet die Messgenauigkeit, mit der ein analoges Signal bei der Digitalisierung gemessen wird, also wie genau der gemessene Wert dem ursprünglichen Signal entspricht. Die Abtasttiefe wird mittels der Anzahl an Bits bestimmt. Je höher die Bitzahl, desto größer ist auch die Abtasttiefe. Die Abtasttiefe ist vom Konzept her vergleichbar mit der Farbtiefe.}
+
+\glos{ACCDB}{ist ein seit 2007 verwendetes proprietäres Datenbankformat von Microsoft Access.}
+
+\glosacr{ADDML}{Archival Data Description Mark-up Language}{ist eine Sprache zur Dokumentation von Datenbanken.}
+
+\glos{Adobe RGB}{ist ein häufig verwendeter \ingls{RGB}-\ingls{Farbraum}, der 1998 von Adobe veröffentlicht wurde.}
+
+\glos{AI}{ein proprietäres Format für Vektorgrafiken, das in Adobe Illustrator verwendet wird.}
+
+\glosacr{AIFF}{Audio Interchange File Format}{ist ein proprietäres Containerformat zum Speichern von Audiodaten. Es wurde von Apple entwickelt und hat vor allem auf Apple-Systemen eine weite Verbreitung gefunden.}
+
+%AIP
+
+\glos{Alphakanal}{wird bei Rastergrafiken verwendet, um Transparenz zu speichern.}
+
+\glos{AMP}{Apache-Server, MySQL oder PostgreSQL Datenbank, PHP, Perl oder Python-Skriptsprache ist ein Akronym für den kombinierten Einsatz von Programmen, um dynamische Webseiten zur Verfügung zu stellen. Die einzelnen Komponenten des AMP-Systems können durch ähnliche Komponenten ersetzt werden.}
+
+\glosacr{ANSI}{American National Standards Institute}{ist eine Standardisierungsorganisation aus den USA mit Sitz in Washington, D. C. Sie ist vergleichbar zur DIN.}
+
+\glosacr{ASCII}{American Standard Code for Information Interchange}{ist eine Zeichenkodierung, deren Zeichensatz aus insgesamt 128 Zeichen besteht und mit jeweils einem \ingls{Byte} gespeichert werden. ASCII enthält keine diakritischen Zeichen oder gar andere Schriften, weshalb verschiedene Erweiterungen der ASCII-Kodierung entwickelt wurden, um insgesamt 256 verschiedene Zeichen zu kodieren.}
+
+\glos{ASF/WMV}{ist ein proprietäres Containerformat für Videos, das von Microsoft für das Streaming von Multimediadaten entwickelt wurde.}
+
+\glos{Attribut}{bezeichnet die Eigenschaft eines Objektes, wie etwa "Farbe" oder "Größe".}
+
+\glos{Attributtyp}{gibt an um welchen Datentyp es sich bei dem Wert eines Attributes handelt, wie beipsielsweise "Text" für das Attribut "Farbe" oder "Fließkommazahl" für das Attribut "Größe".}
+
+\newglossaryentry{Auflosung-gl}{name={Auflösung}, description={gibt die Punktdichte für ein physikalisches Wiedergabemedium an. Sie wird üblicherweise in Punkten (dots per inch; dpi), \ingls{Pixel}n (pixel per inch; ppi) oder Linien (lines per inch; lpi) pro Zoll (inch) angegeben.}}
+
+\glos{Aussehensattribut}{siehe \ingls{Layoutattribut}}
+
+\glos{Auszeichnungselement}{(Tag) wird in Auszeichnungssprachen verwendet, um bestimmte Bereiche zu etikettieren. Beispielsweise kann durch die Verwendung eines Tags die Zeichenkette "24-28" als eine Größenangabe gekennzeichnet werden: $\langle$groesse$\rangle$24-28$\langle$/groesse$\rangle$}
+
+\glos{Auszeichnungssprache}{(Markup Language) beschreibt mit Hilfe von Auszeichnungselementen den Inhalt von textbasierten Formaten. Damit kann das Aussehen eines Textdokumentes von dessen Struktur und Inhalt getrennt werden. Außerdem können implizite Informationen, die bisher nur für den menschlichen Leser verständlich waren, explizit gekennzeichnet werden und somit auch maschinell verarbeitbar gemacht werden. Beispiele sind: SGML, XML, HTML und TEI.}
+
+\glos{AutoCAD}{ist Teil der \ingls{CAD}-Produktpalette von Autodesk zum Erstellen von zwei- und dreidimensionalen CAD-Zeichnungen.}
+
+\glosacr{AVI}{Audio Video Interleave}{ist ein einfaches und robustes, jedoch proprietäres Containerformat für Videos. Es wurde von Microsoft entwickelt.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%B
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\glosacr{B-Rep}{Boundary Representation}{, dt. Begrenzungsflächenmodell, ist eine Methode zur Beschreibung von 3D-Modellen durch deren begrenzende Oberflächen.}
+
+\glos{BAK}{steht für eine Datei, die meist als Backupdatei oder Kopie von Programmen angelegt wird.}
+
+\glos{Baseline TIFF}{ist der kleinste gemeinsame Nenner aller \ingls{TIFF}-Formate, das von jedem TIFF-fähigen Programm verarbeitet werden kann und daher für die Langzeitarchivierung geeignet ist. Es kann beispielsweise keine Ebenen speichern und erlaubt auch keine Kompression wie LZW. Ursprünglich war das Format als TIFF 6.0, Teil 1: Baseline TIFF bekannt.} 
+
+%binär
+%Binärformat, Binärdatei
+
+\glos{Batchverarbeitung}{siehe \ingls{Stapelverarbeitung}.}
+
+\glos{Beziehung}{dient in Datenbanken zur Beschreibung der Abhängigkeit von Attributen. Die Beziehungen werden mittels Schlüsseln realisiert. Beispielsweise kann eine Beziehung zwischen einem in einer Tabelle gespeicherten Objekt und einem in einer weiteren Tabelle gespeicherten Ort hergestellt werden.}
+
+\newglossaryentry{bezierkurve-gl}{name={Bézierkurve}, description={ist eine Kurve, die mittels bestimmten Parametern mathematisch beschrieben wird. Bézierkurven werden beispielsweise in Vektorgrafiken eingesetzt.}}
+
+\glos{Bildformat}{wird für Videos durch die Anzahl der Pixel und dem \ingls{Seitenverhaltnis} angegeben, um die Darstellungsgröße zu ermitteln.}
+
+\glos{Bildfrequenz}{gibt an wie viele Bilder pro Sekunde in einem Video abgespielt werden.}
+
+\newglossaryentry{Bildpunkt-gl}{name={Bildpunkt}, description={ siehe \ingls{Pixel}.}, plural=Bildpunkte}
+
+\glosacr{BIM}{Building Information Model}{, dt. Gebäudedatenmodell, ist eine Methode zur digitalen Planung von Gebäuden. In einem BIM fließen alle Gebäudedaten zusammen aus dem dann alle anderen Teile und Dateien erzeugt werden können.}
+
+\glos{Bit}{ist die kleinste digitale Informationseinheit und kann entweder den Wert $0$ oder $1$ haben. Der Name ist aus \emph{binary digit} zusammengesetzt.}
+
+\glos{Bitrate}{siehe \ingls{Datenrate}}
+
+\glos{Bitstream}{ist eine Sequenz von \ingls{Bit}s, die einen Informationsfluss repräsentiert und eine unbestimmte Länge hat.}
+
+\glosacr{BLOB}{Binary Large Object}{ist ein großes binäres und damit für die Datenbank nicht weiter strukturiertes Objekt,  beziehungsweise Felddaten (z.B. Bilddateien).}
+
+\newglossaryentry{Bloecke-gl}{name={Blöcke}, description={sind im Bereich von CAD zu einem komplexen Objekt zusammengesetzte Einzelobjekte, die in anderen Dateien wiederverwendet werden können}}
+
+\glosacr{BOM}{Byte Order Mark, Bytereihenfolge-Markierung}{ist das \ingls{Unicode}-Zeichen U+FEFF am Anfang eines in Unicode kodierten Dokumentes, das angibt in welcher Reihenfolge die \ingls{Byte}s angeordnet sind. BOM ist bei der Verwendung von UTF-16 und UTF-32 zwingend in der Datei erforderlich. Zusätzlich kann das BOM ein Hinweis auf die Verwendung von UTF-Kodierungen sein, jedoch wird von dessen Verwendung außer für UTF-16 und UTF-32 abgeraten.}
+
+\glos{Bounding Box}{, auch Minimum Bounding Box, (engl. minimal umgebende Box) ist der kleinste mögliche Quader, der eine bestimmte Menge an Punkten oder Objekten umschließt. Eine Bounding Box kann sowohl zweidimensional als auch dreidimensional sein.}
+
+\glos{Browser}{Ein Browser ist ein Computerprogramm zum Abrufen wie auch Darstellen von Dateien (HTML-Dokumente, PDF-Dateien, multimediale Inhalte). Ein Webbrowser dient speziell für die Darstellung von Dateien und ganzen Webanwendungen aus dem Internet und ist die Schnittstelle zwischen dem Nutzer und WWW.}
+
+\glosacr{BWF}{Broadcast Wave Format}{ist ein von der EBU entwickeltes Containerformat für Audiodaten, das auf WAVE aufbaut. Es unterstützt die Einbettung von weiteren Metadaten und kann maximal zwei Tonkanäle speichern.}
+
+\glos{Byte}{ist eine Folge von 8 \ingls{Bit}s.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%C
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\glosacr{CD}{Compact Disc}{ist ein scheibenförmiges, optisches Speichermedium.}
+
+\glosacr{CAD}{Computer-aided design}{, dt. rechnerunterstützte Konstruktion, bezeichnet Programme und Dateien, die auf das computerunterstützte Konstruieren spezialisiert sind. Mittels CAD können technische Zeichnungen erstellt werden, die mit zusätzlichen Informationen angereichert werden können. Zudem bieten CAD-Programme spezielle Funktionalitäten, wie etwa die automatische Berechnung von Volumina, die Erzeugung verschiedener Ansichten oder eine Such- und Filtermöglichkeit.}
+
+\glosacr{CBR}{engl. \emph{constant bitrate}, konstante Bitrate}{überträgt pro Sekunde immer die gleiche Datenmenge. Siehe auch \ingls{Datenrate}.}
+
+\glosacr{CGM}{Computer Graphics Metafile}{ist ein unter ISO/IEC 8632 standardisiertes Format für Vektorgrafiken, das 1986 entwickelt wurde. Seit 1999 wurden keine weiteren Aktualisierungen vorgenommen.}
+
+\glosacr{CHI}{Cultural Heritage Imaging}{ist eine gemeinnützige Firma, die visuelle Dokumentationsmethoden für Kulturgut entwickeln und einsetzen. CHI hat die Methode des Highlight-RTI entwickelt und stellt kostenlose Programme für die Erstellung von RTIs zur Verfügung.}
+
+\glos{Chroma}{steht für den Farbanteil eines Bildpunktes, bezogen auf Farbmodelle für selbstleuchtende Geräte.}
+
+\glos{Chrominanz}{siehe \ingls{Chroma}.}
+
+\glosacr{CIDOC}{Comité International pour la DOCumentation}{ist das internationale Komitee für Dokumentation des internationalen Museumsverbandes (ICOM) und setzt Standards für die Dokumentation in Museen. Es hat außerdem eine beratende Funktion. Das Komitee ist verantwortlich für \ingls{CIDOC CRM}.}
+
+\glosacr{CIDOC CRM}{CIDOC Conceptual Reference Model}{ist eine erweiterbare Struktur, um Begriffe und Informationen im Bereich des Kulturerbes in kontrollierter Form austauschen zu können. Neben der physischen Beschreibung von Objekten können auch zeitliche und örtliche Informationen beschrieben werden. Es ist die Norm ISO 21127:2006. Seit 2014 ist ebenfalls eine neue Version normiert: ISO 21127:2014.}
+
+\glos{Client}{greift auf einen \ingls{Server} zu.}
+
+\glosacr{CMS}{Content Management System}{ist eine Software zur gemeinschaftlichen Erstellung, Bearbeitung und Organisation Webseiteninhalten. Viele CM-Systeme sind mit wenig Programmier- und HTML-Kenntnissen bedienbar. Beispiele sind Drupal, Joomla, TYPO3 oder WordPress.}
+
+\glos{CMYK}{ist ein subtraktives \ingls{Farbmodell}. Es bildet die technische Grundlage des Vierfarbendrucks. Die Abkürzung steht für die Farben Cyan, Magenta, Gelb (Yellow) und den Schwarzanteil für die Farbtiefe (Key). CMYK-Farbräume enthalten weniger Farben, als \ingls{RGB}-Farbräume.}
+
+\glosacr{CNR-ISTI}{Consiglio Nazionale delle Ricerche - Istituto di Scienza e Tecnologie dell’Informazione "A. Faedo"}{ist ein in Pisa angesiedeltes informationstechnisches Institut, das dem Nationalen Forschungsrat angehört.}
+
+\glos{Codec}{Der Begriff Codec setzt sich aus den englischen Wörtern \emph{coder} (Codierer) und \emph{decoder} (Decodierer) zusammen. Codecs definieren wie Datenströme gespeichert und gelesen werden, können also als Format verstanden werden. Codecs bieten immer eine Kompression der Daten, die entweder verlustbehaftet oder verlustfrei erfolgen kann. Im Bereich Video und Audio werden die visuellen und auditiven Inhalte jeweils in einem eigenen Codec gespeichert und anschließend in einem Containerformat zusammengeführt.}
+
+\glos{Container}{Eine Containerdatei kann unterschiedliche Dateien und Dateitypen enthalten. Beispielsweise werden in einem ZIP-Container mehrere Dateien in einer Archivdatei zusammengefasst. Als Containerformat werden Containerdateien bezeichnet, die eine bestimmte Strukturierung der beinhalteten Dateien voraussetzen. Beispielsweise werden in dem Containerformat Matroska visuelle und auditive Inhalte zusammengeführt, um ein Video zu speichern. Es gibt eine große Zahl an Containerformaten, die für unterschiedliche Anforderungen entwickelt wurden und daher auch jeweils einen unterschiedlichen Funktionsumfang aufweisen.}
+
+\glosacr{CSG}{Constructive Solid Geometry}{, Konstruktive Festkörpergeometrie, beschreibt 3D-Modelle anstatt durch Eckpunkte, Flächen oder Kurven, mit Hilfe von geschlossenen geometrischen Körpern. Dabei kann die Vereinigung, die Differenz oder die Schnittmenge der Körper gebildet werden.}
+
+\glosacr{CSS}{Cascading Style Sheets}{ist eine Sprache mittels der Elemente aus HTML- und XML-Dokumenten hinsichtlich des Aussehens konfiguriert werden können. CSS wird vom W3C gepflegt und standardisiert.}
+
+\glosacr{CSV}{Comma Separated Values}{ist ein textbasiertes Dateiformat für tabellarische Daten. Hierbei werden einzelne Zellen durch das ein bestimmtes Trennzeichen, z.B. durch ein Komma, voneinander getrennt. Jede Zeile einer CSV-Datei entspricht der Zeile einer Tabelle. Da das Trennzeichen auch als Inhalt der Zellen erlaubt ist, werden in diesem Fall zusätzlich Textbegrenzungszeichen (z.B. Anführungszeichen) vor und nach den Zellen eingefügt, falls das Trennzeichen auch als Wert innerhalb der Zelle verwendet wird. Ein De-facto-Standard für CSV-Dateien ist in RFC 4180 beschrieben.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%D
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\glosacr{DAT}{Data File}{ein Dateiformat mit sehr unterschiedliche Verwendung, meist als Container für binäre Daten.}%alt
+
+\glos{Data-URI}{,auch Data-URL, ermöglicht die textbasierte Einbettung von Ressourcen (z.B. Bilder) in strukturierte Textdateien. Die Spezifizierung erfolgt durch RFC 2397.}
+
+\glos{Datenbankschema}{ist Bestandteil eines \ingls{Datenkatalog}s. Es beschreibt formal die Struktur der Daten und legt in abstrahierter Form die Beziehung und Art der Speicherung von Einzelinformationen fest.}
+
+\glos{Datenkatalog}{dient der Beschreibung der Datenstruktur in einer Datenbank. Er enthält alle Festlegungen und Detailinformationen, welche die Struktur der Datenbankinhalte in einem konkreten DBMS beschreiben, wozu beispielsweise die Attributtypen und die Beziehungen gehören. Außerdem enthält der Katalog das \ingls{Datenbankschema}.}
+
+\glos{Datenrate}{gibt an wie viele Daten in einer bestimmten Zeitspanne übertragen oder gelesen werden. Sie wird meist in Bits pro Sekunde gemessen, weshalb auch von Bitrate gesprochen wird.}
+
+\glos{dBASE}{war das erste weit verbreitete Datenbankverwaltungssystem für Mikrocomputer. Die Basisidee des dBASE-Systems ist, die Tabellen einer Datenbank in speziell strukturierten Dateien zu halten.}
+
+\glosacr{DBF}{Data Base File}{proprietäres Format zur Speicherung von dBASE-Datenbanken.}
+
+\glosacr{DBS}{Datenbanksystem}{dient der Strukturierung, Pflege und Verwaltung von Daten. Ein DBS besteht aus einer Datenbank mit dem eigentlichen Datenbestand und der Datenbanksoftware mittels derer auf die Daten zugegriffen wird.}
+
+\glosacr{DBML}{Database Markup Language}{ist eine Sprache zur Dokumentation von Datenbanken.}
+
+\glosacr{DBMS}{Datenbankmanagementsystem}{ist die Verwaltungssoftware eines DBS über die der Nutzer auf die Datenbank zugreift. Es steuert die strukturierte Speicherung der Daten und führt alle lesenden und schreibenden Zugriffe auf die Datenbank aus.}
+
+\glos{Demultiplexing}{bezeichnet das Aufsplitten der Inhalte eines Containers für Videos in die einzelnen Bestandteile.}
+
+\glos{Demuxing}{siehe \ingls{Demultiplexing}.}
+
+\glos{Detaillierungsgrad}{gibt an wie detailliert ein zweidimensionales Bild oder ein dreidimensionales Objekt dargestellt ist. In 3D-Szenen können unterschiedliche Objekte unterschiedliche Detailstufen aufweisen.}
+
+\glos{Dirac/Schroedinger}{ist ein vom BBC entwickelter Codec für Videos, der eine verlustfreie Komprimierung bietet, jedoch nicht sehr performant ist.}
+
+\glosacr{DML}{Database Markup Language}{,dt. \emph{Datenbearbeitungssprache}, ist der Teil einer Datenbanksprache, der Befehle zur Manipulation, also Schreiben, Bearbeiten und Löschen bereit stellt.}
+
+\glos{DMP}{ist ein proprietäres Format von Oracle zur Speicherung von Datenbankdaten. Es handelt sich dabei um eine temporäre Backup-Datei, also sogenannte \emph{data dumps}.}
+
+\glosacr{DNG}{Digital Negative}{ein offenes Format, das von Adobe speziell für die Speicherung und Langzeitarchivierung von Kamerarohdaten (\ingls{RAW}) entwickelt wurde. Es werden die \ingls{Metadaten}-Standards \ingls{Exif}, \ingls{IPTC-NAA} und \ingls{XMP} unterstützt.}
+
+\glosacr{DNS}{Domain Name System}{verwaltet die IP-Adressen zu den verschiedenen eingetragenen Domains und gibt sie an Nutzer weiter, um ihnen die Navigation auf die gewünschte Seite zu ermöglichen.}
+
+%Dublin Core
+
+%\glosacr{DVD}{Digital Versatile Disc}{die DVD ist ein digitales Speichermedium, das einer \ingls{CD} ähnelt, aber über eine deutlich höhere Speicherkapazität verfügt.}
+\glos{DOCX}{ist ein offenes XML-basiertes Format, das von Microsoft zur Speicherung von Textdokumenten entwickelt wurde.}
+
+\glosacr{DOI}{Digital Object Identifier}{, dt. \emph{digitaler Objektidentifikator}, ist ein Persistenter Identifikator für elektronische Ressourcen vergleichbar mit einer ISBN für Bücher. Damit können digitale Objekte eindeutig referenziert werden.}
+
+\glos{Domain}{ist ein Teilbereich des Internets, der mit einem Namen versehen ist und als Adressbestandteil für Ressourcen im WWW dient.}
+
+\glos{Dokumenttypdefinition}{siehe \ingls{DTD}.}
+
+\glos{Dokumenttypdeklaration}{steht zu Beginn eines SGML-, XML- oder HTML-Dokuments. Es enthält den Verweis auf die verwendete Dokumenttypdefinition oder auf das verwendete XML Schema.}
+
+\glosacr{dpi}{dots per inch}{gibt an wie viele Bildpunkte pro Zoll eine Rastergrafik enthält. Je größer die Punktdichte, desto größer auch die Auflösung des Bildes.}
+
+\glosacr{DTD}{Dokumenttypdefinition}{beinhaltet für SGML-Dateien die Regeln für die zu verwendende Auszeichnungselemente und deren Kombinationsmöglichkeiten, beschreibt also deren Struktur. Es handelt sich um eine separate Datei, die in der SGML-Datei in der Dokumenttypdeklaration angegeben wird.}
+
+\glos{Dublin Core}{ist ein Metadatenschema, das 15 Kernfelder beinhaltet. Es wurde entwickelt, um möglichst viele verschiedene Objekttypen beschreiben zu können. Es ist standardisiert als ISO 15836-2003, ANSI/NISO Z39.85-2007 und IETF RFC 5013.}
+
+\glosacr{DV}{Digital Video}{ist ein Codec für digitale Videos auf Videokasetten, der mit der Ablösung von Kasetten durch andere Speichermedien obsolet wird.}
+
+\glos{DWF}{ein von Autodesk entwickeltes Format zur Visualisierung von Vektordaten.}
+
+\glosacr{DWG}{abgeleitet von \emph{drawing}}{ist das native Speicherformat von AutoCAD und weder offen dokumentiert noch standardisiert. Um eine hohe Nachnutzbarkeit zu gewährleisten, sollte eine ältere Version des Formates verwendet werden, wie beispielsweise DWG 2010.}
+
+\glosacr{DXF}{Drawing Interchange Format}{ist ein von Autodesk entwickeltes Format zum Austausch von CAD-Dateien. Es ist offen dokumentiert, wobei ab Release 13 manche Bereiche ungenügend spezifiziert sind. DXF gibt es als Binärformat und als textbasierte ASCII-Variante, die auch für die Langzeitarchivierung verwendet werden sollte. Um eine hohe Nachnutzbarkeit zu gewährleisten, sollte eine ältere Version des Formates verwendet werden, wie beispielsweise DXF 2010.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%E
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\glos{Ebene}{wird in der Bildbearbeitung verwendet, um verschiedene Elemente eines Bildes zu gruppieren. Ebenen können mit durchsichtigen Folien verglichen werden, die übereinander gelegt werden, um den gesamten Bildinhalt wiederzugeben. Mit Ebenen können Zeichnungen strukturiert werden, indem etwa Elemente mit ähnlicher inhaltlicher Bedeutung oder ähnlichem Aussehen zusammengefasst werden.}
+
+\glosacr{EBML}{Extensible Binary Meta Language}{ist das binäre Äquivalent zu XML.}
+
+\glosacr{EBU}{European Broadcasting Union}{ist die Europäische Rundfunkunion, die einen Zusammenschluss von über 70 Rundfunkanstalten bildet. Die Organisation beteiligt sich an der Forschung und Entwicklung von neuen Standards, wie etwa EBUCore.}
+
+\glos{EBUCore}{ist ein von der EBU entwickeltes Metadatenschema für Film und Ton.}
+
+\glos{Ecma}{(Ecma International, früher ECMA) ist eine private Normungsorganisation mit Sitz in Genf, die sich insbesondere auf Informations- und Kommunikationssysteme konzentriert. Sie wurde 1961 gegründet.}
+
+\glos{Editor}{ist ein Programm für die Erstellung und Bearbeitung von bestimmten Dateiformaten. Beispielsweise bieten Texteditoren spezielle Funktionen für das Arbeiten mit Textdateien.}
+
+\glos{Einbetten}{bezeichnet in der IT das integrieren von externen Ressourcen in eine Datei. Beispielsweise kann eine Schriftart in ein PDF-Dokument eingebettet werden, um das Erscheinungsbild des Dokumentes auch auf anderen Systemen zu erhalten, wo die Schriftart nicht installiert ist.}
+
+\glos{Emulation}{bezeichnet in der IT die Nachbildung eines, meist älteren oder obsoleten, Systems in einem noch verwendeten System. Beispielsweise können alte Videospiele mit passenden Emulatoren auch auf modernen Betriebssystemen ausgeführt werden.}
+
+\newglossaryentry{entitat-gl}{name={Entität}, description={ist in einer Datenbank das Objekt das mit verschiedenen Attributen beschrieben wird, wie beispielsweise eine Münze.}}
+
+\glos{encoding}{siehe \ingls{Zeichenkodierung}.}
+
+\glosacr{EPS}{Encapsulated PostScript}{ist ein Format für Vektordaten, das aufbauend auf PS von Adobe entwickelt wurde. EPS enthält im Vergleich zu PS zusätzlich eine Vorschaudatei. EPS kann keine Ebenen und Transparenzen speichern.}
+
+\glosacr{ERD}{Entity Relationship Diagram}{siehe \ingls{ERM}.}
+
+\glosacr{ERM}{Entity-Relationship-Modell}{ist ein grafisches Hilfsmittel zum Entwurf und zur Dokumentation einer Datenbank. Dabei werden die Entitätstypen, Beziehungstypen und Attribute tabellarisch erfasst und beschrieben. Eine grafische Darstellung in einem Diagramm wird mittels eines Entity-Relationship-Diagram (ERD) realisiert. Mit Hilfe eines ERM kann zunächst die Konzeption der Datenbank vorgenommen werden, auf deren Grundlage dann die Implementierung der Datenbank erfolgt.}
+
+\glos{ESRI-Shape}{Das Dateiformat Shapefile (oft Shapedaten oder Shapes genannt) ist ein von ESRI ursprünglich für ArcView entwickeltes Format für Geodaten. Ein Shapefile ist keine einzelne Datei, es besteht aus mindestens drei Dateien:
+\begin{itemize}
+	\item .shp dient zur Speicherung der Geometriedaten
+	\item .shx dient als Index der Geometrie zur Verknüpfung der Sachdaten (auch Attributdaten genannt)
+	\item .dbf Sachdaten im \ingls{dBASE}-Format
+\end{itemize}}
+
+\glosacr{Exif}{Exchangeable Image File Format}{ist ein Standard der Japan Electronic and Information Technology Industries Association (JEITA) für die Speicherung von \ingls{Metadaten} in digitalen Bildern. Exif-Daten können in \ingls{TIFF}-, \ingls{DNG}- und \ingls{JPEG}-Formaten gespeichert werden.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%F
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\glos{Farbmodell}{ist ein mathematisches Modell, das üblicherweise mit Hilfe von Zahlentupeln (Zahlenpaare) beschreibt wie Farben dargestellt werden können. Alle Farben eines Farbmodells können dreidimensional als \ingls{Farbraum} dargestellt werden.}
+
+\newglossaryentry{Farbraum-gl}{name=Farbraum, description={ist die dreidimensionale Abbildung eines \ingls{Farbmodell}s.}, plural=Farbräume}
+
+\glos{Farbtiefe}{gibt die Anzahl der \ingls{Bit}s an, die den Farbwert eines \ingls{Pixel}s speichern. Ein Bit kann dabei $2^1$, also zwei Farbwerte (z.B. Schwarz und Weiß) speichern. Die Anzahl der darstellbaren Farbwerte steigt mit der Anzahl der Bits exponentiell. So können mit 8 Bits bereits $2^8$ also 256 Farbwerte und mit 24 Bits schon $2^{24} = 16.777.216$ Farbwerte dargestellt werden.}
+
+\glos{Farbunterabtastung}{(engl. \emph{chroma subsampling}) macht sich zunutze, dass das menschliche Auge Farben im Vergleich zu Helligkeiten schlechter auflösen kann. Die Farbunterabtastung bedeutet, dass von dem Kanal für Chrominanz und den zwei Kanälen für Luminanz nur die Chrominanz vollständig gespeichert wird, während die Chrominanz horizontal und vertikal geringer aufgelöst wird. Wenn die drei Kanäle zusammengerechnet werden, weist das Gesamtbild optisch kaum sichtbare Unterschiede auf. Die Farbunterabtastung wird üblicherweise mittels drei Ziffern angegeben, wie etwa 4:2:0.}
+
+\glos{FFmpeg}{ist ein Projekt, das aus einer Reihe von frei verfügbaren Programmbibliotheken besteht, um digitale Videos und Audioaufnahmen aufzunehmen, zu konvertieren und streamen. FFmpeg enthält eine umfangreiche Sammlung von Audio- und Videocodecs, wie beispielsweise FFV1 für Videos.}
+
+\glosacr{FFV1}{FFmpeg Video Codec 1}{ist ein Codec für Videos, der eine verlustfreie und schnelle Intraframe-Kompression verwendet. Er wurde in dem Projekt FFmpeg entwickelt und hat eine weite Verbreitung gefunden.}
+
+\glosacr{FLAC}{Free Lossless Audio Codec}{ist ein offen dokumentierter und frei verfügbarer Audiocodec, der verlustfrei komprimiert.}
+
+\glos{Flash}{ist ein Containerformat für das Streaming von Multimediadaten. Es wurde von Macromedia entwickelt und dann von Adobe übernommen.}
+
+\glos{FMP}{proprietäres und binäres Dateiformat für FileMaker-Datenbanken. Je nach verwendeter Version lautet die Dateiendung FP5, FP7 oder FMP12.}
+
+\glos{Font}{steht für Schriftart.}
+
+\glosacr{FourCC}{Four Character Code}{ist ein vier Byte langer Bezeichner aus ASCII-Zeichen, der in dem Header einer Videodatei angibt, welcher Codec verwendet wird. Beispielsweise wird \emph{FFV1} verwendet um den Codec FFV1 zu identifizieren.}
+
+\glosacr{FTP}{File Transfer Protocol}{überträgt Dateien zwischen einem Server und einem Client mittels Up- und Download über das Internet. FTP ist in RFC 959 spezifiziert.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%G
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newglossaryentry{Gauss-Krueger-gl}{name=Gauß-Krüger, description={ist ein kartesisches Koordinatensystem, womit hinreichend kleine Gebiete auf der Erde mit metrischen Koordinaten winkeltreu verortet werden können.}}
+
+\glos{Generationsverlust}{bezeichnet die Abnahme der Qualität von einer Kopie zur nächsten. Gerade bei verlustbehafteten Formaten, wie beispielsweise \ingls{JPEG} entstehen beim Speichern Fehler, die sich mit jeder weiteren Kopie der Kopie fortpflanzen und durch neue ergänzt werden. Vorbeugen kann man diesem Phänomen, indem man möglichst verlustfreie Formate verwendet.}
+
+\glos{Georeferenz}{siehe \ingls{Raumbezug}.}
+
+\glos{Georeferenzierung}{bezeichnet die Zuweisung raumbezogener Informationen zu einem Datensatz. Beispielsweise können einem Objekt in einer Vektordatei geografische Koordinaten zugewiesen werden.}
+
+\glos{GeoTIFF}{ist ein georeferenziertes \ingls{TIFF}. Die Besonderheit gegenüber dem normalen TIFF-Format liegt darin, dass spezielle Daten über die Georeferenz zusätzlich zu den sichtbaren Rasterdaten in die Bilddatei eingebettet werden. Dazu zählen Koordinaten zur Georeferenzierung des Bildausschnitts sowie zur verwendeten Kartenprojektion: Die Datei enthält spezifische Angaben über das Koordinatenreferenzsystem.}
+
+\glosacr{GIF}{Graphics Interchange Format}{ist ein proprietäres Dateiformat zur Speicherung von Bilddaten, das von Compuserve entwickelt wurde. Dieses Format ist im Internet besonders verbreitet und bietet eine verlustfreie \ingls{Komprimierung} und nur eine \ingls{Farbtiefe} von 8 \ingls{Bit}, also 256 Farben, an. \ingls{Metadaten} können nur eingeschränkt in diesem Dateiformat gespeichert werden. Es wird empfohlen stattdessen \ingls{PNG} oder \ingls{TIFF} zu verwenden.}
+
+\glosacr{GIS}{Geoinformationssystem}{ist ein rechnergestütztes System, mit dem raumbezogene Daten digital erfasst, redigiert, gespeichert, organisiert, modelliert und analysiert sowie alphanumerisch und grafisch präsentiert werden können.}
+
+\glosacr{GPL}{GNU General Public License}{ist eine weit verbreitet Softwarelizenz, welche die frei Ausführung, Verbreitung und Änderung von Software erlaubt. Dabei muss die Software aber unter den gleichen Bedingungen weiter Verbreitet werden.}
+
+\glos{Grafische Primitive}{sind die kleinsten Bestandteile von Vektorgrafiken, die elementare geometrische Formen umfassen. Zu grafischen Primitiven gehören beispielsweise Punkte, Linien, Kurven und geschlossene Pfade. Auch einfache Geometrien, wie Rechtecke oder Kreise, und Texte können dazu gezählt werden.}
+
+\glos{Graph}{ist eine abstrakte Struktur mit der Objekte und deren Verbindungen untereinander repräsentiert werden können. Die Objekte werden dabei als Knoten bezeichnet, während die Verbindungen zwischen den Knoten Kanten genannt werden. Kanten bestehen nur zwischen zwei Objekten und können gerichtet oder ungerichtet sein. Graphen können auch visuell dargestellt werden.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%H
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\glos{H.264}{(H.264/MPEG-4 AVC) ist ein Videocodec, mit dem eine verlustfreie Kompression möglich ist. Der Codec bietet eine hohe Bildqualität, ist Teil des MPEG-4-Standards und wird in dem Containerformat MP4 verwendet.}
+
+\glos{H.265}{(H.265/MPEG-H (High Efficiency Video Coding (HEVC)) ist ein Videocodec der seit 2013 existiert und als Nachfolger von H.264 gedacht ist. Er bietet eine verlustfreie Kompression, ist jedoch noch nicht vollständig spezifiziert und weist patentrechtliche Einschränkungen auf. Daher ist dieser Codec \emph{nicht} für die Langzeitarchivierung geeignet.}
+
+\glos{Hardware}{beschreibt in der IT die physische Ausrüstung, also Geräte und Geräteteile, wie beispielsweise Festplatten, Grafikkarten oder Computer. Der Begriff kann auf alle weiteren Geräte erweitert werden, die digitale Daten produzieren, wie etwa Digitalkameras oder Tachymeter.}
+
+\glos{Header}{bezeichnet in der \ingls{IT} den Dateikopf, also die Daten am Anfang eines Datenblocks, in dem üblicherweise \ingls{Metadaten} gespeichert werden. Beispielsweise werden Metadaten für Bilder mit Hilfe des \ingls{Exif}-Formats in den Header der Bilddatei geschrieben. Für XML- oder HTML-Dateien gibt es eigene Auszeichnungselemente für Informationen im Header, der am Anfang der jeweiligen Datei zu finden ist.}
+% In der Informationstechnik steht die Bezeichnung Header für Zusatzinformationen (Metadaten), die Nutzdaten am Anfang eines Datenblocks ergänzen. Handelt es sich bei dem Datenblock um eine Datei, so wird der Header auch Dateikopf genannt. Die Zusatzinformationen können verwendet werden, um die Verarbeitung der Daten zu beschreiben (z. B. das Datenformat, die Adressinformationen eines Datenpakets zu transportieren oder die verwendete Zeichenkodierung) bzw. um die Daten zu charakterisieren (z. B. der Autor oder die Lizenz). 
+%Nicht verwechseln mit Kopfzeilen in Textdokumenten
+
+\glos{hexadezimal}{(Hexadezimalsystem) beschreibt Zahlen auf Basis von 16. Im Unterschied zu dem üblichen Dezimalsystem gibt es für die Zahlen 0 bis 15 eigene Werte: 0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F.}
+
+\glos{H-RTI}{siehe Highlight-RTI.}
+
+\glos{Highlight-RTI}{ist eine von CHI entwickelte Aufnahmemethode für die Erstellung von RTI-Dateien. Hierfür wird nur ein Blitzgerät benötigt, das für jede Aufnahme an einer imaginären Kuppel entlang bewegt wird. Um die Position der Lichtquelle errechnen zu können, wird neben das Objekt eine schwarz glänzende Kugel platziert. Aus den Reflexionspunkten des Lichtes an der Kugel kann das Programm dann die Richtung, aus der das Licht kommt, berechnen.}
+
+\glos{Homepage}{bezeichnet die Startseite einer Website.}
+
+\glosacr{HTML}{Hyptertext Markup Language}{ist eine Auszeichnungssprache, die einen Anwendungsfall von SGML darstellt. HTML hat als Grundlage von Webseiten eine große Verbreitung gefunden und wird vom W3C und der Web Hyptertext Application Technology Working Group (WHATWG) gepflegt und entwickelt. Die aktuellste Version ist HTML5.}
+
+\glosacr{HTTP}{HyperText Transfer Protocol}{ist das Protokoll zur Datenübertragung im WWW zwischen Server und Browser. Derzeit ist Version HTTP/2 aktuell, spezifiziert durch RFC 7540. Eine sichere Variante stellt HTTPS dar, das in RFC 2718 spezifiziert wird.}
+
+\glos{HuffYUV}{ist ein verlustfreier Codec für Videodaten, der eigens für Windows-Systeme entwickelt wurde. HuffYUV ist mit \ingls{Lagarith} verwandt.}
+
+\glos{Hyperlink}{Ein Hyperlink verweist in einem Hypermedium auf eine externe Ressource (ein Bild oder Video im Internet, eine Webseite im WWW etc.) oder eine bestimmte Stelle in derselben Datei. Ein "toter Verweis" (\emph{dead link, broken link}) ist ein Hyperlink, der auf eine nicht (mehr) vorhandene Ressource zeigt und demnach ungültig ist. Hierbei wird oftmals der Statuscode 404 Not Found (die Ressource konnte nicht gefunden werden) ausgegeben. Hyperlinks sind eine elementarer Bestandteil des WWW.}
+
+\glos{Hypermedium}{Bei Hypertext handelt es sich um non-linearen Text, der Hyperlinks als Verweise zu anderen Texten enthält und so mit diesen vernetzt ist. Unter Hypermedia versteht man zuzüglich zum Text Grafiken und jede weitere Art von multimedialer Ressource, die ebenso durch Hyperlinks miteinander verknüpft sind. Die Begriffe Hypertext und Hypermedium sind nicht klar definiert und werden sowohl synonym als auch distinktiv benutzt. Zudem kann das Hypermedium als Konzept verstanden werden, das Texte und multimediale Inhalte miteinander verbindet; als Beispiel für ein solches wäre das WWW selbst zu nennen.}
+
+\glos{Hypertext}{siehe \ingls{Hypermedium}.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%I
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\glosacr{IANA}{Internet Assigned Numbers Authority}{ist für die Zuordnung von Namen und Nummern im Internet zuständig. Darunter fallen beispielsweise IP-Adressen oder Medientypen.}
+
+\glosacr{IASA}{International Association of Sound and Audiovisual Archives}{ist eine 1969 gebildete Vereinigung, um als Mittler für internationale Kooperationen zwischen Archiven für Ton- und Videoaufnahmen zu fungieren.}
+
+\glosacr{ICC}{International Color Consortium}{wurde 1993 von acht Industrieunternehmen gegründet um eine Vereinheitlichung der Farbmanagementsysteme für alle Betriebssysteme und Softwarepakete zu erreichen.  Weithin bekanntes Ergebnis der Bemühungen des ICC ist ein Standard zur Beschreibung von Farbprofilen.}
+
+\glosacr{IEC}{International Electrotechnical Commission}{ist eine 1906 gegründete Organisation für die Erstellung und Veröffentlichung von internationalen Standards im Bereich von  Elektrotechnik und Elektronik. Einige Normen entwickelt sie auch gemeinsam mit der \ingls{ISO}.}
+
+\glosacr{IETF}{Internet Engineering Task Force}{ist eine Organisation, die in mehreren Arbeitsgruppen Standards für das Internet erstellt.}
+
+\glosacr{IIM}{Information Interchange Model}{Ein Standard zur Speicherung von \ingls{Metadaten} in Bilddateien, der 1990 vom International Press Telecommunications Council und der Newspaper Association of America (NAA) entwickelt wurde und ein Vorläufer des \ingls{IPTC-NAA} Standards ist. Die letzte Version, 4.1, stammt von 1997.}
+
+\glos{INDD}{ein proprietäres Format, das von Adobe InDesign verwendet wird.}
+
+\glos{Internet}{verbindet auf weltweiter Ebene verschiedene Computer-Netzwerke. Systeme wie das WWW als Internetdienste ermöglichen hier den Austausch von Daten.}
+
+\glos{Interframe-Kompression}{bezeichnet bei Videos die Komprimierung über die ganze Sequenz hinweg, wobei mehrere Bilder zusammengefasst werden können, was im Gegensatz zur \ingls{Intraframe-Kompression} steht. Dies hat den Nachteil, dass eventuell auftretende Fehler nicht nur ein Einzelbild, sondern eine ganze Sequenz an Bildern korrumpieren.}
+
+\glos{Interpolation}{bezeichnet in der Mathematik Methoden, um für gegebene Werte eine stetige Funktion zu finden. Anwendung findet dies beispielsweise bei der Vergrößerung von Rastergrafiken. Dabei werden die fehlenden Bildpunkte mittels Interpolation berechnet, wobei dies immer nur eine Annäherung sein kann.}
+
+\glos{Intraframe-Kompression}{beschränkt sich bei der Kompression von Videos auf die Komprimierung der Daten jedes Einzelbildes für sich. Sie steht im Gegensatz zur \ingls{Interframe-Kompression}.}
+
+\glos{IP-Adresse}{ist die Adresse von physischen Severn und anderen Geräten im Internet.}
+
+\glos{IPTC-NAA}{(kurz auch nur IPTC) ist ein Standard zur Speicherung von \ingls{Metadaten} in Bilddateien. Er wurde vom International Press Telecommunications Council (IPTC) zusammen mit der Newspaper Association of America (NAA) entwickelt. Vorläufer dieses Standards ist der \ingls{IIM}-Standard.}
+
+\glosacr{ISBN}{Internationale Standardbuchnummer}{ist eine Nummer, die verwendet wird, um Bücher eindeutig zu kennzeichnen. Eine ISBN ist ein \ingls{persistenter Identifikator}.}
+
+\glosacr{ISO}{International Organization for Standardization}{eine internationale Vereinigung von Normungsorganisationen. Sie erarbeitet internationale Normen in allen Bereichen mit Ausnahme der Elektrik und der Elektronik, für die die Internationale elektrotechnische Kommission (IEC) zuständig ist, und mit Ausnahme der Telekommunikation, für die die Internationale Fernmeldeunion (ITU) zuständig ist.}
+
+\glos{ISO 639}{ist eine fünfteilige Sammlung von Standards, die sich mit der Benennung (Codes) von Sprachen und Sprachgruppen beschäftigt. So kann nach ISO 639-1 für ein Text in Deutsch das Kürzel \emph{de} verwendet werden, um die verwendete Sprache anzugeben. Da ISO 639-1 bei weitem nicht alle Sprachen abdeckt, wird die Verwendung von ISO 639-3 empfohlen, das dreistellige Kürzel verwendet, wie etwa \emph{deu} für Deutsch oder \emph{eng} für Englisch. ISO 639-3 berücksichtigt auch ausgestorbene Sprachen oder Dialekte. Eine vollständige Liste wird von der Organisation SIL International verwaltet und bereit gestellt: \url{http://www-01.sil.org/iso639-3/download.asp}}
+
+\glos{ISO 8601}{ist eine internationale Norm, die Empfehlungen für numerische Datumsformate und Zeitangaben enthält. Der Titel der Norm ist \emph{Data elements and interchange formats -- Information interchange -- Representation of dates and times} (dt. Datenelemente und Austauschformate -- Informationsaustausch -- Darstellung von Datum und Uhrzeit). Eine Datums- und Zeitangabe kann beispielsweise folgendermaßen aussehen: 2015-06-03T12:45:30+02:00. Diese Zeichenfolge steht für den 03. Juni 2015 um 14:45 (und 30 Sekunden) in Berlin. Die Zeichenfolge \emph{+02:00} gibt dabei die Differenz zur UTC an. Auch Zeitspannen können mit der Norm dargestellt werden, wobei beispielsweise \emph{P3Y6M4DT12H30M5S} für 3 Jahre, 6 Monate, 4 Tage, 12 Stunden, 30 Minuten und 5 Sekunden steht, oder die Zeichenfolge \emph{T2H2M} für 2 Stunden und 2 Minuten steht.}
+
+\glosacr{IT}{Informationstechnologie}{ein Oberbegriff für die Informations- und Datenverarbeitung sowie für die dafür benötigte Hard- und Software. Häufig wird auch die englisch ausgesprochene Abkürzung IT verwendet.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%J
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\glos{Java}{bezeichnet sowohl die Programmiersprache Java als auch verschiedene Laufzeitumgebungen, die zur Ausführung von Java-Programmen dienen. Zahlreiche Anwendungen und Systeme verwenden die Java Technologie. Die Sprache Java ist eine auf Simplizität ausgelegte, sehr beliebte, plattformunabhängige Programmiersprache und ist aktuell durch die 8. Edition der Java Language Specification spezifiziert.}
+
+\glos{Java-Applet}{ist ein Programm mit der Dateinnamenserweiterung ".class", das von einer Webseite durch einen Webbrowser heruntergeladen und in einer JVM ausgeführt wird, um spezielle Funktionen, etwa eine interaktive Karte, bereitzustellen. Es wird eine Laufzeitumgebung benötigt. Java-Applets werden aus verschiedenen Gründen nicht von allen aktuellen Browsern (etwa Google Chrome ab Version 45) unterstützt.}
+
+\glos{JavaScript}{ist eine Programmiersprache. Sie dient dazu, Webseiten um zusätzliche Funktionen zu ergänzen und ist die im WWW und HTML-Bereich verbreitetste Programmiersprache. JavaScript ist durch die Standards ECMA-262 und ECMA-402 von Ecma International spezifiziert und liegt derzeit in der Version ECMAScript 2016 vor. Programme in JavaScript verfügen über die Dateinamenserweiterung ".js".}
+
+\glosacr{JPEG}{Joint Photographic Experts Group}{ist ein Dateiformat zur Speicherung von Bilddaten, das verlustbehaftete \ingls{Komprimierung} verwendet und eine \ingls{Farbtiefe} von 32 \ingls{Bit} anbietet. Es wird  in der Norm \ingls{ISO}/IEC 10918-1 bzw. CCITT Recommendation T.81 beschrieben und eignet sich \emph{nicht} für die Langzeitarchivierung. \ingls{Metadaten} können im \ingls{Exif}- oder \ingls{IPTC-NAA}-Format gespeichert werden.}
+
+\glos{JPEG 2000}{ist ein Dateiformat zur Speicherung von Bilddaten. Es ist als ISO/IEC 15444 zertifiziert. Im Gegensatz zu \ingls{JPEG} ermöglicht die verwendete diskrete Wavelet-Transformation auch eine verlustfreie Kompression, weshalb dieses Format für die Langzeitarchivierung verwendet werden kann.}
+
+\glos{JPG}{siehe \ingls{JPEG}.}
+
+\glosacr{JSON}{Javascript Object Notation}{ist ein textbasiertes Dateiformat, das für den Datentransfer im Internet entwickelt wurde. Es ist unter RFC 7159 und Ecma 404 standardisiert.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%K
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\glos{Kartenprojektion}{, auch Kartennetzentwurf oder Kartenabbildung, bezeichnet die Methode in der Kartografie, mit der die dreidimensionale Oberfläche der Erde auf eine zweidimensionale Karte projiziert wird. Dabei kann man diesen Vorgang mathematisch beschreiben. Ein prominentes Beispiel für die Vielzahl an Kartenprojektionen ist die Mercator-Projektion.}
+
+\glosacr{kB}{kilobyte}{bezeichnet 1024 Byte.}
+
+\glos{Khronos Group}{wurde 2000 von als Konsortium von Industrievertretern gegründet, um sich für die Erstellung und Verwaltung von offenen Standards im Multimediabereich einzusetzen.}
+
+\glos{Kompression}{siehe \ingls{Komprimierung}.}
+
+\glos{Komprimierung}{(auch Kompression) ist die Reduzierung der Dateigröße mit Hilfe verschiedener Algorithmen. Es gibt verlustfreie und verlustbehaftete Komprimierungsmethoden.}
+
+\glos{Konvertierung}{ist die Überführung eines Dateiformates in anderes Format. Konvertierung kann verlustbehaftet sein.}
+
+\glos{Koordinatensystem}{wird in der Mathematik zur eindeutigen Positionsangabe von Objekten verwendet. Koordinatensysteme können mehrere Dimensionen haben. Beispielsweise werden zweidimensionale Grafiken oder geografische Karten mit zwei Dimensionen beschrieben, während 3D-Daten in einem dreidimensionalen Koordinatensystem verortet werden. Das hierfür am häufigsten verwendete System ist das kartesische Koordinatensystem. Auch Punkte auf der Erde können mit einem geografischen Koordinatensystem genau angesprochen werden. Dabei kann auch zwischen einem individuell festgelegtem lokalen Koordinatensystem und einem weltweit geltenden globalen System unterschieden werden. Sind für einzelne Punkte eines lokalen Koordinatensystems auch die Koordinaten des globalen Systems bekannt, kann ein lokales System in ein globales System gehängt werden.}
+
+\glos{Koordinatenreferenzsystem}{, auch Koordinatenbezugsystem, besteht aus einem geodätischen Bezugssystem (z. B. ETRS89) und einem Koordinatensystem (z. B. UTM) und dient der eindeutigen Verortung von Punkten in der realen Welt.}
+
+%Kuratierung
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%L
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\glos{Lagarith}{ist ein verlustfreier Codec für Videodaten, der eigens für Windows-Systeme entwickelt wurde. Lagarith ist mit \ingls{HuffYUV} verwandt.}
+
+\glos{Layer}{siehe \ingls{Ebene}}
+
+\glos{Layoutattribut}{ist eine Eigenschaft, die grafischen Primitiven zugewiesen werden kann, um deren Darstellung zu beeinflussen. Damit können beispielsweise die Strichstärke, der Linientyp, die Farbe oder Transparenz definiert werden.}
+
+\glos{Link}{siehe \ingls{Hyperlink}.}
+
+\glosacr{LOD}{Level of Detail}{siehe \ingls{Detaillierungsgrad}.}
+
+\glos{LP}{(light position file) ist eine textbasierten Datei für die Erstellung von RTIs. In der Datei werden die Positionen der Lichtquelle für jedes einzelne Bild gespeichert.}
+
+\glosacr{LPCM}{Lineare Puls-Code-Modulation}{verwendet für das Abtasten eines Signals einen gleich groß bleibenden Wertebereich bei der Quantisierung (also immer die gleiche Messskala).}
+
+\glosacr{lpi}{lines per inch}{gibt an wie viele Zeilen mit Bildpunkten pro Zoll eine Rastergrafik enthält. Je größer die Punktdichte, desto größer auch die Auflösung des Bildes.}
+
+\glos{Luma}{steht für die Helligkeit eines Bildpunktes, bezogen auf Farbmodelle für selbstleuchtende Geräte.}
+
+\glos{Luminanz}{siehe \ingls{Luma}.}
+
+\glosacr{LZW}{Lempel-Ziv-Welch-Algorithmus}{ist ein Algorithums zur verlustfreien \ingls{Komprimierung} von Bilddateien. Bis 2004 war diese Methode nur eingeschränkt verwendbar, da Patente darauf bestanden. Diese Patente sind inzwischen ausgelaufen, weshalb LZW-Komprimierung frei verwendet werden kann. Allerdings wurde die Verwendung in der Langzeitarchivierung noch nicht ausreichend erprobt.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%M
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%,
+\glosacr{MAFF}{Mozilla Archive Format}{ermöglicht die Speicherung einer ganzen Webseite samt allen zugehörigen Ressourcen komprimiert und verlustfrei in einem ZIP-Container. MAFF-Dateien werden derzeit von Mozilla Firefox unter Verwendung eines Plug-ins unterstützt. Es liegt eine Spezifikation auf Mozdev vor.}
+
+\glos{Mapping}{, dt. Abbildung oder Kartierung, meint in der IT das Überführen von Elementen aus einem Modell in ein anderes.}
+
+\glos{Marker}{bezeichnet innerhalb von Vektorgrafiken einen bestimmten Punkt. Mit der Verwendung von Symbolen (Punkt, Kreuz etc.), können Marker identifiziert werden.}
+
+\glos{Matroska}{(MKV für Video oder MVA für Audio) ist ein offenes Containerformat, das eine große Bandbreite von Codecs und ergänzenden Inhalten unterstützt. Das Format basiert auf einer binären Variante von XML, nämlich EBML, was eine zukünftige flexible Erweiterung erlaubt, jedoch auch sicher sicher stellt, dass ältere Programme weiterhin damit umgehen können. Das Format ist fehlertolerant und kann bis zu einem gewissen Grad auch beschädigte Dateien wiedergeben. Für die Langzeitarchivierung wird die Verwendung von den Codecs FFV1 für Video und FLAC für Audio empfohlen.}
+
+\glos{MDB}{ist ein Datenbankformat von Microsoft Access. Es steht für Microsoft DataBase und ist proprietär. Seit Access 2007 wird \ingls{ACCDB} verwendet.}
+
+\glos{Mesh}{ist ein 3D-Modell, bei dem nur die Eckpunkte und die zu den Polygonen gehörenden Kanten erfasst sind, also ein Drahtgittermodell.}
+
+\glos{Metadaten}{sind Informationen über eine Datei oder ein Dokument. Sie umfassen sowohl technische (Dateiname, Dateigröße etc.) als auch inhaltliche Angaben, wie z.B. Schlagworte. Bei einem Foto beinhalten Metadaten beispielsweise Informationen über den Fotografen, die verwendete Ausrüstung, den Aufnahmeort etc.}
+
+\glosacr{MHTML}{MIME Encapsulation of Aggregate HTML Documents}{ist ein Format zur Speicherung ganzer Webseiten sowie teilweise der externen Ressourcen unter Beibehaltung des Designs der Webseite in einer Datei mit der Endung .mht. MHTML wird durch RFC 2557 spezifiziert.}
+
+\glos{MIME-Type}{(Internet Media Type) wird im Internet verwendet, um in einer Datei zu spezifizieren um welches Format es sich handelt. MIME-Types werden von der IANA verwaltet.}
+
+\glosacr{MPEG}{Moving Picture Experts Group}{(engl. „Expertengruppe für bewegte Bilder“) ist eine Gruppe von Experten, die verschiedene Standards für Video und Audio erstellen. Es gibt mehrere Generationen von Standards, darunter MPEG-1, MPEG-2, MPEG-4 oder MPEG-7. Die Standards beschreiben nicht nur Containerformate, sondern auch Codecs für Video und Audio oder Vorgaben für die Dokumentation von Multimediadateien (MPEG-7). Viele MPEG-Standards sind auch ISO/IEC zertifiziert.}
+
+\glos{MP3}{(MPEG-1 Audio Layer III) ist ein Audiocodec, der in MPEG-1 spezifiziert wurde und seit 1991 unter ISO/IEC 11172 zertifiziert ist. Der Codec hat eine weite Verbreitung gefunden, verwendet jedoch verlustbehaftete Kompression.}
+
+\glosacr{M-JPEG}{Motion JPEG}{ist ein Videocodec, bei dem jedes Einzelbild separat als \ingls{JPEG}-Bild komprimiert wird. Er eignet sich \emph{nicht} zur Langzeitarchivierung, da die Kompression verlustbehaftet ist.}
+
+\glos{Motion JPEG 2000}{(MJ2) ist ein speziell für die Archivierung entwickeltes Containerformat für Videos. MJ2 ist unter ISO/IEC 15444-3:2007 zertifiziert und als MIME-Type video/mj2 registriert. Das Format verwendet einen eigenen \ingls{Codec}, der jedes Einzelbild separat und verlustfrei als Bild in JPEG 2000 speichert.}
+
+\glos{MOV}{ist ein proprietäres Containerformat für Videos, das von Apple entwickelt wurde und beispielsweise in QuickTime verwendet wird.}
+
+\glos{Multiplexing}{bezeichnet das Zusammenführen der einzelnen Komponenten einer Videodatei in ein Containerformat.}
+
+\glos{Muxing}{siehe \ingls{Multiplexing}.}
+
+\glosacr{MXF}{Material eXchange Format}{ist ein offenes Containerformat für Videos, das von der SMPTE standardisiert wird. Es ist als MIME-Type application/mxf registriert und kann, zusammen mit der verlustfreien Variante des Codecs JPEG 2000, für die Langzeitarchivierung verwendet werden. MXF ist eine Teilmenge des Advanced Authoring Format (AAF) und wird vor allem im Bereich Kino und Fernsehen in spezialisierten Varianten verwendet.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%N
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\glosacr{NISO}{National Information Standards Organization}{ist eine Standardisierungsorganisation aus den USA. Sie wurde 1939 gegründet und entwickelt technische Standards für den bibliografischen und bibliothekarischen Bereich. Die Namen der Standards beginnen jeweils mit "ANSI/NISO Z39.". Die NISO ist auch im entsprechenden Komitee der \ingls{ISO} vertreten.}
+
+\glos{NOSQL Datenbank}{ist eine Datenbank, die keinem relationalen Modell folgt, sondern andere Paradigmen anwendet. NoSQL steht dabei für "nicht nur SQL" (engl. \emph{Not only SQL}).}
+
+\glos{Nullwert-Problematik}{bezeichnet die Unsicherheit, wie fehlende Angaben (z.B. in Datenbankfeldern) zu interpretieren sind: Wurden Angaben vergessen; Konnten sie nicht erfasst werden; War die gefragte Information nicht relevant; Wurde das Eingabefeld nicht verstanden? Vermieden werden können solche Unsicherheiten durch die Verwendung eindeutig definierter, expliziter Werte oder Zeichen, z.B. "nicht relevant", "keine Information vorliegend", "unklar".}
+
+\glosacr{NURBS}{Non-Uniform Rational B-Splines}{, dt. nicht-uniforme rationale B-Splines, werden verwendet um mathematisch Kurven zu beschreiben. NURBS werden beispielsweise in 3D-Daten oder Vektordaten verwendet.}
+
+\glos{Nyquist-Frequenz}{ist nach Harry Nyquist benannt und besagt, dass das originale (analoge) Signal exakt reproduziert werden kann, wenn die Abtastrate doppelt so hoch wie die höchste Signalfrequenz ist.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%O
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\glosacr{OAIS}{Open Archival Information System}{Offenes Archiv-Informations-System (\ingls{ISO}-Standard 14721:2003). Der Grund für die Entwicklung dieses Modells bestand in der Einsicht, dass elektronisch archivierte Dokumente nach längerer Zeit aus vielfältigen Gründen nicht mehr lesbar sein könnten. Das Referenzmodell beschreibt ein Archiv als Organisation, in dem Menschen und Systeme  zusammenwirken, um einer definierten Nutzerschaft Archivgut verfügbar zu machen. Die Implementierung eines OAIS-konformen Archivs ist dabei jedoch nicht festgelegt. "Offen" bedeutet, dass die Entwicklung des OAIS sich in offenen Foren abspielt. Dies bezieht sich nicht auf den uneingeschränkten Zugang zu einem Archiv.}
+
+\glosacr{OASIS}{Organization for the Advancement of Structured Information Standards}{ist eine Organisation, die sich mit der Weiterentwicklung von Standards im Bereicht IT-Sicherheit, Internet der Dinge und weiteren beschäftigt.}
+
+\glos{Objektorientiert}{oder Objektorientierung ist die Beschreibung eines Systems durch Objekte. Dabei hat ein Objekt bestimmte Eigenschaften und Methoden, so dass es mit anderen Objekten kommunizieren kann. Mehrere Objekte können in einer Klasse zusammengefasst werden.}
+
+\glosacr{OCR}{Optical Character Recognition, optische Zeichenerkennung}{ist die Bezeichnung für den automatisierten Prozess, bei dem Text in digitalen Bildern (z.B. Scans von Dokumentseiten) automatisch in einzelne Buchstabenzeichen umgewandelt wird.}
+
+\glos{ODB}{ist ein Teil von \ingls{ODF} zur Speicherung von Datenbanken. Es ist offen verfügbar und basiert auf XML.}
+
+\glosacr{ODF}{Open Document Format}{ist ein offenes XML-basiertes Dateiformat für Textdokumente (ODT), Tabellenkalkulationen (ODS), Präsentationen (ODP), Datenbanken (ODB), Grafiken (ODG) und mathematische Formeln (ODF). Es wurde von einem technischen Komitee unter der Leitung der Organization for the Advancement of Structured Information Standards (OASIS) entwickelt und ist seit 2006 als internationale Norm \ingls{ISO}/IEC 26300 verfügbar.}
+
+\glos{ODS}{ist ein Teil von \ingls{ODF} zur Speicherung von Tabellenkalkulationen. Es ist offen verfügbar und basiert auf XML.}
+
+\glos{ODT}{ist ein Teil von \ingls{ODF} zur Speicherung von Textdokumenten. Es ist offen verfügbar und basiert auf XML.}
+
+\glos{Ogg}{ist ein offenes Containerformat für Audio und Video , das von der Xiph.Org Foundation entwickelt wurde. Es verwendet Codecs mit verlustbehafteter Kompression und ist vor allem für das Streaming von Multimediadaten gedacht.}
+
+\glos{Opus}{ist ein Audiocodec, der in dem Format Ogg verwendet wird. Er komprimiert verlustbehaftet.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%P
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\glos{Passpunkt}{ist ein Punkt im Gelände, dessen Lage im verwendeten Koordinatensystem (z.B. in einem geografischen System) bekannt ist. Zwei oder mehr Passpunkte werden verwendet, um beispielsweise eine Georeferenzierung und Entzerrung von Luftbildern zu realisieren.}
+
+\glos{PBCore}{ist ein in den USA von der Public Broadcasting entwickeltes Metadatenschema für Film und Ton.}
+
+\glosacr{PCM}{Puls-Code-Modulation}{bezeichnet das Abtasten eines Signals in einer vorgegebenen Abtastrate und die anschließende Quantisierung des gemessenen Wertes. Es handelt sich um ein Verfahren, um beispielsweise ein analoges Audiosignal in ein digitales Signal umzuwandeln.}
+
+\glosacr{PDF}{Portable Document Format}{wurde 1993 von Adobe Systems entwickelt, um den Datenaustausch zu erleichtern. Es ist ein plattformunabhängiges, offenes Dateiformat, das 2008 mit der Version 1.7 als ISO-Standard zertifiziert wurde und seitdem von der ISO weiter gepflegt wird.}
+
+\glos{PDF/A}{ist gezielt als stabiles, offenes und standardisiertes Format für die Langzeitarchivierung unterschiedlicher Ausgangsdateien entwickelt worden. Insgesamt sind aktuell drei, aufeinander aufbauende Versionen von PDF/A-Formaten zu unterscheiden, von denen PDF/A-1 (seit 2005, ISO 19005-1) und PDF/A-2 (seit 2011) echte Archivformate sind, da sie das Objekt in einem stabilen Zustand konservieren. Bei PDF/A-3 (seit 2012) handelt es sich hingegen um einen Container, in den beliebige Dateiformate eingebettet werden können. Letzteres ist nur dann für die Langzeitarchivierung geeignet, wenn alle eingebetteten Dateien in einem anerkannten Archivformat vorliegen.}
+
+\glos{persistenter Identifikator}{(PID) ist eine einzigartige Zeichenkette, die einem Etwas dauerhaft zugeordnet wird, um dieses Etwas eindeutig zu identifizieren oder zu referenzieren. Ein PID wird exakt einmal vergeben. Beispielsweise ist die \ingls{ISBN}-Nummer ein persistenter Identifikator für Bücher.}
+
+\glos{Pfad}{ist in Computergrafiken der Weg zwischen mehreren Punkten, die entweder durch gerade Linien oder Kurven miteinander verbunden sind.}
+
+\glos{Pillarboxing}{bezeichnet bei Videodateien das Einfügen eines Bildes in ein Breitbildformat, wobei schwarze Ränder in Kauf genommen werden. Ein typisches Beispiel ist die Wiedergabe von älteren Videos im Format 4:3 auf neueren Wiedergabemedien mit dem Format 16:9.}
+
+\glos{Pixel}{ist ein Bildpunkt einer Rastergrafik und das kleinste Element darin, das kontrolliert werden kann. Auch digitale Videos bestehen in ihren kleinsten Elementen aus Pixeln, wobei diese im Gegensatz zu denen bei Rastergrafiken, nicht immer quadratisch sind, sondern aufgrund des analogen Ursprungs von einigen Videoformaten auch rechteckig sein können.}
+
+\glos{plain text}{(reiner Text) beschreibt Textdokumente, die nur Text (und Zahlen) enthalten und meist als TXT-Datei gespeichert werden. Formatierungsangaben, Tabellen, Bilder etc. sind nicht in plain-text-Dateien enthalten.}
+
+\glos{Plug-in}{ein in eine Anwendung integriertes, externes Programm, das dem ursprünglichen Umfang der Anwendung zusätzliche Funktionen hinzufügt.}
+
+\glosacr{PNG}{Portable Network Graphics}{ist ein Dateiformat zur Speicherung von Bilddaten. Es bietet eine verlustfreie \ingls{Komprimierung}, hat eine \ingls{Farbtiefe} von 32 \ingls{Bit} und ermöglicht die Speicherung von Transparenzen. Das Format ist primär für die Verwendung im Internet gedacht, weshalb auch nur das \ingls{RGB}-\ingls{Farbmodell} unterstützt wird. \ingls{Exif}-Daten können nicht gespeichert werden. Das Format eignet sich nicht für digitale Fotos.}
+
+\glos{Polylinie}{oder Polygonzug ist ein Weg oder Pfad, der sich aus Geraden zusammensetzt.}
+
+\glosacr{ppi}{pixel per inch}{gibt an wie viele Bildpunkte, Pixel, pro Zoll eine Rastergrafik enthält. Je größer die Punktdichte, desto größer auch die Auflösung des Bildes.}
+
+\newglossaryentry{Primarschlussel-gl}{name={Primärschlüssel}, description={dient zur eindeutigen Referenzierung eines Datensatzes in einer Datenbank. Der Primärschlüssel für einen Datensatz ist in Datenbanken immer einzigartig und unveränderbar.}}
+
+\glos{Profil}{fasst Konfigurationsmerkmale für bestimmte Anwendungsbereiche zusammen. Siehe z.B. \ingls{Videoprofil}.}
+
+\glosacr{PS}{PostScript}{ist eine Sprache zur Beschreibung von Seiten, die von Adobe entwickelt wurde und den Grundstein des PDF-Formates bildet. Sie erlaubt das Speichern von Vektorgrafiken.}
+
+\glosacr{PTM}{Polynomial Texture Map}{ist eine Repräsentationsform von Bildern mit Hilfe von Funktionen, statt einzelner Farbwerte. Im Gegensatz zu Rastergrafiken werden für die einzelnen Pixel von PTMs nicht nur feste Farbwerte gespeichert, sondern zusätzlich eine Funktion, die mit Hilfe der Parameter $l_u$ und $l_v$ die Leuchtdichte der Oberfläche berechnet.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Q
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\glos{Quantisierung}{bezeichnet bei der Digitalisierung eines analogen Signals das Runden des gemessenen Wertes auf den nächstliegenden Wert der verwendeten Messskala. Da die verwendete Messskala nur bestimmte Werte abdeckt, kann die digitale Repräsentation des Signals vom Original abweichen.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%R
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Da hier noch ein Plural definiert wird
+\newglossaryentry{Rastergrafik-gl}{name={Rastergrafik}, description={(auch Pixelgrafik) ist ein digitales Bild, das mittels rasterförmig angeordneter \ingls{Pixel} beschrieben wird. Jedem Pixel ist dabei ein Farbwert zugeordnet. Rastergrafiken haben eine fixe Größe und \glslink{Auflosung-gl}{Auflösung} und sind daher nicht skalierbar. Rastergrafiken können sein: Digitale Fotografien jeder Art, Satellitenbilder, digitalisierte Bilder (Scans), Screenshots sowie digitale Orignialbilder und -grafiken.}, plural=Rastergrafiken}
+
+\glos{Rastern}{bezeichnet den Vorgang der Umwandlung einer \ingls{Vektorgrafik} in eine \ingls{Rastergrafik}.}
+
+\glos{Raumbezug}{bezeichnet die Lage eines Objektes in einem Bezugssystem, wie etwa mittels Koordinaten im geografischen Raum. Der Raumbezug kann direkt oder indirekt sein.}
+
+\glos{RAW}{ist ein jeweils kamera-, modell- und herstellerspezifisches Dateiformat von Digitalkameras, bei dem die Kamera die Daten nach der Digitalisierung weitgehend ohne Bearbeitung auf das Speichermedium schreibt. Die Schreibweise RAW hat sich analog zur Schreibweise Raw eingebürgert.}
+
+\glos{Relation}{bezeichnet in relationalen Datenbankmodellen die Darstellung der Daten in Tabellen.}
+
+\glos{Ressource}{Bei einer Ressource handelt es sich um alles, was durch eine URI adressiert werden kann, etwa elektronische Dokumente oder Bilder. Der Begriff wird durch RFC 3986 spezifiziert.}
+
+\glosacr{RFC}{Request for Comments}{sind Dokumente in denen Methoden, Eingeschaften, Forschungen oder Innovationen im Zusammenhang mit dem Internet und der damit verbundenen Systeme veröffentlicht werden. Sie können als Richtlinien dienen oder werden sogar von der \emph{Internet Engineering Task Force} zu Standards erhoben.}
+
+\glos{RF64/MBWF}{ist eine Erweiterung des BWF-Formats, das von der EBU entwickelt wurde, um Dateien zu speichern, die größer als 4GB sind oder mehr als zwei Tonkanäle beinhalten.}
+
+\glos{RGB}{ist ein additives \ingls{Farbmodell}, in dem die Farben durch mischen der drei Grundfarben Rot, Grün und Blau dargestellt werden. Übliche Farbräume in RGB sind \ingls{sRGB} und \ingls{Adobe RGB}.}
+
+\glosacr{RIFF}{Resource Interchange File Format}{ist ein von Microsoft und IBM entwickeltes Containerformat für Multimediadateien. Je nachdem ob es ich um Audio- oder Videoinhalte handelt, kann es sich bei dem Container um eine WAVE- oder AVI-Datei handeln.}
+
+\glosacr{RTI}{Reflectance Transformation Imaging}{ist eine computergestützte Fotografiermethode, mit der von einem Objekt mehrere Bilder mit fixierter Kameraposition und variablen Beleuchtungspositionen gemacht werden. Die Bilder werden zu einem PTM zusammengerechnet. In der resultierenden Datei kann die Position der Lichtquelle verändert werden, um beispielsweise die Oberfläche des aufgenommenen Objekts im Schräglicht untersuchen zu können.}
+
+%RTF
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%S
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\glos{Screenreader}{ist ein Programm, das Sehbehinderten und Blinden Informationen vom Bildschirm auf anderem Wege, meistens akustisch, vermittelt.}
+
+\glos{Screenshot}{, auch Bildschirmfoto, bezeichnet die Abbildung des Inhalts eines Computerbildschirms. Ein Screenshot ist immer eine Rastergrafik.}
+
+\glos{SD PAL}{beschreibt ein bestimmtes Seitenverhältnis und eine bestimmte Bildgröße von Videodateien.}
+
+\newglossaryentry{Seitenverhaltnis-gl}{name={Seitenverhältnis}, description={bezieht sich auf die Darstellung eines Videobildes und wird als Verhältnis von Breite zu Höhe angegeben, wie beispielsweise 4:3.}}
+
+\glos{Server}{ist ein Programm oder Computer (\emph{Host}), der in einem Netzwerk, wie beispielsweise im Internet, verschiedene Dienste und Ressourcen zur Verfügung stellt. Andere Programme oder Computer die auf den Server zugreifen werden Clients genannt.}
+
+\glosacr{SGML}{Standard Generalized Markup Language}{eine Auszeichnungssprache, die seit 1986 unter ISO 8879 standardisiert ist.}
+
+\glos{SHP}{eine zur Speicherung der Geometriedaten. Es ist Bestandteil des Dateiformats \ingls{ESRI-Shape}.}
+
+\glos{SHX}{dient als Index der Geometrie zur Verknüpfung der Sachdaten (auch Attributdaten genannt) eines \ingls{ESRI-Shape}files.}
+
+\glosacr{SIARD}{Software Independent Archiving of Relational Databases}{ist ein vom schweizerischen Bundesarchiv entwickeltes Format, das im Projekt e-ARK weiterentwickelt wurde. Es beruht auf den ISO-Standards zu XML und SQL und dient als Archivformat für relationale Datenbanken. Es werden sowohl Datenbankstruktur als auch Datenbankinhalte gemeinsam beschrieben und archiviert. Der Standard ist offen und frei verfügbar.}
+
+\glos{Sicht}{(engl. \emph{view}) bezeichnet im Zusammenhang mit Datenbanken einen Ausschnitt aus der Gesamtmenge aller Daten dar und kann mittels Abfragen nach bestimmten Merkmalen erstellt werden.}
+
+\glos{Skalieren}{bedeutet z.B. ein digitales Bild oder 3D-Objekt zu vergrößern oder zu verkleinern.}
+
+\glosacr{SMPTE}{Society of Motion Picture and Television Engineers}{ist eine internationalee Organisation im Bereich der professionellen Film- und Videotechnik, die 1916 gegründet wurde. Die Organisation kümmert sich um Standards, Praxisempfehlungen und Richtlinien im Film-, Video- und Audiobereich.}
+
+\glos{Software}{meint Programme, die auf einer \ingls{Hardware} laufen, beziehungsweise deren Funktionalität erst herstellen. Dies kann beispielsweise das Betriebssystem auf einem Computer oder einer Totalstation sein. Es kann auch ganz speziell ein bestimmtes Programm gemeint sein, wie etwa das Programm zur Verarbeitung von Messdaten.}
+
+\glos{Spline}{ist in der Mathematik eine Funktion, die aus Polynomen zusammengesetzt ist. Mit Hilfe von Splines können Kurven oder aus mehreren Kurven zusammengesetzte Pfade beschrieben werden.}
+
+\glosacr{SQL}{Structured Query Language}{ist eine Datenbanksprache zur Definition, Abfrage und Manipulation von Daten in relationalen Datenbanken. SQL ist unter ISO 9075 standardisiert und wird von fast allen gängigen Datenbanksystemen unterstützt.}
+
+\glosacr{sRGB}{Standard-RGB}{ist ein häufig verwendeter \ingls{RGB}-\ingls{Farbraum}.}
+
+\glos{Stapelverarbeitung}{bezeichnet die automatisierte Verarbeitung von mehreren Dateien mittels eines Programms. Beispielsweise können Bilddateien im Stapel gedreht und skaliert werden.}
+
+\glos{Streaming}{bezeichnet in der elektronischen Datenverarbeitung die kontinuierliche Übertagung eines Datenstroms. Beispielsweise können mittels Audiostreaming Audiodaten vergleichbar zu einer Radiofunkübertragung gesendet und empfangen werden.}
+
+\glosacr{SVG}{Scalable Vector Graphics}{ist ein offenes XML-basiertes Format zur Speicherung von zweidimensionalen Vektorgrafiken, das vom W3C empfohlen wird. Es ist als MIME-Type image/svg+xml registriert. Die aktuelle Version ist 1.1. Seit 2012 wird an Version 2 gearbeitet, welche als Nachfolger von 1.1 gedacht ist.}
+
+\glos{SVGZ}{ist eine mittels gzip gespeicherte Version von SVG, die nicht für die Langzeitarchivierung geeignet ist.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%T
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\glos{Tabellenkalkulation}{kann sowohl das Programm (z.B. OpenOffice Calc), als auch die damit erstellte Datei mit einer oder mehreren Tabellen meinen.}
+
+\glos{Tag}{siehe \ingls{Auszeichnungselement}.}
+
+\glosacr{TCP}{Transmission Control Protocol}{ist ein Netzwerkprotokoll mit dem der Austausch von Daten geregelt wird. Es wird durch RFC 793 und 1323 spezifiziert.}
+
+\glosacr{TEI}{Text Encoding Initiative}{ist eine Initiative, die speziell für Geistes-, Sozial- und Sprachwissenschaften ein auf \ingls{XML} basierendes Dokumentenformat entwickelt, das den Austausch von maschinenlesbaren Texten unterstützen und standardisieren soll. Die aktuelle Version ist P5.}
+
+\glos{Textbasiertes Format}{ist ein Format, das seinen Inhalte in Form von Darstellbaren Zeichen beschreiben. Textbasierte Formate sind auf eine bestimmte Weise strukturiert oder verwenden Auszeichnungssprachen. Im Gegensatz zu Binärdateien, können textbasierte Formate beispielsweise mit einem Texteditor geöffnet und auch von Menschen gelesen und verstanden werden. Beispiele für textbasierte Formate sind: XML, CSV, PLY.}
+
+\glos{Textbegrenzungszeichen}{wird in textbasierten Tabellenformaten vor und nach den Zellen eingefügt, falls das Trennzeichen auch als Wert innerhalb der Zelle verwendet wird.}
+
+\glos{Texteditor}{ist ein \ingls{Editor}, der speziell für die Bearbeitung von Textdateien entwickelt wurde.}
+
+\glos{Textdatei}{ist eine Datei, die nur darstellbare Zeichen enthält. Sie enthält keine Formatierungsangaben oder externe Medien wie Bilder oder Tabellen.}
+
+\glos{Textdokument}{ist eine Datei, die neben darstellbaren Zeichen auch Formatierungsangaben und externe Medien enthält. Für Textdokumente gibt es spezielle Speicherformate wie \ingls{DOCX} oder \ingls{ODT}. }
+
+\glos{Textverarbeitungsprogramm}{ist ein Programm, um Textdokumente zu erstellen und zu bearbeiten. Es bietet Funktionalitäten, um Formatierungsangaben zu machen und Medien wie Bilder oder Tabellen einzubetten. Frei verfügbare Beispiele wären OpenOffice Writer und LibreOffice Writer.}
+
+\glos{Theora}{ist der für \ingls{Ogg}-Dateien entwickelte Videocodec, der allerdings nur eine verlustbehaftete Kompression bietet und daher \emph{nicht} für die Langzeitarchivierung zu empfehlen ist.}
+
+\glosacr{TIFF}{Tagged Image File Format}{ist ein Dateiformat zur Speicherung von Rastergrafiken. TIFF bietet verschiedene Speicheroptionen an, wie die Verwendung von \ingls{LZW}-\ingls{Komprimierung}, mehrere Seiten, Ebenen und eingebettete \ingls{Metadaten}. Der kleinste gemeinsame Nenner aller Speicheroptionen bildet das unkomprimierte \ingls{Baseline TIFF}.}
+
+\glos{Tonkanal}{entspricht in einer Audiodatei einer Tonspur. Eine Audiodatei kann eine, zwei oder mehr Tonspuren enthalten und diese können bei der Wiedergabe, je nach verwendetem Tonsystem, an unterschiedliche Ausgabegeräte geleitet werden.}
+
+\glos{Tonsystem}{gibt an, wie die Anordnung der Ausgabegeräte für die Tonkanäle einer Audiodatei intendiert ist.}
+
+\glos{Transcodierung}{bezeichnet für Audio- und Videodateien die \ingls{Konvertierung} von einem Codec in einen anderen.}
+
+\glos{Trennzeichen}{ist in textbasierten Tabellenformaten (wie z.B. CSV) das Zeichen, das verwendet wird, um die einzelnen Zellen voneinander zu trennen.}
+
+\glos{True Color}{ist eine Bezeichnung für Bilder, die einen natürlichen Eindruck beim Betrachter erwecken. Man spricht auch von Echtfarben. Dabei hat jedes \ingls{Pixel} 256 mögliche Werte (also 8 \ingls{Bit}) für jede der Farbkomponenten. True Color \ingls{RGB}-Bilder weisen daher eine \ingls{Farbtiefe} von 24 ($3\times 8$) und \ingls{CMYK}-Bilder von 32 ($4\times 8$) Bit auf.}
+
+\glos{TrueType}{ist ein Standard zur Darstellung von Schriftarten. Die einzelnen Zeichen werden dabei als Vektorgrafiken abgelegt, was eine Skalierbarkeit ermöglicht.}
+
+\glosacr{TSV}{Tab-Separated Values}{ist ein textbasiertes Dateiformat für tabellarische Daten. Hierbei werden einzelne Zellen durch das Tabulator-Zeichen (U+0009) voneinander getrennt. Jede Zeile einer TSV-Datei entspricht der Zeile einer Tabelle. Das Tabulator-Zeichen ist nicht als Inhalt der Zellen erlaubt. TSV ist ein Standard der IANA und ist als MIME-Type \emph{text/tab-separated-values} registriert.}
+
+\glos{Tupel}{dienen in der Mathematik dazu mathematische Objekte zusammenzufassen. Ein Tupel kann als eine Liste von Objekten in einer bestimmten Reihenfolge betrachtet werden. Im relationalen Datenbanken werden die Informationen zu einem Datensatz in einem Tupel zusammengefasst.}
+
+\glos{TXT}{ist ein einfaches reines Textformat (\emph{\ingls{plain text}}).}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%U
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\glosacr{U3D}{Universal 3D Format}{ist ein 2005 von der ECMA standardisiertes 3D-Format, das vom 3D Industry Forum mit Mitgliedern wie Intel und Adobe Systems entwickelt wurde. Dieses Format ist nur für die Integration von 3D-Modellen in ein 3D-PDF relevant.}
+
+\glos{Unicode}{ist ein Zeichensatz, in dem aktuell für 113.021 Zeichen aus 123 Schriftsystemen eindeutige Codepunkte (\emph{code points}) zugewiesen werden. Die Codepunkte werden mittels einer hexadezimalen Zahl und einem vorangestellten \emph{U+} dargestellt, wie beispielsweise \emph{U+00C4} für \emph{ä}. Zugleich stellt dieser Zeichensatz die Umsetzung von dem in ISO 10646 beschriebenen universellen Zeichensatz \emph{Universal Character Set} dar. Um den Unicode-Zeichensatz in einem System anwenden zu können, wurden Zeichenkodierungen definiert, die unter dem Namen \emph{Unicode Transformation Format} (UTF) subsumiert werden.}
+
+\glosacr{URI}{Uniform Resource Identifier}{, dt. \emph{einheitlicher Bezeichner für Ressourcen}, ermöglicht die Identifizierung einer elektronischen Ressource (z. B. PDF) mittels einer Reihe von Zeichen, die einer bestimmten Syntax folgen. URIs sind durch RFC 3986 spezifiziert. Ein URI ist ein übergreifender Begriff für alle Möglichkeiten, um ein Ressource im Internet zu identifizieren und kann entweder als ein Name (z. B. URN), als ein "locator" (wo
+etwas zu finden ist, z. B. URL) oder als beides klassifiziert werden.}
+
+\glosacr{URL}{Uniform Resource Locator}{, dt. \emph{einheitlicher Quellenanzeiger}, ermöglicht die Adressierung einer bestimmten Ressource, was vergleichbar mit der postalischen Adresse einer Person ist. Der Begriff URL bezieht sich auf eine Untermenge der URIs und bezeichnet URIs, die nicht nur eine Ressource identifizieren, sondern auch ein Mittel zur Lokalisierung der Ressource bereitstellen, indem der primäre Zugriffsmechanismus beschrieben wird. URLs sind durch RFC 1738 spezifiziert.}
+
+\glosacr{URN}{Uniform Resource Name}{, dt. \emph{einheitlicher Name für Ressourcen}, benennen eine Ressource persistent und eindeutig. URN sind URIs, die das urn-Schema verwenden. URNs können nicht auf den Ort des referenzierten Objektes verweisen, sind also ortsunabhängig. Beispielsweise identifiziert eine URN mittels der ISBN-Nummer ein bestimmtes Buch, aber nicht den Ort an dem es sich befindet. URNs sind durch RFC 2141 spezifiziert.}
+
+\glosacr{UTC}{koordinierte Weltzeit}{wurde 1972 eingeführt und ist die gültige Weltzeit. Die mitteleuropäische Zeit ergibt sich aus der Weltzeit durch die Addition von einer (Winterzeit) oder zwei (Sommerzeit) Stunden. Mit Hilfe der UTC können nach ISO 8601 Datum und Zeit angegeben werden, wie beispielsweise 2015-06-03T12:45:30+02:00 für den 03. Juni 2015 um 14:45 (und 30 Sekunden) in Berlin. Die Zeichenfolge "+02:00" gibt dabei die Differenz zur UTC an, die an dem Tag wegen der geltenden Sommerzeit bei zwei Stunden lag.}
+
+\glosacr{UTF}{Unicode Transformation Format}{ist eine Menge von Zeichenkodierungen für den Unicode-Zeichensatz. Zu den häufigsten gehören dabei UTF-8 und UTF-16, die im Web und in verschiedenen Betriebssystemen eine große Verbreitung gefunden haben. Der Unterschied besteht dabei in der Zahl der pro Zeichen verwendeten Bytes. Eine Besonderheit von UTF-8 besteht darin, dass die Bytedarstellungen der ersten 128 Zeichen denen der 128 Zeichen des ASCII-Zeichensatzes entspricht. Weitere Varianten von UTF sind UTF-1, UTF-7 und UTF-32.}
+
+\glosacr{UTM}{Universal Transverse Mercator}{ist ein globales Koordinatensystem, das die Erdoberfläche in $6^{\circ}$ breite vertikale Streifen aufteilt. Die einzelnen Zonen werden mit einem kartesischen Koordinatensystem überzogen.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%V
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\glos{Valide}{(Validität) bezieht sich im Zusammenhang von \ingls{Auszeichnungssprache}n auf ein Dokument, das sich an die angegebene \ingls{Dokumenttypdefinition}, \ingls{XSD} oder andere angegebene Grammatik hält. Beispielsweise ist ein XML-Dokument valide wenn die in der \ingls{XSD} definierte Struktur eingehalten wird. Wird keine Dokumentgrammatik spezifiziert, kann das Dokument nicht validiert werden.}
+
+\glosacr{VBR}{engl. \emph{variable bitrate}, variable Bitrate}{überträgt, je nach Komplexität des Inhaltes, pro Sekunde variierende Datenmengen. Da ruhige und einfache Übergänge und Inhalte mit einer niedrigen Datenrate gespeichert werden können, kann der Speicherplatzverbrauch verringert werden. Siehe auch \ingls{Datenrate}.}
+
+\glos{Vektorgrafik}{ist ein digitales Bild, das mittels grafischer Primitiven wie Linien, Kreisen, Polygonen oder Kurven beschrieben wird. Vektorgrafiken sind stufenlos skalierbar.}
+
+\glos{Vektorisierung}{bezeichnet die Umwandlung einer Rastergrafik oder einer analogen Vorlage in eine Vektorgrafik. Das kann entweder mit Hilfe verschiedener Algorithmen automatisch passieren oder durch manuelles Nachzeichnen.}
+
+\glos{Verwaistes Werk}{(engl. \emph{orphan work}) ist ein Werk an das keine \ingls{Metadaten} mehr geknüpft sind. Beispielsweise lässt ein Bild ohne eingebettete, bzw. verknüpfte Metadaten keinerlei Rückschlüsse auf dessen Urheber und Inhalt zu.}
+
+\glos{Videoprofil}{, auch einfach nur Profil. Da Videodateien auf den unterschiedlichsten Medien wiedergegeben werden können, die hardwareseitig stark differierende Leistung bieten, gibt es für einige Containerformate Profile, die Konfigurationsmerkmale für bestimmte Anwendungsbereiche zusammenfassen, wie beispielsweise die Profile \emph{Baseline}, \emph{Extended} oder \emph{Main} für MPEG-4. \\
+Ein Profil stellt eine Zusammenfassung bestimmter Merkmale dar und ist jeweils auf verschiedene Anwendungen zugeschnitten, wie beispielsweise mobile Applikationen, professionelle Videobearbeitung oder Videostream per Internet. Dazu definiert ein Profil einen Satz an unterstützten Eigenschaften, wie etwa verlustfreie Kompression oder eine bestimmte Farbunterabtastung. \\
+Zusätzlich kann ein Profil durch Level weiter definiert werden. Die verschiedenen Level definieren maximale Werte für etwa Bitrate, Bildfrequenz oder Bildformat, um beispielsweise die Wiedergabe auf Systemen mit schwacher Leistung zu gewährleisten.}
+
+\glos{Vorbis}{ist ein Audiocodec, der in dem Format Ogg verwendet wird. Er komprimiert verlustbehaftet.}
+
+\glosacr{VRML}{Virtual Reality Modelling Language}{ist das Vorgängerformat von X3D für 3D-Daten. Die jüngste Version wurde 1997 unter dem Namen VRML97 veröffentlicht.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%W
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\glosacr{W3C}{World Wide Web Consortium}{ist das wichtigste Gremium zur Standardisierung des World Wide Web, das 1994 gegründet wurde. Das W3C entwickelt technische Spezifikationen und Richtlinien und stellt diese Vorgänge auch transparent auf deren Webseiten dar. \url{http://www.w3.org/}}
+
+\glosacr{WARC}{Web ARChive}{ist ein Format das unter ISO 28500 standardisiert ist und als Containerformat für mehrere Webseiten einer ganzen Website dient.}
+
+\glosacr{WAVE}{Waveform Audio File Format}{ist ein Containerformat zur Speicherung von Audiodaten, das von Microsoft und IBM als Teil von RIFF entwickelt wurde. Das Format ist proprietär, aber offen dokumentiert und kann verschiedene Audiocodecs speichern. Von der IASA wird WAVE mit linearem PCM als Archivformat empfohlen und es hat sich als Standard de facto etabliert.}
+
+\glos{Web3D Consortium}{ist eine 1997 gegründete Organisation, um die Entwicklung des X3D-Formates zu fördern.}
+
+\glos{Webarchive}{ist ein Dateiformat zur Speicherung ganzer Webseiten, welches derzeit nur durch Apples Safari Webbrowser unterstützt wird.}
+
+\glos{Webbrowser}{siehe \ingls{Browser}.}
+
+\glos{WebCGM}{ist eine 2001 vom W3C veröffentlichte Variante von CGM zur Speicherung von Vektorgrafiken, die zusätzliche Funktionalitäten für die Verwendung im Internet enthält. Die aktuell empfohlene Fassung ist Version 2.1.}
+
+\glos{Website}{meint und umfasst alle Webseiten eines Auftritts im Internet, beispielsweise die Website der IT-Empfehlungen.}
+
+\glos{WHATWG}{\textbf{\small(Web Hypertext Application Technology Working Group)} ist eine Arbeitsgruppe für neue Entwicklungen im HTML-Bereich, die sich aus Mozilla, Opera und Apple zusammensetzt und mit dem W3C in variierendem Ausmaß zusammenarbeitet. Auf die WHATWG geht HTML5 zurück.}
+
+\glosacr{WMA}{Windows Media Audio}{ist ein von Microsoft entwickeltes proprietäres Containerformat für Audiodaten, das verlustbehaftete Kompression verwendet.}
+
+\glos{Wohlgeformt}{bezieht sich im Kontext von \ingls{Auszeichnungssprache}n auf Dokumente, welche die Regeln der jeweils verwendeten Auszeichnungssprache einhalten.}
+
+\glosacr{WWW}{World Wide Web}{ist ein System aus Hypertexten und Hypermedia im Internet, das via HTTP als Protokoll kommuniziert. Standardisiert durch IETF und W3C, ist HTTP derzeit als Version HTTP/2 durch RFC 7540 spezifiziert.}
+
+\glosacr{WYSIWYG}{What You See Is What You Get}{bezeichnet den Umstand, dass z.B. Textdokumente in einem Text-Editor nicht etwa als Codezeilen, sondern so dargestellt werden, wie sie in der Ausgabe, etwa als Ausdruck, erscheinen. Bei LibreOffice Writer handelt es sich beispielsweise um ein WYSIWYG Textverarbeitungsprogramm.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%X
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\glosacr{X3D}{extensible 3D Graphics}{ein Format zur Speicherung von 3D-Daten, das vom Web3D Consortium entwickelt wurde und seit 2006 bei der ISO zertifiziert ist. Es eignet sich sowohl zur Speicherung von einzelnen 3D-Modellen, als auch komplexer 3D-Inhalte, wie etwa Virtual Reality. Es darf nicht mit dem proprietären Format 3DXML verwechselt werden.}
+
+\glosacr{XHTML}{Extensible HyperText Markup Language}{ist eine Auszeichnungssprache, die sich stark an XML orientiert, jedoch mit HTML verwandt ist. XHTML ist durch die W3C Recommendation vom 28. 10. 2014 spezifiziert.}
+
+\glosacr{XSD}{XML Schema Definition}{dient zur Beschreibung der Struktur und der verwendeten Elemente einer \ingls{XML}-Datei. XSD ist eine Empfehlung des W3C und ist selbst ein XML-Dokument.}
+
+\glos{XLSX}{ist ein offenes XML-basiertes Format, das von Microsoft zur Speicherung von Tabellenkalkulationen entwickelt wurde.}
+
+\glosacr{XML}{Extensible Markup Language}{ist eine Auszeichnungssprache, die eine Teilmenge von SGML bildet und die Definition von eigenen Auszeichnungselementen erlaubt, um beliebige Strukturen annotieren zu können. De facto wurde SGML von der einfacher anwendbaren XML verdrängt. XML wird vom W3C gepflegt und entwickelt. Es bildet die Grundlage von vielen weiteren Dateiformaten wie ODT, DOCX, SVG etc. Für XML-Dateien gibt es als Alternative zu einer Dokumenttypdefinition (DTD) die Möglichkeit der Verwendung eines XML Schemas.}
+
+\glos{XML Schema}{siehe \ingls{XSD}.}
+
+\glosacr{XMP}{Extensible Metadata Platform}{ist ein ISO-Standard (seit 2012, 16684-1), um \ingls{Metadaten} in digitale Medien einzubetten oder sie dateibegleitend zu speichern.}
+
+%\glosacr{XSL-FO}{Extensible Stylesheet Language - Formatting Objects}{ist eine \ingls{XML}-Anwendung, die beschreibt, wie Text, Bilder, Linien und andere grafische Elemente auf einer Seite angeordnet werden. Mit Hilfe von XSL-FO ist es möglich, qualitativ hochwertige Druckerzeugnisse entweder auf Papier oder auf dem Bildschirm zu erzeugen.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Y
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\glos{YCbCr}{ist ein \ingls{Farbmodell} für selbstleuchtende Geräte. Es hat drei Kanäle, wovon der erste (Y) die Helligkeit (\ingls{Luma}) der Bildpunkte beschreibt und für die Übertragung von Schwarz-Weiß-Bildern verwendet wird. Der Farbanteil (\ingls{Chroma}) wird mit den Kanälen Cb und Cr repräsentiert.}
+
+\glos{YPbPr}{ist ein \ingls{Farbmodell} für selbstleuchtende Geräte. Es hat drei Kanäle, wovon der erste (Y) die Helligkeit (\ingls{Luma}) der Bildpunkte beschreibt und für die Übertragung von Schwarz-Weiß-Bildern verwendet wird. Der Farbanteil (\ingls{Chroma}) wird mit den Kanälen Pb und Pr repräsentiert.}
+
+\glos{YUV}{ist ein \ingls{Farbmodell} für selbstleuchtende Geräte. Es hat drei Kanäle, wovon der erste (Y) die Helligkeit (\ingls{Luma}) der Bildpunkte beschreibt und für die Übertragung von Schwarz-Weiß-Bildern verwendet wird. Der Farbanteil (\ingls{Chroma}) wird mit den Kanälen U und V repräsentiert.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Z
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\glos{Zeichenkodierung}{kann als abstrakte Tabelle verstanden werden, in der einer bestimmten Zeichenmenge, dem Zeichensatz, Zahlenwerte zugeordnet werden. Beispielsweise hat der Buchstabe \emph{A} in dem \emph{American Standard Code for Information Interchange} (ASCII) den dezimalen Zahlenwert von \emph{65}. In ISO 8859-1 stellt der Wert \emph{228} das Zeichen \emph{ä} dar, während der gleiche Wert in ISO 8859-7 als \emph{$\delta$} interpretiert wird. Die Angabe der verwendeten Zeichenkodierung ist entscheidend dafür, ob auf dem Bildschirm \emph{ôå$\div$íç} oder \emph{$\tau\epsilon\chi\nu\eta$} dargestellt wird.}
+
+\glos{Zeichensatz}{definiert eine Menge von Zeichen, wie beispielsweise das deutsche Alphabet. Die Darstellung eines Zeichensatzes im Computer wird mit einer \ingls{Zeichenkodierung} realisiert. Beispielsweise kann der Zeichensatz \ingls{Unicode} mit der Zeichenkodierung \ingls{UTF}-8 dargestellt werden.}
+
+\glos{ZIP}{ist ein Dateiformat das Dateien verlustfrei zusammenfasst, also als Container dient, und dabei den Platzbedarf verlustfrei reduziert.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%falls sie mal Erwähung finden:
+% SIP, DIP, PID, PIP, Ingest, CMS
+
+
+%\newacronym{XSLFO}{XSLFO}{Extensible Stylesheet Language –- Formatting Objects \protect\glsadd{glos:XSLFO}}
+%\newglossaryentry{glos:XSLFO}{name={Extensible Stylesheet Language –- Formatting Objects (XSLFO)}, description={eine \ingls{XML}-Anwendung, die beschreibt, wie Text, Bilder, Linien und andere grafische Elemente auf einer Seite angeordnet werden. Mit Hilfe von XSL-FO ist es möglich, qualitativ hochwertige Druckerzeugnisse entweder auf Papier oder auf dem Bildschirm zu erzeugen.}}

@@ -1,0 +1,341 @@
+%Um hyperref Warning: The PDF version number could not be set, abzuschalten
+\pdfminorversion=4\relax
+\pdfobjcompresslevel=0\relax
+
+\documentclass[a4paper]{report}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[ngerman]{babel}
+\usepackage[utf8x]{inputenc}  
+\usepackage[T1]{fontenc}
+\inputencoding{utf8}
+\makeatother
+\usepackage{lmodern}           
+
+%Bilder
+\usepackage{graphicx}
+%Nutzung: \includegraphics{eps; png; jpeg; gif; pdf}
+%Text um Bilder herum
+\usepackage{wrapfig}
+\usepackage{adjustbox} %Boxen anpassen; vor allem für wrapfigures in itemize (bsp: vektor)
+%Eigene Grafiken und Diagramme bauen
+\usepackage{tikz}
+\usetikzlibrary{positioning, matrix, arrows, shapes.geometric, fit, backgrounds, scopes}
+%Damit mit b platzierte Grafiken nicht unter der Fußnote stehen
+\usepackage[bottom]{footmisc}
+
+%Tabellenspezifisches
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{colortbl}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{longtable}
+
+%Diverse Symbole
+\usepackage{amssymb}
+\usepackage[nointegrals]{wasysym}
+%Ausschalten der Warnung:
+%Latex Font Warning: Font shape `U/wasy/b/n' in size <7> not available
+%(Font)              Font shape `U/wasy/m/n' tried instead on input line X
+\wasyfamily
+\DeclareFontShape{U}{wasy}{b}{n}{ <-10> ssub * wasy/m/n
+ <10> <10.95> <12> <14.4> <17.28> <20.74> <24.88>wasyb10 }{}
+
+\usepackage{ccicons}
+
+%Zur Anpassung der Titelformatierung
+\usepackage{titlesec}
+
+%Für syntax highlighting von Codeschnipseln (z.B. XML)
+\usepackage{listings}
+
+%Für Listeneinstellungen
+\usepackage{enumitem}
+
+
+%Um ein Index zu erstellen
+%\usepackage{makeidx}
+%\makeindex
+%%Einträge in verschiedene Ebenen sind möglich
+%%\index{Haupteintrag}
+%%\index{Haupteintrag!Untereintrag}
+%%\index{Haupteintrag!Untereintrag!Unteruntereintrag}
+%%Verweis auf ganze Textabschnitte:
+%%\index{Neurobiologie|(}
+%% TEXT
+%%\index{Neurobiologie|)}
+%%Sortierung von Sonderzeichen oder Symbolen:
+%%\index{Summe@$\sum$} vorne wie sortiert wird, nach dem @ was ausgegeben wird
+
+\usepackage[hyphens]{url}
+%Pakete für PDF/A
+%\usepackage[a-1a]{pdfx}
+\usepackage[a-2b]{pdfx}
+%\hypersetup{pdfencoding=unicode}
+\input{glyphtounicode.tex}
+\input{glyphtounicode-cmr.tex}
+%\pdfglyphtounicode{CIRCLE}{0041} %0041=A
+\pdfgentounicode=1
+\usepackage[pdfa]{hyperref}
+\usepackage{bookmark}
+
+\usepackage[acronym, toc, section, nonumberlist]{glossaries}
+\makeglossaries
+
+\input{glossar}
+
+\title{IT-Empfehlungen für den nachhaltigen Umgang mit digitalen Daten in den Altertumswissenschaften}
+%\author{XX \and Xy \and Z}
+\date{IANUS\\
+Version 1.0.0.0\\ 
+\today}
+
+%Auch subsubsections sollen ins Inhaltsverzeichnis
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+%Silbentrennung für das ganze Dokument (max. 300 Wörter!)
+%Für die einzelnen Dateien kann noch mal eine Liste angelegt werden
+\hyphenation{
+al-ter-tums-wis-sen-schaft-lich-er
+For-schungs-pro-jek-te
+Aus-zeich-nungs-spra-che
+Ge-ne-ra-tions-ver-lust
+Digi-ta-li-sa-te
+Digi-ta-li-sierung
+un-kom-pri-mier-te
+Da-tei-na-men
+Da-tei-na-mens-er-wei-te-rung
+PDF-Do-ku-men-ten
+}
+
+%compilieren des documentes mit nur einem der inkludierten files:
+%\includeonly{dateiformate}
+\begin{document}
+%\newcommand{Achtung}[1]{\parbox[c]{1.1\width}{#1}}
+
+%Für URL-Angaben in den Toollisten und den Quellangaben
+\newcommand{\urllist}[1]{\newline \hspace*{0.08cm} {\parbox[c]{0.98\textwidth}{\itshape \url{#1}}\\ \vspace*{0.15cm}}}
+
+%Für Abstand nach Quelle ohne URL in Quellangaben
+\newcommand{\abstand}{\\ \vspace*{0.15cm}}
+
+%IANUS-Farben
+\definecolor{ianusGrau}{cmyk}{0.07, 0, 0, 0.25}
+\definecolor{ianusBlau}{cmyk}{0.851, 0.561, 0, 0.42}
+
+\definecolor{ianusBlauHell}{cmyk}{0.851, 0.561, 0, 0.0}
+
+%Kommando für Text in ianusBlau
+\newcommand{\tib}[1]{{\color{ianusBlau}#1}}
+
+%kurzes Kommando für vertikale Tabellenstreifen in ianusGrau
+\newcommand{\tbg}{{\color{ianusGrau}\vrule}}
+
+%Rotierter Text in Tabellen
+\newcommand{\rot}[1]{\makebox[1em][l]{\rotatebox{45}{#1}}}
+
+%Spalten bestimmter breite mit automatischen Textumbruch und links, zentriert oder rechts aligned
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+%Formatierung der Überschriften
+\newcommand{\hsp}{\hspace{20pt}}
+%\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{ianusGrau}{|}\hsp}{0pt}{\Huge\bfseries}
+\titleformat{\chapter}[hang]{\huge\sffamily\color{ianusBlau}}{\thechapter\hspace{5pt}\textcolor{ianusGrau}{\bfseries |}\hspace{20pt}}{0pt}{\huge\sffamily\color{ianusBlau}}
+\titlespacing*{\chapter}{0pt}{-\topskip}{8pt}
+
+\titleformat*{\section}{\Large\sffamily\color{ianusBlau}}
+\titlespacing*{\section} {0pt}{3.5ex plus 1ex minus .2ex}{0.8ex plus .2ex}
+\titleformat*{\subsection}{\large\sffamily\color{ianusBlau}}
+\titlespacing*{\subsection} {0pt}{3.25ex plus 1ex minus .2ex}{0.7ex plus .2ex}
+\titleformat*{\subsubsection}{\sffamily\color{ianusBlau}}
+\titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{0.6ex plus .2ex}
+\titleformat{\paragraph}[hang]{\bfseries\sffamily\color{ianusBlau}}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph} {0pt}{3.25ex plus 1ex minus .2ex}{0.6ex plus .2ex}
+\titleformat*{\subparagraph}{\bfseries\color{ianusBlau}}
+
+%Überschrift in den Quellangaben
+\newcommand{\quelltyp}[1]{\vspace*{0.2cm} {\bfseries\sffamily\color{ianusBlau} #1}\linebreak}
+
+%Anpassung der Listenformatierung
+\renewcommand{\labelitemi}{{\color{ianusGrau}{\bfseries -}}}
+\renewcommand{\labelitemii}{{\color{ianusGrau}{\bfseries -}}}
+\renewcommand{\labelitemiii}{{\color{ianusGrau}{\bfseries -}}}
+
+\setlist[itemize]{leftmargin=\parindent} %Einzug
+%\setlist[itemize,2]{leftmargin=0} %Einzug, zweite Listenebene
+\setlist[itemize]{itemsep=0.2\itemsep} %Abstand zwischen items
+\setlist[itemize,2]{topsep=-3pt} %Abstand oben für zweite Listenebene
+
+%Anpassung der Angaben in Bildern (und Tabellen)
+\renewcommand{\figurename}{Abb.}
+%\renewcaptionname{ngerman}{\tablename}{Tab.}
+
+%Kommando zur Angabe der Autoren
+\newcommand{\abschnittsautor}[1]{\vspace{-1mm}{\footnotesize \itshape #1 \vspace{0.3cm}\newline}}
+
+
+%\maketitle
+\hypersetup{pageanchor=false}
+\include{deckblatt}
+\newpage
+\include{metadatenblatt}
+\hypersetup{pageanchor=true}
+\tableofcontents
+%\newpage
+
+\definecolor{eclipseGreen}{RGB}{63,127,95}
+%Einstellungen für Code-Blocks mit listings;
+%Ab hier überall gültig
+\lstset{
+  basicstyle=\ttfamily\small,
+  columns=fullflexible,
+  showstringspaces=false,
+	tabsize=2,
+	linewidth=0.58\linewidth}
+\lstdefinelanguage{XML}
+{ morestring=[b]",
+  morestring=[s]{>}{<},
+  stringstyle=\color{black},
+  identifierstyle=\color{ianusBlau},
+  keywordstyle=\color{ianusGrau},
+  morekeywords={typ, einheit, count, link, name, creationTime, version, encoding, path, creationDate}}
+\lstdefinelanguage{HTML}
+{ morecomment=[s]{<!--}{-->},
+	commentstyle=\color{eclipseGreen},
+  stringstyle=\color{black},
+  identifierstyle=\color{ianusBlau},
+  keywordstyle=\color{ianusGrau}
+	}
+\lstdefinelanguage{SQL}	
+{	morecomment=[s]{/*}{*/},
+	morecomment=[l]{--},
+	commentstyle=\color{eclipseGreen},
+	stringstyle=\color{black},
+  %identifierstyle=\color{ianusBlau}%,
+  keywordstyle=\color{ianusBlau},
+	morekeywords={CREATE, TABLE, NOT NULL, SELECT, FROM, WHERE, UPDATE, SET, USER, PASSWORD}
+	}
+
+%Damit Sonderzeichen in den listings auch richtig gesetzt werden
+\lstset{literate=
+  {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+  {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+  {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+  {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+  {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+  {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+  {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+  {Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+  {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+  {ű}{{\H{u}}}1 {Ű}{{\H{U}}}1 {ő}{{\H{o}}}1 {Ő}{{\H{O}}}1
+  {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+  {€}{{\euro}}1 {£}{{\pounds}}1 {«}{{\guillemotleft}}1
+  {»}{{\guillemotright}}1 {ñ}{{\~n}}1 {Ñ}{{\~N}}1 {¿}{{?`}}1
+}	
+
+%Einleitung
+	\include{einleitung}
+
+%Projektphasen
+	\include{projektphasen}
+	
+%Dateiformate
+	\include{dateiformate}
+
+%Forschungsmethoden
+	\include{methoden}
+
+%Archivierung bei IANUS
+	\include{archivierung}
+
+\appendix
+	\include{anhang}
+
+\glsaddall
+
+\chapter{Glossar}
+	\glstocfalse
+	\renewcommand{\glossaryname}{}
+	\printglossaries
+
+%\chapter{Index}
+%	\printindex
+
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Vorlagen für Kapitel! %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%   Übersicht   %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\paragraph{Übersicht}
+%\paragraph{Langzeitformate} ~ \\
+%\begin{center}
+	%\begin{tabular}{l p{0.2\textwidth} p{0.6\textwidth}}
+		%\toprule
+		%\multicolumn{2}{l}{Format} & Begründung \\ \midrule
+		%\multirow{3}{*}{\color{ForestGreen} \LARGE \checkmark} & Format & Begründung \\
+		  %& DNG & bla.\\ 
+		  %& GeoTIFF & blubb.\\ \cmidrule(r){1-3}
+		%\multirow{1}{*}{$\color{BurntOrange} \thicksim$} & PNG & PNG blubb \\ \cmidrule(r){1-3}
+		%\multirow{2}{*}{\LARGE \boldmath$\color{BrickRed} \times$}& JPEG & wup.\\
+		 %& GIF & whoop \\
+ 		%\bottomrule    
+	%\end{tabular}
+%\end{center}
+
+%%%%%   Dokumentation  %%%%%%
+%\paragraph{Dokumentation} ~ \\
+%\begin{center}
+	%\begin{tabular}{l p{0.6\textwidth}}
+		%\toprule
+		%Metadatum & Beschreibung \\ \midrule
+		%Feld & Beschreibung \\
+ 		%\bottomrule    
+	%\end{tabular}
+%\end{center}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%   Vertiefung   %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\paragraph{Vertiefung} ~ \\
+%
+	%\subparagraph{Geometrie}
+		%{\bfseries Drahtgittermodell:} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%   Praxis   %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\paragraph{Praxis} ~ \\
+%\begin{flushleft}
+%
+%\begin{itemize}
+%\item Für optionale Auflistungen
+%\end{itemize}
+%
+	%Tool: \urllist{}\\
+%\end{flushleft}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%   Quellen   %%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\paragraph{Quellen} ~ \\
+%\begin{flushleft}
+%1. Autor -- 2. Autor, Titel (Jahr) \urllist{}\\
+%
+%
+%Tools und Programme\linebreak
+%Tool: \urllist{}\\
+%\end{flushleft}

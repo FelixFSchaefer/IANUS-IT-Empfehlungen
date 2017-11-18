@@ -1,0 +1,103 @@
+\hyphenation{pro-jekt-ü--ber-grei-fen-de
+Spei-che-rung
+}
+Vektorgrafiken sind Grafiken, die mittels grafischer Primitiven, wie beispielsweise Linien, Punkte, Polygone, Kreise und Kurven beschrieben werden. Sie sind daher im Gegensatz zu Rastergrafiken ohne Qualitätsverlust beliebig skalierbar. Zeichnungen von Scherben, Isometrische Darstellungen von Objekten oder aus CAD- oder GIS-Anwendungen exportierte Pläne werden häufig als Vektorgrafik angelegt oder gespeichert. 
+
+Auch bei Daten, die mittels CAD entstehen, handelt es sich um Vektordaten mit grafischen Primitiven, die in den entsprechenden Programmen zusätzliche Funktionalitäten bieten, die speziell auf architektonische und technische Zeichnungen zugeschnitten sind. CAD-Daten können sowohl in 2D als auch in 3D vorliegen und werden in den Altertumswissenschaften meist für Zeichnungen von Ausgrabungen, archäologische Karten oder architektonische Pläne verwendet.
+
+Dieser Abschnitt beschäftigt sich mit der Archivierung von zweidimensionalen Vektorgrafiken und CAD-Daten. Die Archivierung von GIS-Daten wird in dem eigenen Abschnitt GIS ab Seite \pageref{GIS} beschrieben. Hinweise zur Archivierung von dreidimensionalen Objekten sind in dem Abschnitt 3D und Virtual Reality ab Seite \pageref{3D} zu finden.
+
+
+\subparagraph{Langzeitformate}
+Für zweidimensionale Vektorgrafiken ist das vom W3C entwickelte und seit 2001 auch empfohlene Format Scalable Vector Graphics (SVG) für die Langzeitarchivierung geeignet, da es ein XML-basiertes, offen dokumentiertes Format ist, eine weite Verbreitung gefunden hat und als MIME-Type image/svg+xml registriert ist. Die aktuelle Version ist 1.1. Neben grafischen Primitiven, geometrischen Formen, Text und eingebetteten Rastergrafiken können SVG-Dateien auch Skripte und Animationen enthalten. Mit Hilfe des Gruppierungselementes \emph{$<$d$>$} können Ebenen ausgezeichnet werden, wobei dieses Element in der Praxis auch für andere Zwecke genutzt wird. Umfassende Metadaten können in einem eigens dafür vorgesehenen Bereich gespeichert werden. Speziell für mobile Geräte gibt es die Variante SVG Tiny 1.2. Das W3C arbeitet seit 2012 an SVG 2, das in absehbarer Zeit die Version 1.1. ablösen soll. SVG-Dateien können auch komprimiert mittels gzip als SVGZ gespeichert werden, wobei dies nicht für die Archivierung zu empfehlen ist. Auch von der Verwendung von Skripten sollte für die Archivierung abgesehen werden.
+
+Computer Graphics Metafile (CGM) ist unter ISO/IEC 8632 standardisiert, wurde 1986 entwickelt und zuletzt 1999 aktualisiert. CGM kann umfangreiche grafische Informationen und geometrische Primitiven speichern, ist inzwischen jedoch für viele Bereiche veraltet, weshalb SVG für die Archivierung verwendet werden sollte. Das W3C hat 2001 die Variante WebCGM veröffentlicht, die zusätzliche Funktionalitäten für die Verwendung im Internet enthält. Die aktuellste und empfohlene Fassung von WebCGM ist Version 2.1.
+
+Speziell für CAD-Daten gibt es kein Format, das uneingeschränkt für die Langzeitarchivierung zu empfehlen ist. Ein Grund dafür ist die immerwährende und schnelle Entwicklung von CAD-Software, die sich auch auf die Ausgabeformate auswirkt und zu einer hohen Heterogenität und mangelnden Interoperabilität der Datenformate führt. Durch die weite Verbreitung des von der Firma Autodesk vertriebenen Programms AutoCAD haben die von Autodesk entwickelten Dateiformate DXF und DWG eine weite Verbreitung in der Archäologie und Bauforschung gefunden und sich de facto als Standard durchgesetzt.
+
+Das Drawing Interchange Format (DXF, aktuelle Version v.u.28.1.01) wurde von Autodesk entwickelt, um den Austausch von CAD-Dateien zwischen AutoCAD und anderen Programmen zu ermöglichen. Dabei wurde das Format so gestaltet, dass es möglichst alle in einer Datei enthaltenen Informationen speichern kann, ohne dass dafür die Optimierungen des proprietären DWG-Formates von Autodesk enthüllt werden müssen. Neue Versionen von DXF werden fast jedes Jahr veröffentlicht und durch neue Funktionalitäten angereichert. Für die jüngsten DXF-Versionen stellt Autodesk die Spezifikationen frei zur Verfügung, wobei allerdings ab Release 13 (v.u13.1.01) manche Bereiche ungenügend spezifiziert sind, so dass unter Umständen nicht alle Funktionen in anderen Programmen umgesetzt und unterstützt werden. DXF gibt es sowohl in einer textbasierten ASCII-Variante, als auch als Binärformat, wobei für die Archivierung erstere bevorzugt werden sollte. Maße werden von DXF nicht unterstützt, weshalb die Angabe des Maßstabes und der Zeicheneinheiten erforderlich ist.
+
+DWG (abgeleitet vom englischen \emph{drawing}) ist das native Speicherformat von AutoCAD und weder offen dokumentiert noch standardisiert. Mit jeder neuen Version von AutoCAD wird auch eine neue Version des DWG-Formates veröffentlicht. Da AutoCAD aber eine so weite Verbreitung gefunden hat, wird dieses Format auch von anderen CAD-Programmen unterstützt. Eine frei verfügbare nachkonstruierte Spezifikation wird von der Open Design Alliance zur Verfügung gestellt.
+
+Für die Archivierung von CAD-Dateien sollten bis zur Etablierung von geeigneten Archivformaten neben dem Originalformat auch Versionen der Datei als DXF und als DWG vorgehalten werden. Um eine möglichst hohe Nachnutzbarkeit zu gewährleisten, sollte eine ältere verbreitete Version der Formate verwendet werden, wie beispielsweise DWG 2010 (AC1024) und DXF 2010 (AC1024). 
+
+Für alle Vektorgrafiken und insbesondere für CAD-Daten gilt die zusätzliche Empfehlung, verschiedene Druckansichten in geeigneten Formaten, wie etwa PDF/A, zu speichern. Dadurch bleibt das intendierte Aussehen der Ursprungsgrafik erhalten, auch wenn die direkte Bearbeitbarkeit verloren geht. Jedoch können Vektorgrafiken größtenteils auch wieder aus einer PDF/A-Datei extrahiert werden. Nähere Informationen zu dem Format sind im Abschnitt über PDF-Dokumente ab Seite \pageref{pdf-dokumente} zu finden.
+
+Externe zugehörige Dateien müssen ebenfalls in einem geeigneten Archivformat gespeichert werden.
+
+PostScript (PS) ist eine Sprache zur Beschreibung von Seiten, die von Adobe entwickelt wurde, und einen Grundstein des PDF-Formates bildet. Darauf aufbauend wurde das Format Encapsulated PostScript (EPS) entwickelt, das neben der Beschreibung in PostScript auch eine eingebettete Datei enthält, die eine Vorschau auf den Inhalt der Datei ermöglicht. Die Vorschaudatei wird jedoch nicht einheitlich gespeichert, was zu einer eingeschränkten Interoperabilität von EPS führt. Ferner kann EPS keine Ebenen und Transparenz speichern. Für die Langzeitarchivierung sollte daher SVG oder PDF/A verwendet werden.
+
+Proprietäre Formate für Vektorgrafiken, wie etwa die Formate AI von Adobe Illustrator und INDD von Adobe InDesign, sind nicht für die Langzeitarchivierung geeignet. Dies trifft ebenfalls auf das von Autodesk entwickelte Format DWF zu, da es primär für Visualisierungen gedacht ist und nicht für den vollständigen Datenaustausch. In der Industrie werden als alternative offene Austauschformate auch IGES und STEP für CAD-Daten und IFC für Gebäudedatenmodellierung verwendet.
+
+\begin{center}
+	\begin{longtable}{l L{0.2\textwidth} p{0.6\textwidth}}
+			\toprule 
+		\multicolumn{2}{l}{Format} & Begründung \\
+		\midrule \endfirsthead
+		\multicolumn{3}{l}{\footnotesize Fortsetzung der vorhergehenden Seite}\\
+		\toprule
+		\multicolumn{2}{l}{Format} & Begründung \\ \midrule \endhead
+		\bottomrule \multicolumn{3}{r}{{\footnotesize Fortsetzung auf der nächsten Seite}} \\
+		\endfoot
+		\bottomrule 
+		\endlastfoot
+		
+		\multirow{1}{*}{\color{ForestGreen} \LARGE \checkmark} & SVG & Ein XML-basierter offener Standard vom W3C. Für die Archivierung sollte unkomprimiertes SVG 1.1 ohne script bindings verwendet werden. \\ \cmidrule(r){1-3}
+		\multirow{4}{*}{$\color{BurntOrange} \thicksim$} & WebCGM & Vom W3C 2001 als Variante von CGM veröffentlicht, um die Verwendung im Internet zu ermöglichen. Wenn es verwendet wird, dann  in Version 2.1, wobei SVG für die Langzeitarchivierung besser geeignet ist.\\
+			& DXF & Das Drawing Interchange Format wurde von Autodesk entwickelt und ist offen dokumentiert. Da Maße nicht gespeichert werden, ist die Angabe des Maßstabes und der Zeicheneinheiten erforderlich. Um eine hohe Nachnutzbarkeit zu erlauben, sollte eine ältere Version, wie etwa DXF 2010 (AC1024), verwendet werden.\\
+			& DWG & Ist ein proprietäres Format von Autodesk und sollte nur verwendet werden, wenn eine Speicherung in DXF einen erheblichen Funktionsverlust darstellen würde. Um eine hohe Nachnutzbarkeit zu erlauben, sollte eine ältere Version, wie etwa DWG 2010 (AC1024), verwendet werden.\\
+			& PDF/A & PDF/A ist für die langfristige Speicherung von zweidimensionalen Vektorgrafiken und Druckansichten von CAD-Daten geeignet. Jedoch bleibt nur das Aussehen erhalten. Nähere Informationen zu dem Format sind im Abschnitt über PDF-Dokumente ab Seite \pageref{pdf-dokumente} zu finden.\\ \cmidrule(r){1-3}
+		\multirow{4}{*}{\LARGE \boldmath$\color{BrickRed} \times$}& CGM & Ist unter ISO/IEC 8632 standardisiert, jedoch veraltet. Stattdessen sollte SVG verwendet werden.\\
+			& PS, EPS & Encapsulated PostScript beruht auf PostScript, einer Sprache zur Beschreibung von Seiten für den Druck, die von Adobe entwickelt wurden. Für die Archivierung sollte SVG oder PDF/A verwendet werden.\\
+			& AI, INDD & Proprietäre Formate von Adobe Illustrator und Adobe InDesign sind nicht für die Langzeitarchivierung geeignet.\\
+			& DWF & Wurde von Autodesk für die Visualisierung von CAD-Daten entwickelt und ist nicht für die Langzeitarchivierung geeignet.\\
+ 		\bottomrule 
+	\end{longtable}
+\end{center}
+
+
+\subparagraph{Dokumentation}
+Neben den allgemeinen minimalen Angaben zu Einzeldateien, wie sie in dem Abschnitt Metadaten in der Anwendung ab Seite \pageref{Metadaten-anwendung} aufgelistet sind, werden für Vektorgrafiken und insbesondere für CAD-Daten weitere Angaben benötigt.
+
+Neben technischen Informationen sollten vor allem auch beschreibende und administrative Metadaten über die Datei erfasst werden. Dabei können manche Metadaten auch Bestandteil der Grafik selbst sein, wie beispielsweise eine Legende, die über Zeichnungskonventionen für verwendete Strichstärken oder Farben Auskunft gibt.
+
+Zur Dokumentation von CAD-Daten gehören unter anderem die Angabe der Quellen oder Messdaten, die zur Erstellung der Zeichnung herangezogen wurden, die Dokumentation der wesentlichen Arbeitsschritte, die im Verlauf der Erstellung durchlaufen wurden, die Dokumentation der angewendeten Methoden und eine Beschreibung der Abhängigkeitsverhältnisse zwischen den unterschiedlichen Bestandteilen wie etwa den Ebenen.
+
+\begin{center}
+		\begin{longtable}{L{0.3\textwidth} p{0.6\textwidth}}
+			\toprule 
+		Metadatum & Beschreibung \\
+		\midrule \endfirsthead
+		\multicolumn{2}{l}{\footnotesize Fortsetzung der vorhergehenden Seite}\\
+		\toprule
+		Metadatum & Beschreibung \\ \midrule \endhead
+		\bottomrule \multicolumn{2}{r}{{\footnotesize Fortsetzung auf der nächsten Seite}} \\
+		\endfoot
+		\bottomrule 
+		\endlastfoot
+		
+		Identifikator & Name der Datei, z.B. grabung01.dxf \\
+		Dateiformat \& Version & z.B. DXF Release 14 \\
+		Farbraum & Der in dem Bild verwendete Farbraum, z.B. RGB oder Graustufen \\
+		Farbtiefe & z.B. 24 bit oder 8 bit \\
+		Bildunterschrift & Der Titel oder eine passende Unterschrift \\
+		Beschreibung & Beschreibung der Datei  \\
+		Urheber & Name des Erstellers oder der Bearbeiter \\
+		Datum & Datum der Erstellung oder letzten Änderung der Datei\\
+		Rechte & Details zum Urheberrecht \\
+		Schlagworte & Schlagworte, wie z.B. Periode, Fundstelle oder charakteristische Merkmale. Wenn vorhanden, angemessene Thesauri verwenden\\
+		Ort & Ortsinformationen zu der Datei. Möglichst in einem standardisierten Format angeben, wie z.B. Lat/Long oder Schlagworte aus einem geeigneten Thesaurus, z.B. Getty Thesaurus of Geographic Names oder GeoNames \\
+		Software & Angaben zu Software (inklusive Plug-ins) und Version mit der die Datei erstellt oder bearbeitet wurde, wie z.B. Autodesk AutoCAD 2012\\ 
+		Externe Dateien & Eine Liste aller externen zugehöriger Dateien, wie etwa Messdaten, Rastergrafiken oder eingebundener Datenbanken\\
+		Maßstab & Angabe zum verwendeten Maßstab bzw. was eine Zeicheneinheit darstellt\\
+		Koordinatensysteme & Falls vorhanden, verwendetes Koordinatensystem oder Kartenprojektion angeben\\
+		Konventionen & Dokumentation der Bedeutung von Farben, Linienstärken, Linientypen, Füllarten etc.\\
+		Ebenen & Angabe der Ebenen, deren Inhalt und der Konventionen für deren Benennung und Befüllung\\
+		Aufnahmemethode & Angabe zur verwendeten Methode zur Datengewinnung \\
+		Aufnahmegerät & Beispielsweise Details zum Laserscanner \\
+		Messgenauigkeit & Angaben zur Messgenauigkeit des Aufnahmegerätes\\
+		\bottomrule    
+	\end{longtable}
+\end{center}
+
+Weitere Metadaten sind methodenabhängig und können in den jeweiligen Abschnitten nachgelesen werden.

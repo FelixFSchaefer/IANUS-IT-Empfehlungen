@@ -1,0 +1,106 @@
+\hyphenation{
+}
+
+Eine Webseite stellt eine Ressource aus strukturiertem Text im World Wide Web (WWW) dar und besteht in ihrer einfachsten Form aus einer HTML-Datei. Sie kann via Hyperlinks mit beliebig vielen weiteren Ressourcen vernetzt sein. Webseiten sind ein integraler Bestandteil des WWW im Internet. In der Regel ist eine Webseite Teil einer Website, bzw. eines Webauftrittes, also eines zusammengehörenden Paketes von miteinander vernetzten Webseiten und weiteren Ressourcen.
+
+In der altertumswissenschaftlichen Forschung können Webseiten für die Öffentlichkeit zugängliche Informationen beinhalten, wie etwa Blogbeiträge oder ausführliche Projektbeschreibungen.
+
+Der vorliegende Artikel beschäftigt sich vornehmlich mit der Archivierung einzelner Webseiten und nicht mit der Archivierung ganzer Websitesysteme. Um umfangreiche Websites mit mehreren Webseiten zu archivieren, empfehlen sich Online-Speicherdienste, spezialisierte Internetarchive oder dezidierte Softwarelösungen. 
+
+\subparagraph{Langzeitformate} 
+Webseiten können archiviert werden, wenn die nötigen Nutzungsrechte der Inhalte vorliegen. Die Archivierung kann dabei auf verschiedene Arten erfolgen:
+\begin{itemize}
+	\item Speicherung als statisches PDF mit zugehörigen Ressourcen
+	\item lokale Speicherung als HTML oder MHTML mit zugehörigen Ressourcen
+	\item Speicherung bei einem spezialisierten Internetarchiv
+\end{itemize}
+
+Als Optimum ist die Langzeitarchivierung einer Webseite in einer Form, die möglichst wenig Informationsverlust garantiert und einfach umzusetzen ist, anzustreben. Webseiten bestehen zum einen aus mindestens einer strukturierten HTML-Datei, zum anderen aus beliebig vielen via Hyperlinks mit der HTML-Datei verbundenen Ressourcen, die teilweise auf demselben Webserver gespeichert sind, aber auch von jedem anderen Ort im Internet bezogen werden können. Dies stellt jedoch nur den theoretisch sehr einfachen Aufbau dar, praktisch bestehen Webseiten aus einer Vielzahl an weiteren strukturierten Textdateien, die etwa das Design der Website regeln (CSS-Dateien) und können zudem über verschiedenste von anderen Websites bezogene und auf der Webseite eingebettete Inhalte (Videos, 3D-Modelle, interaktive Karten etc.) verfügen. Eine der Hauptintentionen jedweder Webseite ist es verschiedene Informationen nach einem vorgegebenen Design in einer bestimmten Abfolge und einem bestimmten Layout dem Nutzer zu vermitteln, vergleichbar zu einer gedruckten Seite in einem Buch. Bei der Archivierung muss beachtet werden, dass für Webseiten teilweise Dateiformate verwendet werden,die für die Langzeitarchivierung dezidiert ungeeignet sind, etwa JPEGs. 
+
+Generell empfiehlt es sich, die der Webseite zugrundeliegenden Daten (z.B. Text und Bilder) als Einzeldateien jeweils separat in einem geeigneten Archivformat zu archivieren. Nähere Informationen zu den Archivierungsformaten sind in den entsprechenden Kapiteln zu finden. Auch werden nicht alle multimedialen Inhalte, Webanwendungen (z.B. Web-GIS) oder über externe Dienste eingebettete Inhalte mit jeder Archivierungsmethode gespeichert, weshalb in solchen Fällen besonderes Augenmerk auf die Auswahl der zu verwendenden Methode gelegt werden muss.
+
+Eine Webseite kann als PDF mit Hilfe des Webbrowsers und eines PDF-Generators als PDF-Datei gespeichert und anschließend mit entsprechender Software in ein archivierbares PDF/A-Datei konvertiert werden. Informationen dazu finden sich im Abschnitt PDF-Dokumente ab Seite \pageref{pdf-dokumente}. Diese Methode führt praktisch immer zu Änderungen des ursprünglichen Layouts. Jedoch können mittels Plug-ins im Webbrowser oder bestimmten Softwareprogrammen Webseiten unter großteiliger Wahrung des Layouts als PDF gespeichert werden. Abschließend muss auch hier eine Konvertierung in das PDF/A-Format vorgenommen werden. Multimediale Inhalte (Videos, 3D-Objekte etc.) werden mit dieser Methode nicht gespeichert.
+
+Die lokale Speicherung einer Webseite aus dem WWW mittels eines Webbrowsers ist einfach möglich und wird durch alle aktuellen Webbrowser unterstützt. Hierbei gilt es jedoch, bestimmte Speicherformate zu beachten, da nicht alle in den Webbrowsern verfügbaren Formate für die Archivierung geeignet sind. Für die Strukturierung und Formatierung von Webseiten werden üblicherweise die Hypertext Markup Language (HTML) oder die  Extensible Hypertext Markup Language (XHTML), sowie Cascading Style Sheets (CSS) verwendet. Es handelt sich dabei um Standards, die vom W3C entwickelt und empfohlen werden, weshalb diese in den Versionen HTML5, XHTML5 und CSS 3 für die Archivierung empfohlen werden können.
+
+Es bietet sich hier also die Möglichkeit der Speicherung der Webseite als HTML- oder XHTML-Datei an. HTML-Dateien (und XHTML) archivieren den strukturierten Text und die Hyperlinks, jedoch nicht die verknüpften Ressourcen (z.B. Bilder, multimediale Inhalte oder externe Inhalte), zudem wird hierdurch nicht das Design der Webseite, welches durch CSS geregelt wird, übernommen, da die entsprechenden Dateien nicht gespeichert werden. Um auch die verknüpften und für das Design benötigte Ressourcen zu speichern, können diese automatisch in einen zusätzlichen lokalen Ordner geladen werden. In der Regel handelt es sich dabei um HTML/XHTML- und CSS-Dateien, Grafiken, JavaScript-Dateien sowie gegebenenfalls Java-Applets und Multimedia-Dateien. 
+
+Die lokale Speicherung einer Webseite in einer einzigen Datei wird mittels MIME HTML (MHTML) ermöglicht. Es handelt sich um ein textbasiertes Format, das in  RFC 2557 spezifiziert wird. In der Regel werden bei MHTML-Dateien das Layout und alle Hyperlinks vollständig übernommen. Auch hier muss das Speichern von eingebetteten Inhalten gegebenenfalls gesondert vorgenommen werden.
+
+Das offen dokumentierte Mozilla Archive Format (MAFF) ermöglicht ebenfalls die Speicherung einer Webseite in Form einer einzelnen Datei. Dabei werden die einzelnen Bestandteile in einem ZIP-Container gespeichert. Da dieses Format aktuell nur von Mozilla Firefox unterstützt wird, sollte für die Archivierung jedoch ein anderes Format vorgezogen werden. Ähnlich verhält es sich mit dem Format Webarchive, das derzeit jedoch nur durch Appels Safari Webbrowser unterstützt wird und daher nicht empfohlen werden kann.
+
+Auch HTML-Dateien mit Data-URIs ermöglichen die Speicherung einer gesamten Webseite meist unter Beibehaltung des Layouts in einer einzigen Datei. Data-URIs ermöglichen es, Ressourcen in HTML einzubetten und sind in RFC 2397 definiert. Es handelt sich dabei um eine spezielle Syntax, mit der binäre Daten als ASCII-Zeichenketten kodiert werden. Da Ressourcen als Data-URIs, wie beispielsweise Bilder,  direkt und in menschenunlesbarer Form in die Datei integriert werden, können diese nicht nachgenutzt werden, weshalb von einer Speicherung als HTML mit Data-URIs für die Archivierung abgesehen werden sollte.
+
+Eine andere häufig praktizierte, jedoch eindeutig nicht empfohlene Möglichkeit, stellt die Speicherung von Webseiten in der Form von Screenshots dar. Screenshots werden in der Regel im PNG- oder JPEG-Format gespeichert. Dies hat drei Nachteile: (1) Die Konvertierung erfolgt oft in das JPEG-Format, das zur Archivierung nicht geeignet ist. (2) Die Speicherung als Rastergrafik kann in manchen Fällen aufgrund einer zu niedrigen Auflösung zu Qualitätsverlusten führen. Außerdem wird Text nicht mehr als solcher erkannt und gespeichert. (3) Die Konvertierung der Webseite in eine Grafik führt dazu, dass sämtliche Hyperlinks desintegriert werden.
+
+Es besteht zwar hinsichtlich der Punkte (1) und (2) die Möglichkeit, mit entsprechender Software eine Texterkennung und anschließende Speicherung als PDF/A durchzuführen, jedoch können hinsichtlich Punkt (3) dadurch keine Hyperlinks wiederhergestellt werden. 
+
+Ein anderer Ansatz ist die Archivierung einer Webseite über einen spezialisierten Archivierungsdienst. Solche werden etwa durch die Bayerische Staatsbibliothek (mit Anmeldung) oder die Organisation Internet Archive angeboten. Hier werden die Webseiten auf einem Server des Archivierungsdienstes gespeichert und können auf diesen Plattformen wiederum über das WWW abgerufen werden. Diese Dienste sind auch zur Archivierung ganzer Websites geeignet. Für die Archivierung ganzer Websites gibt es das Format Web ARChive (WARC), das seit 2009 als ISO 28500 standardisiert ist und von dem International Internet Preservation Consortium aufbauend auf dem Format ARC entwickelt wurde. In einer WARC-Datei werden alle Seiten, Ressourcen und weitere Komponenten einer Website gespeichert.
+
+Hinweis: Angaben zur Archivierung von Programmen in JavaScript sowie Java (Java-Applets) finden sich im Kapitel Eigene Programme und Skripte, Ausführungen zu multimedialen Inhalten (z.B. 3D-Objekte, Audio oder Video) in den entsprechenden Kapiteln. 
+
+\begin{center}
+	\begin{longtable}{l L{0.2\textwidth} p{0.6\textwidth}}
+			\toprule 
+		\multicolumn{2}{l}{Format} & Begründung \\
+		\midrule \endfirsthead
+		\multicolumn{3}{l}{\footnotesize Fortsetzung der vorhergehenden Seite}\\
+		\toprule
+		\multicolumn{2}{l}{Format} & Begründung \\ \midrule \endhead
+		\bottomrule \multicolumn{3}{r}{{\footnotesize Fortsetzung auf der nächsten Seite}} \\
+		\endfoot
+		\bottomrule 
+		\endlastfoot
+		
+		\multirow{4}{*}{\color{ForestGreen} \LARGE \checkmark} & PDF/A-1, PDF/A-2 & PDF/A ist gezielt als stabiles, offenes und standardisiertes Format für die Langzeitarchivierung unterschiedlicher Ausgangsdateien entwickelt worden. \\
+			& HTML und XHTML & HTML- und XHTML-Dateien können als streng strukturierte Textdokumente, die vom W3C standardisiert sind, problemlos archiviert werden. Die Datei sollte wohlgeformt und in UTF-8 ohne BOM kodiert sein. Es sollte möglichst HTML5 verwendet werden. Zusätzliche Dateien, wie CSS, JavaScript oder andere strukturierte Textformate müssen ebenfalls archiviert werden. Eingebettete Ressourcen müssen gesondert archiviert werden.\\
+			& MHTML & MHTML-Dateien können als strukturierte Textdokumente mit genauen Spezifikationen für die Archivierung verwendet werden. Die Archivierung von eingebetteten Inhalten muss gegebenenfalls gesondert erfolgen.\\
+			& WARC & Web ARChive ist als ISO 28500 standardisiert und dient als Containerformat für mehrere Webseiten einer Website.\\ \cmidrule(r){1-3}
+		\multirow{2}{*}{$\color{BurntOrange} \thicksim$} & MAFF & Das Format ermöglicht die Speicherung einer ganzen Webseite samt aller zugehöriger Ressourcen komprimiert und verlustfrei in einem ZIP Container und eignet sich zur Langzeitarchivierung, solange die einzelnen Ressourcen selbst in archivfähigen Formaten vorliegen und Hyperlinks entsprechend aktualisiert werden. \\
+			& HTML mit Data URIs & HTML-Dateien können als strukturierte Textdokumente, die weit verbreiteten Konventionen folgen und aufgrund der integrierten DTD, die die verwendete Struktur beschreibt, problemlos archiviert werden. Data URIs sind ebenso spezifiziert. \\ \cmidrule(r){1-3}
+		\multirow{3}{*}{\LARGE \boldmath$\color{BrickRed} \times$}& andere PDF-Varianten & Viele gängige PDF-Varianten sind nicht für die Langzeitarchivierung geeignet. Stattdessen sollten entweder die Ausgangsdateien in einem passenden Format archiviert oder eine Migration in ein PDF/A-Format vorgenommen werden.\\
+			& Screenshots & Screenshots eignen sich nur für die Dokumentation der Optik der Webseite, jedoch nicht für die Archivierung der Inhalte, da diese als Rastergrafik gespeichert werden und so kaum nachnutzbar sind. \\
+		  & Webarchive & Ist ein Format von Apple, das derzeit auch nur von Safari unterstützt wird. Es ist nicht für die Archivierung geeignet.\\ 
+ 		\bottomrule    
+	\end{longtable}
+\end{center}
+
+
+\subparagraph{Dokumentation} 
+HTML, XHTML und MHTML verfügen über einen eigenen Dokumentenkopf, in dem verschiedene Metadaten eingebettet werden können. Es sollten Angaben zur verwendeten Zeichenkodierung, dem Titel des Dokumentes, dem/der AutorIn sowie Stichwörter gemacht werden. Ergänzende Metadaten können zusätzlich mit Hilfe eines Kommentars in den Kopfdaten der Datei eingefügt werden. Auch in CSS-Dateien können Metadaten als Kommentar eingetragen werden.
+ 
+Die hier angegebenen Metadaten sind als minimale Angabe zu betrachten und ergänzen die angegebenen Metadaten für Projekte und Einzeldateien in dem Abschnitt Metadaten in der Anwendung.
+
+\begin{center}
+	\begin{longtable}{L{0.3\textwidth} p{0.6\textwidth}}
+			\toprule 
+		Metadatum & Beschreibung \\
+		\midrule \endfirsthead
+		\multicolumn{2}{l}{\footnotesize Fortsetzung der vorhergehenden Seite}\\
+		\toprule
+		Metadatum & Beschreibung \\ \midrule \endhead
+		\bottomrule \multicolumn{2}{r}{{\footnotesize Fortsetzung auf der nächsten Seite}} \\
+		\endfoot
+		\bottomrule 
+		\endlastfoot
+
+Titel & Titel der Webseite \\
+Kurzbeschreibung & Kurze Beschreibung des Inhaltes. \\
+Stichwörter & Schlagworte, die den Inhalt beschreiben. \\
+Autor & Name des Verfassers oder Erstellers der Datei. \\
+Erstellungsdatum & Datum der Erstellung der Datei, also der Archivierung der Webseite. \\
+Bearbeitungsdatum & Datum der letzten Bearbeitung der Webseite. \\
+Abschaltung Webserver & Datum an dem die Webseite zum letzten Mal online verfügbar war \\
+URI & Internetadresse der archivierten Webseite \\
+Identifikator & Wenn das Dokument bereits veröffentlicht wurde und einen Persistent Identifier erhalten hat, sollte dieser angegeben werden. \\
+Sprache & Angabe der im Dokument verwendeten  Sprachen. Sprachkennungen nach ISO639 angeben. \\
+Rechte & Details zum Urheberrecht. \\
+Standard & Name und Version des verwendeten Standards, z.B. HTML5 und CSS 3. \\
+Zeichenkodierung & Angabe der verwendeten Zeichenkodierung, z.B. UTF-8 ohne BOM. \\
+Beziehungen & Dateien oder Ressourcen, die mit der Datei zusammenhängen, wozu auch frühere Versionen gehören. Bei der Archivierung einer Website mit mehreren Webseiten müssen die Beziehungen der einzelnen Seiten untereinander dokumentiert werden, beispielsweise mit einer Sitemap. \\
+Versionsnummer & Angabe der Dateiversion, bezogen auf den Inhalt. z.B. 1.3. \\
+Software & Name und Version der für die Archivierung der Seite verwendeten Programme \\
+weitere Dateien & Liste von eingebetteten Medien, die zusätzlich separat gespeichert wurden. Liegt eine Dokumentationsdatei für das Dokument vor, muss diese ebenfalls genannt werden. \\
+  \bottomrule
+	\end{longtable}
+\end{center}

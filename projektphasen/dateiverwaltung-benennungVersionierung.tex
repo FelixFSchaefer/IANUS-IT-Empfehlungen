@@ -1,0 +1,59 @@
+\hyphenation{
+Schnitt-stel-le
+}
+\label{dateibenennung}
+\subsection{Dateibenennung}
+Üblicherweise besteht der Dateiname einer Datei aus dem eigentlichen Namen und der durch einen Punkt getrennten Dateinamenserweiterung, die das Format der Datei angibt. Die Erweiterung wird in der Regel von dem Programm, mit dem die Datei gespeichert wurde, automatisch an den Dateinamen gehängt.
+
+Ein Beispiel: \emph{IT-Empfehlungen.pdf} gibt an, dass es sich um eine Datei mit dem Namen \emph{"`IT-Empfehlungen"'} handelt, die in dem PDF-Format vorliegt.
+
+Da die Erweiterung automatisch erzeugt wird, muss die Datei mit einem geeigneten Programm konvertiert werden, wenn man das Dateiformat ändern möchte. In dem Kapitel "`Dateiformate"' ab Seite \pageref{dateiformate} sind ausführliche Informationen darüber zu finden.
+
+Im Folgenden geht es nur noch um den reinen Dateinamen, ohne die Dateinamenserweiterung.
+
+\subparagraph{Erlaubte Zeichen} Moderne Betriebssysteme können mit Sonderzeichen umgehen, zu denen Umlaute und Leerzeichen gehören. Das war aber nicht immer so und kann auch heute noch zu Problemen führen. Webserver lesen zum Beispiel das Leerzeichen als die Zeichenfolge "`$\%20$"' ein und da Umlaute nicht immer gleich kodiert werden, kann auch das zu Schwierigkeiten führen. 
+
+Für die Langzeitarchivierung sollten also nur die alphanumerischen Zeichen des englischen Alphabets, also a-z, A-Z und 0-9 verwendet werden. Zusätzlich kann der Bindestrich ({\bfseries -}) und bei Bedarf auch der Unterstrich ({\bfseries\_}) verwendet werden.
+
+\subparagraph{Zu vermeidende Zeichen} Es gibt eine ganze Reihe von Zeichen, die für besondere Aufgaben von Betriebssystemen verwendet werden. Der Punkt dient zur Trennung des Dateinamens von der Dateinamenserweiterung und der Schrägstrich dient in Windows um Ordnerebenen zu kennzeichnen.
+
+Zu den Zeichen, die absolut nicht verwendet werden dürfen, gehören:
+\begin{center}
+	\Large \bfseries \textbackslash	 / : * ? "'	< >	|
+\end{center}
+
+Die Verwendung von allen weiteren Sonderzeichen ist zwar möglich, kann jedoch zu einem unerwarteten Verhalten des Systems führen. Daher wird von der Verwendung von Leerzeichen und Sonderzeichen, Bindestrich ({\bfseries -}) und Unterstrich ({\bfseries\_}) ausgenommen, abgeraten.
+
+\subparagraph{Groß- und Kleinschreibung} Die Groß- und Kleinschreibung in einem Dateinamen wird von unterschiedlichen Systemen verschieden gedeutet. In Windows beispielsweise kann, wenn es eine Datei mit dem Namen \emph{"`TestDatei"'} schon gibt, keine Datei mit dem Namen \emph{"`testdatei"'} angelegt werden. Andere Systeme könnten dies jedoch erlauben, was aber nicht bedeutet, dass man dies auch tun sollte.
+
+Hat man sich in der Praxis einmal für eine Schreibweise entschieden, muss diese auch konsequent eingehalten werden und insbesondere bei der Arbeit auf verschiedenen Systemen darauf geachtet werden.
+
+\subparagraph{Länge} Der Dateiname sollte so kurz wie möglich und so lang wie nötig sein. Eine aktuelle Obergrenze, die auf manchen Systemen nicht überschritten werden darf, sind 260 Zeichen, wobei dabei der gesamte Dateipfad gezählt wird. Kryptische oder untypische Kürzel sollten vermieden werden, da sie in der Regel in Vergessenheit geraten.
+
+\subsection{Versionskontrolle}\label{versionskontrolle}
+Wenn unterschiedliche Personen an einer Datei arbeiten, ist es wichtig, die verschiedenen Änderungen und Entwicklungsstadien zu verfolgen und zu kennzeichnen. Nur so kann vermieden werden, dass an der falschen Dateiversion gearbeitet wird oder diese gar gelöscht wird. Dateiversionen, die nicht mehr benötigt werden, sollten bei Bedarf gelöscht werden.
+
+Es gibt mehrere Strategien, um die Versionskontrolle durchzuführen, die im Folgenden erläutert werden.
+
+\subparagraph{Angabe im Dateinamen} Eine einfache und übersichtliche Methode ist, die Versionsangabe in den Dateinamen zu integrieren. Das kann beispielsweise mit einer Datumsangabe oder Ziffern erfolgen. Durch ein vorangestelltes {\bfseries v} werden die Ziffern als eine Versionsnummer gekennzeichnet, wie zum Beispiel {\bfseries v001}. Führende Nullen stellen sicher, dass die Versionsnummern einheitlich und leichter lesbar sind und richtig sortiert werden.
+
+Eine Kennzeichnung von Versionen durch Worte wie \emph{"`neu"'}, \emph{"`neuer"'} und \emph{"`alt"'} ist unbedingt zu vermeiden. Eine Ausnahme können endgültige Dateiversionen bilden, die der Übersicht halber etwa durch \emph{FINAL} am Ende gekennzeichnet werden können. Es darf aber nur eine Datei mit dieser Kennzeichnung in einem Ordner und einem bestimmten Format vorliegen. Eine endgültige Version, die zum Beispiel sowohl als \emph{docx} als auch als \emph{pdf} vorliegt, ist also erlaubt.
+
+\subparagraph{Angabe in der Datei} Angaben zum Erstellungsdatum und den verschiedenen Versionen und deren Änderungen können im Header der Datei oder in standardisierten Kopfzeilen in der Datei selbst angegeben werden. Bei Textdokumenten bietet sich die Möglichkeit einen Innentitel mit einer Versionshistorie zu verwenden. Ein Beispiel für solch einen Innentitel findet sich am Anfang der PDF-Version dieser Empfehlungen.
+
+\subparagraph{Änderungsprotokoll} Statt einzelne Dateiversionen abzuspeichern, kann auch ein Änderungsprotokoll geführt werden. Dabei werden die einzelnen Änderungen in einer einfachen Textdatei protokolliert, die zusammen mit der eigentlichen Datei abgelegt wird. Im Englischen wird dafür der Begriff \emph{ChangeLog} verwendet.
+
+\subparagraph{Software} Die bisher beschriebenen Methoden sind hauptsächlich manuell anzuwendende Vorgänge. Es gibt jedoch auch Software zur Versionsverwaltung. Deren Einsatz lohnt sich vor allem in großen Projekten, die zentral auf einem Server abgelegt werden. Versionsverwaltungssoftware kann aus den Dateiänderungen automatisch \emph{ChangeLogs} erstellen. Die am weitesten verbreiteten Systeme zur Versionsverwaltung sind \href{http://subversion.apache.org/}{Subversion (SVN)} und \href{https://git-scm.com/}{Git}. Primär wurden sie für die Bedürfnisse von Softwareentwicklern konzipiert, jedoch eignen sie sich auch für allgemeinere Aufgaben. Für die einzelnen Computerarbeitsplätze werden Clients wie \href{https://tortoisesvn.net/}{TortoiseSVN} für SVN oder \href{https://windows.github.com/}{GitHub} für Git benötigt.
+
+Eine einfache Versionsverwaltung für Dateien bieten \href{https://owncloud.org/}{ownCloud}, \href{https://www.dropbox.com/}{Dropbox} und \href{https://drive.google.com/drive/}{Google Drive} wobei die Menge der unterschiedlichen gespeicherten Versionen abhängig von dem persönlichen Speicherplatz ist.
+
+\begin{flushleft}
+Git: \urllist{https://git-scm.com/}
+Clients für Git: \urllist{https://git-scm.com/downloads/guis}
+Subversion (SVN): \urllist{http://subversion.apache.org/}
+TortoiseSVN: \urllist{https://tortoisesvn.net/}
+ownCloud: \urllist{https://owncloud.org/}
+Dropbox: \urllist{https://www.dropbox.com/}
+Google Drive: \urllist{https://drive.google.com/drive/}
+Vergleich von Versionsverwaltungssystemen auf Wikipedia: \urllist{https://en.wikipedia.org/wiki/Comparison_of_revision_control_software}
+\end{flushleft}

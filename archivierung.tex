@@ -1,0 +1,216 @@
+\chapter{Archivierung bei IANUS}
+	\abschnittsautor{M. Trognitz}
+	\label{archivierungIANUS}
+In diesem Abschnitt sind Informationen zu finden, die sich speziell auf die langfristige Archivierung und Bereistellung von altertumswissenschaftlichen Forschungsdaten in IANUS beziehen. Da die entsprechenden technischen Systeme zur Zeit noch im Aufbau begriffen sind, professionelle Workflows definiert und umgesetzt werden müssen und notwendige Vorgaben zusammen mit Hilfestellungen noch zu präzisieren sind, können hier aktuell nur allgemeine Hinweise gegeben werden. Diese werden in den nächsten Wochen und Monaten kontinuierlich weiter ausformuliert, so dass wir Sie bei Interesse bitten, sich regelmäßig an dieser Stelle zu informieren.
+
+Sofern Sie als Datenproduzent Forschungsdaten besitzen, die Sie bereits jetzt gerne IANUS zur Kuratierung und Veröffentlichung anvertrauen möchten, können Sie dies gerne tun, indem Sie sich entweder per mail an ianus-fdz@dainst.de wenden oder die beiden Projektkoordinatoren direkt telefonisch kontaktieren.
+
+\subparagraph{Dateiformate}
+Nicht jedes Dateiformat ist für die Langzeitarchivierung geeignet, weshalb dies ein zentrales Thema der IT-Empfehlungen ist. In dem Kapitel "`Dateiformate"' ab Seite \pageref{dateiformate} werden entsprechende Hinweise für jeden Dateityp gegeben, wobei zu beachten ist, dass das Kapitel noch nicht abgeschlossen ist. Außerdem können in Abhängigkeit der Entstehung der Datei Abweichungen auftreten, was in dem Kapitel "`Forschungsmethoden"' ab Seite \pageref{methoden} thematisiert werden soll.
+
+Für die bereits überarbeiteten und abgeschlossenen Abschnitte sind die präferierten und akzeptierten Dateiformate in der folgenden Tabelle dargestellt, die separat auch als Download zur Verfügung steht. Präferierte Dateiformate sind Formate, die bereits für die Langzeitarchivierung geeignet sind, während akzeptierte Formate noch einer Konvertierung bedürfen. Die Tabelle steht auch als Download zur Verfügung.
+
+\begin{center}
+	\begin{longtable}{L{0.05\textwidth} L{0.35\textwidth} L{0.2\textwidth} p{0.25\textwidth}}
+		\toprule 
+		\multicolumn{4}{l}{Präferierte und akzeptierte Dateiformate}\\
+		\midrule \endfirsthead
+		\multicolumn{4}{l}{\footnotesize Fortsetzung der vorhergehenden Seite}\\
+		\toprule
+		\multicolumn{4}{l}{Präferierte und akzeptierte Dateiformate}\\ \midrule \endhead
+		\bottomrule \multicolumn{4}{r}{{\footnotesize Fortsetzung auf der nächsten Seite}} \\
+		\endfoot
+		\bottomrule 
+		\endlastfoot
+		
+		\multicolumn{4}{l}{PDF-Dokumente}\\
+		 & PDF/A-1 & pdf & präferiert\\
+		 & PDF/A-2 & pdf & präferiert\\
+		 & PDF/A-3 & pdf & akzeptiert\\
+		 & andere PDF-Varianten & pdf & akzeptiert\\ \midrule
+		\multicolumn{4}{l}{Texte/Dokumente}\\
+		 & Portable Document Format (PDF/A) & pdf & präferiert\\
+		 & andere PDF-Varianten & pdf & akzeptiert\\
+		 & OpenDocument Format & odt & präferiert\\
+		 & Microsoft Office XML & docx & präferiert\\
+		 & Microsoft Word & doc & akzeptiert\\
+		 & Rich Text Format & rtf & akzeptiert\\
+		 & Open Office XML & sxw & akzeptiert\\
+		 & Reiner Text, plain text & txt & präferiert\\
+		 & Strukturierter Text, Markup & xml, sgml, html etc. + dtd, xsd etc. & präferiert\\ \midrule
+		\multicolumn{4}{l}{Rastergrafiken}\\
+		 & Baseline TIFF v. 6, unkomprimiert & tiff, tif & präferiert\\
+		 & Adobe Digital Negative & dng & präferiert\\
+		 & Portable Network Graphics & png & akzeptiert\\
+		 & Joint Photographic Expert Group & jpeg, jpg & akzeptiert\\
+		 & Graphics Interchange Format & gif & akzeptiert\\
+		 & Bit-Mapped Graphics Format (Microsoft) & bmp & akzeptiert\\
+		 & Photoshop (Adobe) & psd & akzeptiert\\
+		 & CorelPaint & cpt & akzeptiert\\
+		 & JPEG2000 & jp2, jpx & akzeptiert\\
+		 & RAW image format & nef, crw etc. & akzeptiert\\ \midrule
+		\multicolumn{4}{l}{Vektorgrafiken und CAD-Daten}\\
+		 & Scalable Vector Graphics & svg & präferiert\\
+		 & Computer Graphics Metafile & cgm & akzeptiert\\ 
+		 & WebCGM & cgm & akzeptiert\\
+		 & Drawing Interchange Format, 2010 (AC1024) & dxf & akzeptiert\\
+		 & Drawing, 2010 (AC1024) & dwg & akzeptiert\\
+		 & PDF/A-1, PDF/A-2 & pdf & akzeptiert\\
+		 & Postscript, Encapsulated Postscript & ps, eps & akzeptiert\\
+		 & Illustrator, InDesign & ai, indd & akzeptiert\\
+		 & DWF & dwf & akzeptiert\\ \midrule
+		\multicolumn{4}{l}{Tabellen}\\
+		 & Comma Separated Values & csv & präferiert\\
+		 & Tab Separated Values & tsv & präferiert\\
+		 & OpenDocument Format & ods & präferiert\\
+		 & Microsoft Office XML & xlsx & präferiert\\
+		 & Strukturierter Text, Markup & xml, html etc. + dtd, xsd etc. & präferiert\\
+		 & Portable Document Format (PDF/A) & pdf & akzeptiert\\
+		 & Open Office XML & sxc & akzeptiert\\
+		 & Microsoft Excel & xls & akzeptiert\\ \midrule
+		\multicolumn{4}{l}{Datenbanken}\\
+		 & SIARD, SIARD2 & SIARD2 & präferiert\\
+		 & SQL & sql & präferiert\\
+		 & XML & xml & präferiert\\
+		 & CSV & csv & akzeptiert\\
+		 & JSON & json & akzeptiert\\
+		 & Microsoft Access & mdb, accdb & akzeptiert\\
+		 & FileMaker & fp5, fp7, fmp12 & akzeptiert\\
+		 & ODB & odb & akzeptiert\\
+		 & DBF & dbf & akzeptiert\\
+		 & BAK, DB, DMP & bak, db, dmp & akzeptiert\\ \midrule
+		\multicolumn{4}{l}{Video}\\
+  	 & Matroska & mkv & präferiert\\
+  	 & Motion JPEG 2000 & mj2 & akzeptiert\\
+  	 & MPEG-4 & mp4 & akzeptiert\\
+  	 & Material eXchange Format & mxf & akzeptiert\\
+  	 & MPEG-2 & mpeg, mpg & akzeptiert\\
+  	 & andere MPEG-Varianten & mpeg, mpg & akzeptiert\\
+  	 & Audio Video Interleave & avi & akzeptiert\\
+  	 & MOV & mov & akzeptiert\\
+  	 & ASF/WMF & asf, wmv & akzeptiert\\
+  	 & Ogg & ogg, ogv, ogx, ogm, spx & akzeptiert\\
+  	 & Flash & flv, f4v & akzeptiert\\ \midrule
+		\multicolumn{4}{l}{Audio}\\
+  	 & Free Lossless Audio Codec & flac & präferiert\\
+  	 & Waveform Audio File Format & wav & präferiert\\
+  	 & Broadcast Wave Format & bwf & präferiert\\
+  	 & Matroska & mkv & akzeptiert\\
+  	 & RF64/MBWF & wav & akzeptiert\\
+  	 & Advanced Audio Coding/MP4 & aac, mp4 & akzeptiert\\
+  	 & MP3 & mp3 & akzeptiert\\
+  	 & Audio Interchange File Format & aiff, aif & akzeptiert\\
+  	 & Windows Media Audio & wma & akzeptiert\\
+  	 & Ogg & ogg, oga, opus & akzeptiert\\ \midrule
+		\multicolumn{4}{l}{3D-Daten/Virtual Reality}\\
+		 & X3D & x3d + avi, mpg, jpeg & präferiert\\
+		 & COLLADA & dae + avi, mpg, jpeg & präferiert\\
+		 & OBJ & obj + jpeg & präferiert\\
+		 & Polygon File Format (PLY) & ply + jpeg & präferiert\\
+		 & Virtual Reality Modeling Language (VRML) & vrml + avi, mpg, jpeg & akzeptiert\\
+		 & Universal 3D Format & u3d + avi, mpg jpeg & akzeptiert\\
+		 & STL & stl + jpeg & akzeptiert\\
+		 & DXF & dxf + jpeg & akzeptiert\\
+		\multicolumn{4}{l}{Webseiten}\\
+		 & PDF/A-1, PDF/A-2 & pdf & präferiert\\
+		 & HTML, XHTML & html, htm, xhtml, xhtm, css etc. & präferiert\\
+		 & MHTML & mhtml & präferiert\\
+		 & Web Archive & warc & präferiert\\
+		 & MAFF & maff & akzeptiert\\
+		 & HTML mit Data URIs & html, htm & akzeptiert\\
+ 		\bottomrule    
+	\end{longtable}
+\end{center}
+
+Sollten Sie Dateien in anderen Formaten vorliegen haben, kontaktieren Sie uns. Für weitere Dateitypen finden Sie außerdem auf den Seiten des ADS Anhaltspunkte: \urllist{http://archaeologydataservice.ac.uk/advice/FilelevelMetadata\#section-FilelevelMetadata-FileLevelMetadataRequirements}
+
+Die Informationen der Seiten des ADS sind in einer erweiterten Tabelle aggregriert, die ebenfalls als Download zur Verfügung steht. 
+
+\subparagraph{Metadaten}
+Neben dem geeigneten Format sind zusätzliche Informationen zur Datei erforderlich, die sogenannten Metadaten. Ausführliches dazu ist in dem Abschitt "`Dokumentation"' ab Seite \pageref{Metadaten-allgemein} zu finden. Speziell die tabellarischen Aufstellungen im Unterabschnitt "`Metadaten in der Anwendung"' ab Seite \pageref{Metadaten-anwendung} sind dabei zu berücksichtigen. 
+
+Dabei wird zwischen projektbezogenen, dateibezogenen und methodenbezogenen Metadaten unterschieden, für die Sie im folgenden die tabellarischen Übersichten finden, die auch gesondert als Download zur Verfügung stehen. Zu beachten ist dabei, dass in Abhängigkeit des Dateityps und der verwendeten Methode weitere spezifische Metadaten erforderlich sein können, die in den jeweiligen Kapiteln angegeben sind.
+
+\begin{center}
+	\begin{longtable}{L{0.25\textwidth} p{0.68\textwidth}}
+		\toprule
+		\multicolumn{2}{l}{Projektbezogene Metadaten}\\
+		Bezeichnung & Kurzdefinition\\ \midrule \endfirsthead
+		\multicolumn{2}{l}{\footnotesize Fortsetzung der vorhergehenden Seite}\\
+		\toprule
+		Bezeichnung & Kurzdefinition\\ \midrule \endhead
+		\bottomrule \multicolumn{2}{r}{{\footnotesize Fortsetzung auf der nächsten Seite}} \\
+		\endfoot
+		\bottomrule 
+		\endlastfoot
+
+		Identifizierung -- Projekttitel & Verbindliche Kurzbezeichnung des Projektes.\\
+		Identifizierung -- Alternativtitel & Ggf. alternative Titel für ein Projekt.\\
+		Identifizierung -- Projektnummer(n) & Nummern oder Kennungen, die z.B. innerhalb der durchführenden Organisation oder von Mittelgebern verwendet wird, um das Projekt eindeutig identifizieren zu können.\\
+		Kurzbeschreibung & Knappe Angaben zur Fragestellung, zum Verlauf und Ergebnis des Projektes sowie Skizzierung der Datensammlung (insgesamt ca. 100-300 Worte)\\
+		Schlagworte -- Fachdisziplinen & Stichworte, die die beteiligten Disziplinen und Fächer benennen. Sofern die Stichworte auf publizierten Standards oder internen Thesauri beruhen, müssen diese mitangegeben werden.\\
+		Schlagworte -- Inhalt & Stichworte, die den Inhalt der Datensammlung benennen., z. B. zu Materialgruppen, Fundstellen-Klassifizierung, Quellenarten,  Kulturgruppen etc. Sofern die Stichworte auf publizierten Standards oder internen Thesauri beruhen, müssen diese mitangegeben werden.\\
+		Schlagworte -- Methoden & Stichworte, die die eingesetzten Forschungsmethoden beschreiben. Sofern die Stichworte auf publizierten Standards oder internen Thesauri beruhen, müssen diese mitangegeben werden.\\
+		Ausdehnung -- Geografisch-1 & Detaillierte Angaben zur räumlichen Ausdehnung oder zum Fundort des untersuchten Gegenstandes mittels geografischer Koordinaten. Die maximale Ausdehnung kann als Bounding Box angegeben werden.\\
+		Ausdehnung -- Geografisch-2 & Sprachliche Beschreibung des untersuchten Gegenstandes mittels Ortsangaben mit Land, Stadt, Kreis, Straße, Gemarkung etc. Sofern Namen sich im Lauf der Zeit geändert haben, dies gesondert vermerken. Sofern eine Referenz zu einer Geo-Ressource oder einem Gazetteer existiert, sollte diese ebenfalls angegeben werden.\\
+		Ausdehnung -- zeitlich & Chronologische Angaben zum untersuchten Gegenstand, entweder als Periodenbezeichnung und/oder mit groben/genauen Jahresangaben. Sofern die Stichworte auf publizierten Standards oder internen Thesauri beruhen, müssen diese mitangegeben werden.\\
+		Primärforscher -- Person & Personen, die entweder für das Projekt als Ganzes, für das Datenmanagement oder für die Erzeugung bestimmter Datenarten zentral bzw. verantwortlich sind. Hier ist eine Kontaktadressen erforderlich und die aktuelle/letzte institutionelle Zugehörigkeit, damit die Personen bei Rückfragen erreicht werden kann.\\
+		Eigentümer -- Organisation & Organisation, der die unter "`Primärforscher"' genannten Personen angehören, oder die nach Ausscheiden derselben für die Daten verantwortlich ist, im weitesten Sinne also Eigentümer der Daten ist. Hier ist eine Kontaktadresse erforderlich, damit die Organisation bei Rückfragen erreicht werden kann.\\
+		Finanzierung & Nennung der Organisation(en) / (Dritt-)Mittelgeber, durch die das Projekt finanziert wurde. Es sollte jeweils der Zeitraum der Finanzierung angegeben werden.\\
+		Veröffentlichung -- Projektdaten & Wenn die hier beschriebene Datensammlung des Projektes bereits an anderer Stelle veröffentlicht / online gestellt wurde, bitte entsprechende Angaben machen, z. B. durch Nennung der Organisationen, Datenarchive, Online-Ressourcen etc.\\
+		Veröffentlichung -- Ergebnisse & Analoge oder digitale Publikationen zu Ergebnissen des Projektes oder zur Datensammlung des Projektes, ausführliche bibliographische Angaben (ohne fachspezifische Abkürzungen) unter Nennung des Verlages erforderlich.\\
+		Dauer -- Projekt & Anfangs- und Enddatum des Projektes.\\
+		Dauer -- Datenbestand & Anfangs- und Enddatum der Erzeugung oder Verarbeitung digitaler Daten im Rahmen des Projektes.\\
+		Rechtliches -- Urheberrechte & Name des Inhabers der Urheber-, Nutzungs- und Verwertungsrechte; i. d. R. die Organisation, an der der Primärforscher beschäftigt war.\\
+		Rechtliches -- Lizenzgeber & Angabe der Person, die i. d. R. als Vertretung für eine Organisation für die Lizenzierung von Daten zur Nachnutzung verantwortlich und berechtigt ist, einen Datenübergabevertrag abzuschließen.\\
+		Rechtliches -- Datenschutz & Angaben, ob in der Datensammlung datenschutzrelevante Informationen enthalten sind. Wenn ja, in welchem Umfang.\\
+		Quellen -- Ältere & Ältere Quellen oder existierende Ressourcen, auf denen die Daten aufbauen.\\
+		Quellen -- Zugehörige & Sofern während des Projektes Informationen, Datensammlungen, (un-)publizierte Dokumente, Online-Ressourcen etc. verwendet oder erzeugt wurden, die nicht Teil der hier beschriebenen Datensammlung sind, aber für deren Verständnis wichtig sind, bitte entsprechende Angaben zu Art und Umfang dieser Quellen machen.\\
+		Sprache & Die in den Dokumenten und Dateien verwendete(n) Sprache(n). Sprachkennungen nach ISO 639 angeben.\\
+		Art der Daten & Kurzcharakterisierung der Daten, z. B. ob es sich um Rohdaten, verarbeitete Daten, Interpretationen, Ergebnisse, Abschlussberichte etc. handelt.\\
+		Vollständigkeit & Aussagen zur Vollständigkeit der Projektdaten, z. B. ob bestimmte Datenarten noch fehlen und warum.\\
+		Dateiformate & Auflistung der Dateiformate, die in der Datensammlung vorkommen, ggf. unter Nennung der verwendeten Programme und Zeichenkodierungen.\\
+		Zugriffsrechte & Festlegung der gewünschten Zugriffsrechte für die Daten, sofern diese für den gesamten Projekt-Datenbestand gelten sollen; differenzierte Regelungen müssen auf Dateiebene vorgenommen werden.\\
+		Signatur Metadaten & Angabe darüber, wer die o. g. Metadaten wann ausgefüllt hat.\\  
+	\end{longtable}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{L{0.25\textwidth} p{0.68\textwidth}}
+		\toprule
+		\multicolumn{2}{l}{Dateibezogene Metadaten}\\
+		Bezeichnung & Kurzdefinition \\ \midrule
+		Dateiname & Eindeutiger Name der Datei.\\
+		Dateiformat & Format, in der die Datei abgespeichert ist.\\
+		Software -- Dateierstellung & Software, mit der die Datei erstellt wurde.\\
+		Hardware -- Dateierstellung & Hardware, mit der die Datei erstellt wurde, v. a. bei technischen Geräten wie Kameras, GPS-Geräten, Vermessungsinstrumenten, Laserscanner etc.\\
+		Betriebssystem -- Dateierstellung & Betriebssystem, das verwendet wurde als die Datei erstellt wurde.\\
+		Erstellungsdatum & Datum, an dem die Datei erstellt wurde. Datum und Zeit in UTC nach ISO 8601.\\
+		Letzte Aktualisierung & Datum, an dem die Datei zuletzt bearbeitet wurde. Datum und Zeit in UTC nach ISO 8601.\\
+		Dateiversion & Angabe der Versionsnummer der Datei.\\
+		Referenzdateien & Referenzen auf Dateien, die für das Verständnis einer anderen Datei zentral sind, v. a.  bei zusammenhängenden, komplexen Dateien oder wenn auf eine Ursprungsdatei verwiesen werden soll.\\
+ 		\bottomrule    
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{L{0.25\textwidth} p{0.68\textwidth}}
+		\toprule
+		\multicolumn{2}{l}{Methodenbezogene Metadaten}\\
+		Bezeichnung & Kurzdefinition\\ \midrule
+		Prozessnummer & Eindeutige Nummer eines Prozesses oder einer Methode.\\
+		Ausgangsformat(e) & Format der Dateien, die am Anfang eines gesamten Prozesses stehen und den Ausgangspunkt bilden.\\
+		Zwischenformat(e) & Format der Dateien, die im Verlauf eines Prozesses erzeugt werden und den Ausgangspunkt für weitere Prozesse bilden.\\
+		Zielformat(e) & Format der Dateien, die am Ende eines gesamten Prozesses erzeugt werden und den Zielpunkt definieren.\\
+		Durchführende(r) & Person(en), die den Prozess durchgeführt hat (haben).\\
+		Prozessbeschreibung & Beschreibung des Prozesses/der Methode, vor allem der Ausgangssituation und der Zielvorstellung.\\
+		Prozessbeginn & Datum, an dem der Prozess begonnen wurde. Datum und Zeit in UTC nach ISO 8601.\\
+		Prozessende & Datum, an dem der Prozess beendet wurde. Datum und Zeit in UTC nach ISO 8601.\\
+		Software & Software, mit der der Prozess durchgeführt wurde.\\
+		Hardware & Hardware, auf der der Prozess durchgeführt wurde.\\
+ 		\bottomrule    
+	\end{tabular}
+\end{center}
+
+\subparagraph{Datenmanagement}
+Wenn Sie noch am Beginn Ihres Projektes stehen, haben Sie bereits jetzt die Möglichkeit die spätere Archivierung der Daten einzuplanen. Um dies zu erleichtern, ist die Konzeption und Verwendung eines Datenmanagementplanes hilfreich. In dem Kapitel "`Datenmanagement"' ab Seite \pageref{datenmanagement} finden Sie weitere Angaben dazu.

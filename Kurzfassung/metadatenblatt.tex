@@ -1,0 +1,75 @@
+%Kommando für Text in ianusBlau, ohne Serifen
+\newcommand{\tbsf}[1]{{\color{ianusBlau}\sffamily\normalsize#1}}
+
+%Kommando für Text in ianusBlau, ohne Serifen in fett
+\newcommand{\tbsff}[1]{{\color{ianusBlau}\sffamily\bfseries#1}}
+
+%Breitere Zeilen in Tabellen
+\renewcommand{\arraystretch}{1.2}
+
+\thispagestyle{empty}
+\urlstyle{same}
+
+\begin{flushleft}
+\tbsff{Herausgeber} IANUS -- Maurice Heinrich, Felix Schäfer, Martina Trognitz \vspace{2mm}
+
+\tbsff{Autoren:} siehe Autorenverzeichnis auf \url{https://ianus-fdz.de/it-empfehlungen/autorenverzeichnis} \vspace{2mm}
+
+\tbsff{Titel:} Kurzfassung der IT-Empfehlungen für den nachhaltigen Umgang mit digitalen Daten in den Altertumswissenschaften \vspace{2mm}
+
+\tbsff{Sprache:} Deutsch \vspace{4mm}
+
+%\tbsff{doi:10.13149/000.y47clt-t}
+
+\end{flushleft}
+
+\begin{center}
+	\fboxrule0.3mm
+ 	\fcolorbox{ianusGrau}{white}{\parbox[c]{0.97\textwidth}{{\sffamily\color{ianusBlau}Zitierhinweis:}\\ IANUS (Hrsg.), Kurzfassung der IT-Empfehlungen für den nachhaltigen Umgang mit digitalen Daten in den Altertumswissenschaften (2017) [Version 1.0.1.0] %doi: http://dx.doi.org/10.13149/000.y47clt-t
+ 	}}
+\end{center}%\vspace{1mm}
+
+\begin{flushleft}
+
+\tbsff{Kontakt:}\\
+ianus-fdz@dainst.de\\
+\url{www.ianus-fdz.de}\\ \vspace{5mm}
+
+\tbsff{Lizenz:} \vspace{3mm}
+
+\setlength{\tabcolsep}{0.5pt}
+\begin{tabular}{c c c c}
+	\multirow{2}{*}{\raisebox{2.5mm}{\color{ianusBlau} \Huge \ccLogo}} 	& {\color{ianusBlau} \large \ccAttribution}		& {\color{ianusBlau} \large \ccShareAlike} \\
+	& \color{ianusBlau} \sffamily \scriptsize BY	& \color{ianusBlau} \sffamily \scriptsize SA \\
+\end{tabular}
+
+\vspace{2mm} Dieses Werk bzw. Inhalt ist lizenziert unter einer Creative Commons Namensnennung -- Weitergabe unter gleichen Bedingungen 4.0 International Lizenz. \\
+\url{http://creativecommons.org/licenses/by-sa/4.0/}
+\end{flushleft}
+
+\vspace{2cm}
+
+\begin{center}
+	\begin{longtable}{!\tbg p{0.09\textwidth}!\tbg p{0.2\textwidth}!\tbg p{0.14\textwidth}!\tbg L{0.42\textwidth}!\tbg} %\small
+		\arrayrulecolor{ianusGrau}
+		\multicolumn{4}{l}{Versionshistorie}\\
+		\multicolumn{1}{l}{\tbsf{Version}} & \multicolumn{1}{l}{\tbsf{Autor}} & \multicolumn{1}{l}{\tbsf{Datum}} & \multicolumn{1}{l}{\tbsf{Beschreibung}} \\
+		\endfirsthead
+		\multicolumn{4}{l}{\footnotesize Fortsetzung der vorhergehenden Seite}\\
+		\multicolumn{1}{l}{\tbsf{Version}} & \multicolumn{1}{l}{\tbsf{Autor}} & \multicolumn{1}{l}{\tbsf{Datum}} & \multicolumn{1}{l}{\tbsf{Beschreibung}} \\ 
+		\cline{1-4} 
+		\endhead
+		\cline{1-4}
+		\multicolumn{4}{r}{{\footnotesize Fortsetzung auf der nächsten Seite}} \\
+		\endfoot
+		\cline{1-4}
+		\endlastfoot
+	\cline{1-4}
+	1.0.0.0 & IANUS & 15.05.2017 & Erste veröffentlichte Kurzfassung.\\
+	\cline{1-4}
+	1.0.1.0 & IANUS & 18.11.2017 & Überarbeitung der Kapitel Dokumentation und Dateiverwaltung.\\
+	\cline{1-4}
+	 &  &  &  \\
+\end{longtable}
+ 	
+\end{center}

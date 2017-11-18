@@ -1,0 +1,46 @@
+%Kommando für Titeltext
+\newcommand{\titel}[1]{{\LARGE \sffamily #1}}
+
+%Führende Null im Datum
+\newcommand{\leadingzero}[1]{\ifnum #1<10 0\the#1\else\the#1\fi}
+
+%Kurzer Befehl für das heutige Datum
+\newcommand{\datum}{\the\day.\the\month.\the\year}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.4mm}}
+
+%\begin{document}
+\thispagestyle{empty}
+\begin{titlepage}
+%\setlength{\parskip}{2mm plus 1mm minus 1mm}
+
+\begin{center}
+% Upper part of the page
+\begin{flushleft}
+\includegraphics[width=0.13\textwidth]{deckblattLogos/ianus.png}\\[3cm]
+\end{flushleft}
+% Title
+\titel{IT-Empfehlungen für den nachhaltigen Umgang mit digitalen Daten in den Altertumswissenschaften}\\[0.2cm]
+\tib{\HRule \\[1.0cm]}
+\large
+\emph{Herausgeber:}\\
+\textsc{IANUS}\\[1cm]
+Version 1.0.1.0\\
+{\large \today}
+\end{center}
+
+% Bottom of the page
+\vfill
+\begin{flushright} \sffamily
+\minipage{0.155\textwidth}
+Koordination\\
+\includegraphics[width=\textwidth]{deckblattLogos/dai.jpg} 
+\endminipage
+\hspace{1cm}
+\minipage{0.155\textwidth}
+Förderung\\
+\includegraphics[width=\textwidth]{deckblattLogos/dfg.jpg}
+\endminipage
+
+\end{flushright}
+\end{titlepage}

@@ -1,0 +1,301 @@
+\select@language {ngerman}
+\contentsline {chapter}{\numberline {1}Einleitung}{5}{chapter.1}
+\contentsline {section}{\numberline {1.1}Benutzung der IT-Empfehlungen}{8}{section.1.1}
+\contentsline {section}{\numberline {1.2}Der Lebenszyklus von Forschungsdaten}{11}{section.1.2}
+\contentsline {subparagraph}{Erstellung}{12}{subparagraph*.3}
+\contentsline {subparagraph}{Verarbeitung}{12}{subparagraph*.4}
+\contentsline {subparagraph}{Analyse}{12}{subparagraph*.5}
+\contentsline {subparagraph}{Archivierung}{12}{subparagraph*.6}
+\contentsline {subparagraph}{Zugang}{12}{subparagraph*.7}
+\contentsline {subparagraph}{Nachnutzung}{13}{subparagraph*.8}
+\contentsline {chapter}{\numberline {2}Projektphasen}{14}{chapter.2}
+\contentsline {section}{\numberline {2.1}Datenmanagement}{16}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}\IeC {\"U}bersicht der Aufgaben in den Projektphasen}{16}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Datenmanagementplan}{17}{subsection.2.1.2}
+\contentsline {paragraph}{Planungsphase}{18}{paragraph*.11}
+\contentsline {subparagraph}{Rahmendaten und administrative Angaben}{18}{subparagraph*.12}
+\contentsline {subparagraph}{Verantwortlichkeiten}{18}{subparagraph*.13}
+\contentsline {subparagraph}{Rechtliche Aspekte}{19}{subparagraph*.14}
+\contentsline {subparagraph}{Methoden}{19}{subparagraph*.15}
+\contentsline {subparagraph}{Vorgaben, Richtlinien und Standards}{19}{subparagraph*.16}
+\contentsline {subparagraph}{Kosten und Ressourcen}{19}{subparagraph*.17}
+\contentsline {paragraph}{Durchf\IeC {\"u}hrungsphase}{20}{paragraph*.18}
+\contentsline {subparagraph}{Externe Partner oder Dienstleister}{20}{subparagraph*.19}
+\contentsline {subparagraph}{Hard- und Software}{20}{subparagraph*.20}
+\contentsline {subparagraph}{Datentypen und Datenformate}{21}{subparagraph*.21}
+\contentsline {subparagraph}{Nachnutzung vorhandener Daten}{21}{subparagraph*.22}
+\contentsline {subparagraph}{Erzeugung und Prozessierung von Daten}{21}{subparagraph*.23}
+\contentsline {subparagraph}{Datenmenge}{21}{subparagraph*.24}
+\contentsline {subparagraph}{Dateispeicherung und -sicherung}{22}{subparagraph*.25}
+\contentsline {subparagraph}{Dateiverwaltung}{22}{subparagraph*.26}
+\contentsline {subparagraph}{Dokumentation}{22}{subparagraph*.27}
+\contentsline {subparagraph}{Qualit\IeC {\"a}tssicherung}{23}{subparagraph*.28}
+\contentsline {subparagraph}{Datenaustausch}{23}{subparagraph*.29}
+\contentsline {paragraph}{Abschlussphase}{23}{paragraph*.30}
+\contentsline {subparagraph}{Mittelfristige Datenaufbewahrung}{24}{subparagraph*.31}
+\contentsline {subparagraph}{Vorbereitung f\IeC {\"u}r die langfristige Archivierung}{24}{subparagraph*.32}
+\contentsline {subparagraph}{Zug\IeC {\"a}nglichkeit und Nachnutzung}{24}{subparagraph*.33}
+\contentsline {subparagraph}{Projektabschluss}{24}{subparagraph*.34}
+\contentsline {subsection}{\numberline {2.1.3}Weiterf\IeC {\"u}hrende Informationen}{25}{subsection.2.1.3}
+\contentsline {paragraph}{Quellen}{25}{paragraph*.35}
+\contentsline {section}{\numberline {2.2}Dokumentation}{27}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Dokumentation mit Metadaten}{28}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Strukturierung von Metadaten}{30}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Kontrollierte Vokabulare, Thesauri und Normdaten}{34}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Speicherung von Metadaten}{37}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}Metadaten in der Anwendung}{39}{subsection.2.2.5}
+\contentsline {paragraph}{Projektbezogene Metadaten}{39}{paragraph*.42}
+\contentsline {paragraph}{Dateibezogene Metadaten}{42}{paragraph*.43}
+\contentsline {paragraph}{Methodenbezogene Metadaten}{43}{paragraph*.44}
+\contentsline {subsection}{\numberline {2.2.6}Grabungsdokumentation}{44}{subsection.2.2.6}
+\contentsline {subsection}{\numberline {2.2.7}Weiterf\IeC {\"u}hrende Informationen}{47}{subsection.2.2.7}
+\contentsline {section}{\numberline {2.3}Dateiverwaltung}{51}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Dateiablage}{51}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Empfehlungen f\IeC {\"u}r eine Ordnerstruktur}{52}{subsection.2.3.2}
+\contentsline {paragraph}{Praxisbeispiele}{53}{paragraph*.45}
+\contentsline {subsection}{\numberline {2.3.3}Dateibenennung}{56}{subsection.2.3.3}
+\contentsline {subparagraph}{Erlaubte Zeichen}{56}{subparagraph*.47}
+\contentsline {subparagraph}{Zu vermeidende Zeichen}{56}{subparagraph*.48}
+\contentsline {subparagraph}{Gro\IeC {\ss }- und Kleinschreibung}{57}{subparagraph*.49}
+\contentsline {subparagraph}{L\IeC {\"a}nge}{57}{subparagraph*.50}
+\contentsline {subsection}{\numberline {2.3.4}Versionskontrolle}{57}{subsection.2.3.4}
+\contentsline {subparagraph}{Angabe im Dateinamen}{57}{subparagraph*.51}
+\contentsline {subparagraph}{Angabe in der Datei}{57}{subparagraph*.52}
+\contentsline {subparagraph}{\IeC {\"A}nderungsprotokoll}{58}{subparagraph*.53}
+\contentsline {subparagraph}{Software}{58}{subparagraph*.54}
+\contentsline {section}{\numberline {2.4}Dateispeicherung und -sicherung}{59}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Kurzfristige Speicherung}{59}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Mittelfristige Sicherung}{60}{subsection.2.4.2}
+\contentsline {subparagraph}{Speichermedium}{60}{subparagraph*.55}
+\contentsline {subparagraph}{Volldatensicherung}{60}{subparagraph*.56}
+\contentsline {subparagraph}{Inkrementelle Sicherung}{61}{subparagraph*.57}
+\contentsline {subparagraph}{Differentielle Sicherung}{61}{subparagraph*.58}
+\contentsline {subparagraph}{Automatisierung}{61}{subparagraph*.59}
+\contentsline {subparagraph}{Sicherungszeitpunkt}{62}{subparagraph*.60}
+\contentsline {subparagraph}{Sicherungsversionen}{62}{subparagraph*.61}
+\contentsline {subparagraph}{Disaster Recovery}{62}{subparagraph*.62}
+\contentsline {chapter}{\numberline {3}Dateiformate}{63}{chapter.3}
+\contentsline {section}{\numberline {3.1}PDF-Dokumente}{64}{section.3.1}
+\contentsline {subparagraph}{Langzeitformate}{64}{subparagraph*.63}
+\contentsline {subparagraph}{Dokumentation}{65}{subparagraph*.64}
+\contentsline {paragraph}{Vertiefung}{65}{paragraph*.65}
+\contentsline {subparagraph}{Inhalte}{66}{subparagraph*.66}
+\contentsline {subparagraph}{PDF-Varianten}{67}{subparagraph*.67}
+\contentsline {subparagraph}{Das Archivierungsformat PDF/A}{67}{subparagraph*.68}
+\contentsline {subparagraph}{Konformit\IeC {\"a}tsstufen bei PDF/A}{69}{subparagraph*.69}
+\contentsline {paragraph}{Praxis}{69}{paragraph*.70}
+\contentsline {subparagraph}{Erstellung von PDF-Dokumenten}{69}{subparagraph*.71}
+\contentsline {subparagraph}{Validierung: Liegt eine PDF-Datei im PDF/A-Format vor?}{70}{subparagraph*.73}
+\contentsline {subparagraph}{Bearbeitung von Metadaten}{71}{subparagraph*.75}
+\contentsline {paragraph}{Quellen}{73}{paragraph*.78}
+\contentsline {section}{\numberline {3.2}Textdokumente}{76}{section.3.2}
+\contentsline {subparagraph}{Langzeitformate}{76}{subparagraph*.79}
+\contentsline {subparagraph}{Dokumentation}{78}{subparagraph*.80}
+\contentsline {paragraph}{Vertiefung}{79}{paragraph*.81}
+\contentsline {subparagraph}{Zeichenkodierung und Zeichensatz}{79}{subparagraph*.82}
+\contentsline {subparagraph}{Schriftart}{80}{subparagraph*.83}
+\contentsline {subparagraph}{Auszeichnungssprachen}{80}{subparagraph*.84}
+\contentsline {paragraph}{Praxis}{82}{paragraph*.87}
+\contentsline {subparagraph}{Textdokumente mit Formatierungsangaben}{82}{subparagraph*.88}
+\contentsline {subparagraph}{Einbettung von Schriftarten}{83}{subparagraph*.89}
+\contentsline {subparagraph}{Texteditoren und Editoren f\IeC {\"u}r Auszeichnungssprachen}{83}{subparagraph*.90}
+\contentsline {subparagraph}{Einstellen der Zeichenkodierung}{84}{subparagraph*.91}
+\contentsline {subparagraph}{Metadaten bearbeiten und erg\IeC {\"a}nzen}{84}{subparagraph*.94}
+\contentsline {subparagraph}{Digitalisate}{86}{subparagraph*.95}
+\contentsline {paragraph}{Quellen}{86}{paragraph*.96}
+\contentsline {section}{\numberline {3.3}Bilder -- Rastergrafiken}{89}{section.3.3}
+\contentsline {subparagraph}{Langzeitformate}{89}{subparagraph*.97}
+\contentsline {subparagraph}{Dokumentation}{90}{subparagraph*.98}
+\contentsline {paragraph}{Vertiefung}{91}{paragraph*.99}
+\contentsline {subparagraph}{Bildgr\IeC {\"o}\IeC {\ss }e und Aufl\IeC {\"o}sung}{92}{subparagraph*.101}
+\contentsline {subparagraph}{Farbtiefe}{92}{subparagraph*.102}
+\contentsline {subparagraph}{Farbmodell und Farbraum}{93}{subparagraph*.103}
+\contentsline {subparagraph}{Komprimierung}{93}{subparagraph*.105}
+\contentsline {subparagraph}{Transparenz}{94}{subparagraph*.106}
+\contentsline {subparagraph}{Ebenen}{94}{subparagraph*.107}
+\contentsline {subparagraph}{Metadaten}{94}{subparagraph*.108}
+\contentsline {subparagraph}{Anmerkungen zur Qualit\IeC {\"a}t}{94}{subparagraph*.109}
+\contentsline {paragraph}{Praxis}{95}{paragraph*.110}
+\contentsline {subparagraph}{Digitalfotografie}{95}{subparagraph*.111}
+\contentsline {subparagraph}{Rastern aus Vektorgrafiken}{97}{subparagraph*.112}
+\contentsline {subparagraph}{Stapelverarbeitung}{97}{subparagraph*.113}
+\contentsline {subparagraph}{Dateiformate konvertieren und \IeC {\"u}berpr\IeC {\"u}fen}{97}{subparagraph*.114}
+\contentsline {subparagraph}{Erg\IeC {\"a}nzen und extrahieren von Metadaten}{98}{subparagraph*.115}
+\contentsline {subparagraph}{Digitalisate}{98}{subparagraph*.116}
+\contentsline {paragraph}{Quellen}{99}{paragraph*.117}
+\contentsline {section}{\numberline {3.4}Bilder -- Vektorgrafiken und CAD-Daten}{101}{section.3.4}
+\contentsline {subparagraph}{Langzeitformate}{101}{subparagraph*.118}
+\contentsline {subparagraph}{Dokumentation}{104}{subparagraph*.119}
+\contentsline {paragraph}{Vertiefung}{105}{paragraph*.120}
+\contentsline {subparagraph}{Grafische Primitive}{106}{subparagraph*.122}
+\contentsline {subparagraph}{Aussehen grafischer Primitive}{106}{subparagraph*.123}
+\contentsline {subparagraph}{Bildstruktur und Ebenen}{107}{subparagraph*.126}
+\contentsline {subparagraph}{CAD}{108}{subparagraph*.127}
+\contentsline {subparagraph}{Unterschiede von CAD und GIS}{108}{subparagraph*.128}
+\contentsline {paragraph}{Praxis}{111}{paragraph*.132}
+\contentsline {subparagraph}{Erstellung von Vektorgrafiken}{111}{subparagraph*.133}
+\contentsline {subparagraph}{Erstellung und Bearbeitung von CAD-Daten}{112}{subparagraph*.134}
+\contentsline {subparagraph}{Anzeige von CAD-Daten}{113}{subparagraph*.135}
+\contentsline {subparagraph}{Ebenen}{113}{subparagraph*.136}
+\contentsline {subparagraph}{Raumbezug}{115}{subparagraph*.137}
+\contentsline {subparagraph}{Rastern von Vektorgrafiken}{115}{subparagraph*.138}
+\contentsline {subparagraph}{Vektorisierung von Rastergrafiken und analogen Zeichnungen}{116}{subparagraph*.139}
+\contentsline {subparagraph}{Datenerfassung}{117}{subparagraph*.142}
+\contentsline {subparagraph}{Erstellen von Plan- oder Schnittzeichnungen f\IeC {\"u}r den Druck}{120}{subparagraph*.149}
+\contentsline {subparagraph}{Dateiformate konvertieren}{121}{subparagraph*.152}
+\contentsline {subparagraph}{CAD-Daten f\IeC {\"u}r die Verwendung in GIS vorbereiten}{121}{subparagraph*.153}
+\contentsline {paragraph}{Quellen}{127}{paragraph*.156}
+\contentsline {section}{\numberline {3.5}Tabellen}{131}{section.3.5}
+\contentsline {subparagraph}{Langzeitformate}{131}{subparagraph*.157}
+\contentsline {subparagraph}{Dokumentation}{133}{subparagraph*.158}
+\contentsline {paragraph}{Vertiefung}{134}{paragraph*.159}
+\contentsline {subparagraph}{Tabellenkalkulationen}{135}{subparagraph*.161}
+\contentsline {subparagraph}{Strukturierte Textdateien mit Trennzeichen}{135}{subparagraph*.162}
+\contentsline {subparagraph}{Tabellen mit Auszeichnungssprachen}{137}{subparagraph*.167}
+\contentsline {paragraph}{Praxis}{137}{paragraph*.169}
+\contentsline {subparagraph}{Tabellenkalkulationsprogramme}{137}{subparagraph*.170}
+\contentsline {subparagraph}{Tabellen als CSV- oder TSV-Dateien speichern}{139}{subparagraph*.171}
+\contentsline {subparagraph}{Grafiken exportieren}{140}{subparagraph*.173}
+\contentsline {subparagraph}{Bereinigung von Tabellen}{141}{subparagraph*.174}
+\contentsline {paragraph}{Quellen}{141}{paragraph*.175}
+\contentsline {section}{\numberline {3.6}Datenbanken}{143}{section.3.6}
+\contentsline {paragraph}{\IeC {\"U}bersicht}{143}{paragraph*.176}
+\contentsline {subparagraph}{Langzeitformate}{143}{subparagraph*.177}
+\contentsline {subparagraph}{Dokumentation}{147}{subparagraph*.178}
+\contentsline {paragraph}{\IeC {\"U}bersicht}{149}{paragraph*.179}
+\contentsline {subparagraph}{Langzeitformate}{149}{subparagraph*.180}
+\contentsline {subparagraph}{Dokumentation}{153}{subparagraph*.181}
+\contentsline {paragraph}{Vertiefung}{155}{paragraph*.182}
+\contentsline {subparagraph}{Datenbankmodelle}{157}{subparagraph*.184}
+\contentsline {subparagraph}{Relationale Datenbanken}{159}{subparagraph*.190}
+\contentsline {subparagraph}{Beziehungen}{161}{subparagraph*.192}
+\contentsline {subparagraph}{Attributtypen}{162}{subparagraph*.194}
+\contentsline {subparagraph}{Structured Query Language (SQL)}{163}{subparagraph*.195}
+\contentsline {subparagraph}{Entity-Relationship-Modell (ERM)}{163}{subparagraph*.197}
+\contentsline {subparagraph}{Bestandteile einer Datenbank}{163}{subparagraph*.199}
+\contentsline {paragraph}{Praxis}{165}{paragraph*.201}
+\contentsline {subparagraph}{Datenbankentwurf}{165}{subparagraph*.202}
+\contentsline {subparagraph}{DBMS f\IeC {\"u}r Desktop-Datenbanken}{167}{subparagraph*.203}
+\contentsline {subparagraph}{DBMS f\IeC {\"u}r Server-Datenbanken}{168}{subparagraph*.204}
+\contentsline {subparagraph}{Administration von Server-Datenbanken}{169}{subparagraph*.205}
+\contentsline {subparagraph}{Dateneingabe und Datenqualit\IeC {\"a}t}{170}{subparagraph*.206}
+\contentsline {subparagraph}{Schnittstellen und Exportm\IeC {\"o}glichkeiten}{171}{subparagraph*.207}
+\contentsline {subparagraph}{Speicherung und Sicherung}{171}{subparagraph*.208}
+\contentsline {subparagraph}{Mehrsprachigkeit}{171}{subparagraph*.209}
+\contentsline {subparagraph}{Automatische Dokumentation der Datenbankstruktur}{172}{subparagraph*.210}
+\contentsline {subparagraph}{Access-Datenbanken dokumentieren}{172}{subparagraph*.213}
+\contentsline {subparagraph}{Datenbanken mit SIARD archivieren}{174}{subparagraph*.214}
+\contentsline {subparagraph}{FileMaker-Datenbanken archivieren}{174}{subparagraph*.215}
+\contentsline {paragraph}{Quellen}{175}{paragraph*.217}
+\contentsline {section}{\numberline {3.7}GIS}{178}{section.3.7}
+\contentsline {paragraph}{Vertiefung}{178}{paragraph*.218}
+\contentsline {subparagraph}{GIS in der Arch\IeC {\"a}ologie}{178}{subparagraph*.219}
+\contentsline {subparagraph}{Ma\IeC {\ss }stabsebenen}{179}{subparagraph*.220}
+\contentsline {subparagraph}{Datenmodell eines GIS}{180}{subparagraph*.221}
+\contentsline {paragraph}{Praxis}{181}{paragraph*.222}
+\contentsline {subparagraph}{Ausgrabungen und GIS}{181}{subparagraph*.223}
+\contentsline {paragraph}{Quellen}{182}{paragraph*.224}
+\contentsline {section}{\numberline {3.8}Video}{184}{section.3.8}
+\contentsline {subparagraph}{Langzeitformate}{184}{subparagraph*.225}
+\contentsline {subparagraph}{Dokumentation}{188}{subparagraph*.226}
+\contentsline {paragraph}{Vertiefung}{190}{paragraph*.227}
+\contentsline {subparagraph}{Containerformat}{190}{subparagraph*.228}
+\contentsline {subparagraph}{Codec und Kompression}{191}{subparagraph*.230}
+\contentsline {subparagraph}{Bildgr\IeC {\"o}\IeC {\ss }e und Seitenverh\IeC {\"a}ltnis}{192}{subparagraph*.232}
+\contentsline {subparagraph}{Farbinformationen}{192}{subparagraph*.234}
+\contentsline {subparagraph}{Datenrate}{193}{subparagraph*.237}
+\contentsline {paragraph}{Praxis}{195}{paragraph*.238}
+\contentsline {subparagraph}{Metadaten}{195}{subparagraph*.239}
+\contentsline {subparagraph}{Wiedergabeprogramme}{196}{subparagraph*.241}
+\contentsline {subparagraph}{Transcodierung}{196}{subparagraph*.243}
+\contentsline {subparagraph}{Digitalisierung und Aufnahme}{197}{subparagraph*.244}
+\contentsline {paragraph}{Quellen}{197}{paragraph*.245}
+\contentsline {section}{\numberline {3.9}Audio}{201}{section.3.9}
+\contentsline {subparagraph}{Langzeitformate}{201}{subparagraph*.246}
+\contentsline {subparagraph}{Dokumentation}{204}{subparagraph*.247}
+\contentsline {paragraph}{Vertiefung}{204}{paragraph*.248}
+\contentsline {subparagraph}{Abtastrate und Abtasttiefe}{205}{subparagraph*.249}
+\contentsline {subparagraph}{Tonkan\IeC {\"a}le und Tonsysteme}{206}{subparagraph*.251}
+\contentsline {paragraph}{Praxis}{206}{paragraph*.252}
+\contentsline {subparagraph}{Metadaten}{206}{subparagraph*.253}
+\contentsline {subparagraph}{Aufnahme und Bearbeitung}{207}{subparagraph*.254}
+\contentsline {subparagraph}{Wiedergabeprogramme}{207}{subparagraph*.256}
+\contentsline {subparagraph}{Transcodierung}{208}{subparagraph*.257}
+\contentsline {subparagraph}{Digitalisierung}{208}{subparagraph*.258}
+\contentsline {paragraph}{Quellen}{208}{paragraph*.259}
+\contentsline {section}{\numberline {3.10}3D und Virtual Reality}{211}{section.3.10}
+\contentsline {subparagraph}{Langzeitformate}{211}{subparagraph*.260}
+\contentsline {subparagraph}{Dokumentation}{214}{subparagraph*.261}
+\contentsline {paragraph}{Vertiefung}{215}{paragraph*.262}
+\contentsline {subparagraph}{Geometrie}{216}{subparagraph*.265}
+\contentsline {subparagraph}{Oberfl\IeC {\"a}cheneigenschaften}{217}{subparagraph*.266}
+\contentsline {subparagraph}{Belichtungs- und Kameraparameter}{218}{subparagraph*.269}
+\contentsline {subparagraph}{Animation und Interaktion}{219}{subparagraph*.271}
+\contentsline {subparagraph}{Speicherung der verschiedenen Eigenschaften}{219}{subparagraph*.272}
+\contentsline {paragraph}{Praxis}{220}{paragraph*.274}
+\contentsline {subparagraph}{London Charter}{220}{subparagraph*.275}
+\contentsline {subparagraph}{Konvertierung}{221}{subparagraph*.276}
+\contentsline {subparagraph}{Weitergabe von 3D-Modellen}{221}{subparagraph*.277}
+\contentsline {paragraph}{Quellen}{223}{paragraph*.278}
+\contentsline {section}{\numberline {3.11}Webseiten}{225}{section.3.11}
+\contentsline {subparagraph}{Langzeitformate}{225}{subparagraph*.279}
+\contentsline {subparagraph}{Dokumentation}{229}{subparagraph*.280}
+\contentsline {paragraph}{Vertiefung}{230}{paragraph*.281}
+\contentsline {subparagraph}{Grunds\IeC {\"a}tzliche Funktionsweise}{230}{subparagraph*.282}
+\contentsline {subparagraph}{Webbrowser}{232}{subparagraph*.284}
+\contentsline {subparagraph}{URIs}{232}{subparagraph*.285}
+\contentsline {subparagraph}{Webseiten}{232}{subparagraph*.286}
+\contentsline {subparagraph}{HTML}{233}{subparagraph*.287}
+\contentsline {subparagraph}{CSS}{234}{subparagraph*.288}
+\contentsline {subparagraph}{JavaScript}{234}{subparagraph*.289}
+\contentsline {subparagraph}{Dynamische Websites}{235}{subparagraph*.290}
+\contentsline {paragraph}{Praxis}{235}{paragraph*.291}
+\contentsline {subparagraph}{Editoren}{236}{subparagraph*.292}
+\contentsline {subparagraph}{Archivierungsmethoden}{236}{subparagraph*.293}
+\contentsline {subparagraph}{Archivierung als PDF}{237}{subparagraph*.296}
+\contentsline {subparagraph}{Archivierung als MHTML}{239}{subparagraph*.298}
+\contentsline {subparagraph}{Archivierung als MAFF-Datei}{240}{subparagraph*.301}
+\contentsline {subparagraph}{Archivierung als HTML mit Data-URI}{240}{subparagraph*.302}
+\contentsline {subparagraph}{Archivierung von Websites}{240}{subparagraph*.304}
+\contentsline {subparagraph}{Screenshots von Webseiten}{242}{subparagraph*.306}
+\contentsline {paragraph}{Quellen}{242}{paragraph*.307}
+\contentsline {chapter}{\numberline {4}Forschungsmethoden}{246}{chapter.4}
+\contentsline {section}{\numberline {4.1}Geod\IeC {\"a}sie}{246}{section.4.1}
+\contentsline {section}{\numberline {4.2}Georeferenzierung}{251}{section.4.2}
+\contentsline {paragraph}{Einsatz von Hard- und Software in der Praxis}{251}{paragraph*.308}
+\contentsline {paragraph}{Quellen}{252}{paragraph*.309}
+\contentsline {section}{\numberline {4.3}Oberfl\IeC {\"a}chen- (DOM) und Gel\IeC {\"a}ndemodellierung (DGM)}{252}{section.4.3}
+\contentsline {paragraph}{Eine kurze Einf\IeC {\"u}hrung}{253}{paragraph*.310}
+\contentsline {subparagraph}{Vermessung eines Grabungsgel\IeC {\"a}ndes}{253}{subparagraph*.311}
+\contentsline {subparagraph}{Regionale Gel\IeC {\"a}ndemodelle}{254}{subparagraph*.312}
+\contentsline {subparagraph}{Modellierung}{255}{subparagraph*.313}
+\contentsline {paragraph}{Einsatz von Hard- und Software in der Praxis}{256}{paragraph*.314}
+\contentsline {paragraph}{Quellen}{257}{paragraph*.315}
+\contentsline {section}{\numberline {4.4}Rekonstruktion}{257}{section.4.4}
+\contentsline {paragraph}{3D-Modelle}{257}{paragraph*.316}
+\contentsline {paragraph}{Praxis}{258}{paragraph*.317}
+\contentsline {subparagraph}{Auswahl geeigneter Software}{259}{subparagraph*.318}
+\contentsline {subparagraph}{Auswahl der Hardware}{260}{subparagraph*.319}
+\contentsline {paragraph}{Quellen}{261}{paragraph*.320}
+\contentsline {section}{\numberline {4.5}Reflectance Transformation Imaging (RTI)}{263}{section.4.5}
+\contentsline {subparagraph}{Langzeitformate}{263}{subparagraph*.321}
+\contentsline {subparagraph}{Ordnerstruktur}{264}{subparagraph*.322}
+\contentsline {subparagraph}{Dokumentation}{265}{subparagraph*.323}
+\contentsline {paragraph}{Vertiefung}{267}{paragraph*.324}
+\contentsline {subparagraph}{Polynomial Texture Map}{267}{subparagraph*.326}
+\contentsline {subparagraph}{Aufnahmemethoden}{268}{subparagraph*.329}
+\contentsline {paragraph}{Praxis}{269}{paragraph*.330}
+\contentsline {subparagraph}{Erstellung von RTI-Daten}{269}{subparagraph*.331}
+\contentsline {subparagraph}{Ansicht von RTI-Daten}{269}{subparagraph*.332}
+\contentsline {paragraph}{Quellen}{270}{paragraph*.333}
+\contentsline {section}{\numberline {4.6}Satellitenmessungen}{271}{section.4.6}
+\contentsline {paragraph}{Einsatz von Hard- und Software in der Praxis}{271}{paragraph*.334}
+\contentsline {paragraph}{Fotografische Sensoren}{272}{paragraph*.335}
+\contentsline {paragraph}{Digitale Sensoren}{272}{paragraph*.336}
+\contentsline {paragraph}{Quellen}{273}{paragraph*.337}
+\contentsline {chapter}{\numberline {5}Archivierung bei IANUS}{275}{chapter.5}
+\contentsline {subparagraph}{Dateiformate}{275}{subparagraph*.338}
+\contentsline {subparagraph}{Metadaten}{279}{subparagraph*.339}
+\contentsline {subparagraph}{Datenmanagement}{282}{subparagraph*.340}
+\contentsline {chapter}{\numberline {A}Autorenverzeichnis}{284}{appendix.A}
+\contentsline {chapter}{\numberline {B}Glossar}{287}{appendix.B}

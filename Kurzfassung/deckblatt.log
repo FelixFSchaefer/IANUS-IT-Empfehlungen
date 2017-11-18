@@ -1,0 +1,397 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.23)  24 APR 2017 12:54
+entering extended mode
+**./deckblatt.tex
+(deckblatt.tex
+LaTeX2e <2017/01/01> patch level 3
+Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
+
+! LaTeX Error: Environment titlepage undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 \begin{titlepage}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 \begin{center}
+                   
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 17--17
+[] 
+ []
+
+! Undefined control sequence.
+l.20 \includegraphics
+                     [width=0.13\textwidth]{../deckblattLogos/ianus.png}\\[3cm]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+! Missing number, treated as zero.
+<to be read again> 
+                   ]
+l.20 \includegraphics[width=0.13\textwidth]
+                                           {../deckblattLogos/ianus.png}\\[3cm]
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   ]
+l.20 \includegraphics[width=0.13\textwidth]
+                                           {../deckblattLogos/ianus.png}\\[3cm]
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+Missing character: There is no ] in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+! Undefined control sequence.
+\titel #1->{\LARGE 
+                   \sffamily #1}
+l.23 ...alen Daten in den Altertumswissenschaften}
+                                                  \\[0.2cm]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no Ã in font cmss10!
+Missing character: There is no ¼ in font cmss10!
+
+Overfull \hbox (12.9167pt too wide) in paragraph at lines 23--23
+ \OT1/cmss/m/n/10 IT- 
+ []
+
+
+Overfull \hbox (59.0834pt too wide) in paragraph at lines 23--23
+ \OT1/cmss/m/n/10 Empfehlungen 
+ []
+
+
+Overfull \hbox (6.47226pt too wide) in paragraph at lines 23--23
+ \OT1/cmss/m/n/10 fr 
+ []
+
+
+Overfull \hbox (14.77779pt too wide) in paragraph at lines 23--23
+ \OT1/cmss/m/n/10 den 
+ []
+
+
+Overfull \hbox (22.91669pt too wide) in paragraph at lines 23--23
+ \OT1/cmss/m/n/10 nach- 
+ []
+
+
+Overfull \hbox (21.69446pt too wide) in paragraph at lines 23--23
+ \OT1/cmss/m/n/10 halti- 
+ []
+
+
+Overfull \hbox (14.61113pt too wide) in paragraph at lines 23--23
+ \OT1/cmss/m/n/10 gen 
+ []
+
+
+Overfull \hbox (18.15283pt too wide) in paragraph at lines 23--23
+ \OT1/cmss/m/n/10 Um- 
+ []
+
+
+Overfull \hbox (19.97227pt too wide) in paragraph at lines 23--23
+ \OT1/cmss/m/n/10 gang 
+ []
+
+
+Overfull \hbox (13.94446pt too wide) in paragraph at lines 23--23
+ \OT1/cmss/m/n/10 mit 
+ []
+
+
+Overfull \hbox (15.8889pt too wide) in paragraph at lines 23--23
+ \OT1/cmss/m/n/10 dig- 
+ []
+
+
+Overfull \hbox (5.72221pt too wide) in paragraph at lines 23--23
+ \OT1/cmss/m/n/10 i- 
+ []
+
+
+Overfull \hbox (20.41669pt too wide) in paragraph at lines 23--23
+ \OT1/cmss/m/n/10 talen 
+ []
+
+
+Overfull \hbox (25.25006pt too wide) in paragraph at lines 23--23
+ \OT1/cmss/m/n/10 Daten 
+ []
+
+
+Overfull \hbox (7.55556pt too wide) in paragraph at lines 23--23
+ \OT1/cmss/m/n/10 in 
+ []
+
+
+Overfull \hbox (14.77779pt too wide) in paragraph at lines 23--23
+ \OT1/cmss/m/n/10 den 
+ []
+
+
+Overfull \hbox (12.3889pt too wide) in paragraph at lines 23--23
+ \OT1/cmss/m/n/10 Al- 
+ []
+
+
+Overfull \hbox (14.80557pt too wide) in paragraph at lines 23--23
+ \OT1/cmss/m/n/10 ter- 
+ []
+
+
+Overfull \hbox (20.05557pt too wide) in paragraph at lines 23--23
+ \OT1/cmss/m/n/10 tum- 
+ []
+
+
+Overfull \hbox (20.22223pt too wide) in paragraph at lines 23--23
+ \OT1/cmss/m/n/10 swis- 
+ []
+
+
+Overfull \hbox (47.97226pt too wide) in paragraph at lines 23--23
+ \OT1/cmss/m/n/10 senschaften 
+ []
+
+! Undefined control sequence.
+l.24 \tib
+         {\HRule \\[1.0cm]}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.25 \large
+           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (56.05928pt too wide) in paragraph at lines 26--26
+ []\OT1/cmr/m/it/10 Herausgeber: 
+ []
+
+
+Overfull \hbox (34.58296pt too wide) in paragraph at lines 27--27
+ []\OT1/cmr/m/sc/10 IANUS 
+ []
+
+Missing character: There is no V in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+! Undefined control sequence.
+l.29 {\large
+             \today}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.29 {\large \today
+                   }
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 34--34
+[] 
+ []
+
+! Undefined control sequence.
+<recently read> \includegraphics 
+                                 
+l.37 \includegraphics
+                     [width=\textwidth]{deckblattLogos/dai.jpg}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   ]
+l.37 \includegraphics[width=\textwidth]
+                                       {deckblattLogos/dai.jpg}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   ]
+l.37 \includegraphics[width=\textwidth]
+                                       {deckblattLogos/dai.jpg}
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 38.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 38.
+Missing character: There is no Ã in font cmss10!
+Missing character: There is no ¶ in font cmss10!
+! Undefined control sequence.
+<recently read> \includegraphics 
+                                 
+l.42 \includegraphics
+                     [width=\textwidth]{deckblattLogos/dfg.jpg}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   ]
+l.42 \includegraphics[width=\textwidth]
+                                       {deckblattLogos/dfg.jpg}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   ]
+l.42 \includegraphics[width=\textwidth]
+                                       {deckblattLogos/dfg.jpg}
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+Overfull \hbox (1269.74998pt too wide) in paragraph at lines 35--44
+ []$
+ []
+
+
+Overfull \hbox (1269.74998pt too wide) in paragraph at lines 35--44
+ []$
+ []
+
+
+! LaTeX Error: \begin{document} ended by \end{titlepage}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.46 \end{titlepage}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+)
+! Emergency stop.
+<*> ./deckblatt.tex
+                   
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 23 strings out of 493333
+ 260 string characters out of 3139200
+ 54256 words of memory out of 3000000
+ 3650 multiletter control sequences out of 15000+200000
+ 4592 words of font info for 17 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 19i,2n,17p,146b,157s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!

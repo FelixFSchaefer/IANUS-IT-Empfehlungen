@@ -1,0 +1,83 @@
+Tabellen werden verwendet, um Informationen strukturiert in Zellen zu speichern, die in Zeilen und Spalten angeordnet sind. Im Gegensatz zu analogen Tabellen bieten digitale Tabellen, die mit entsprechenden Programmen erstellt werden, eine Vielzahl an weiteren Funktionalitäten. Beispielsweise können Zellinhalte nach bestimmten Kriterien sortiert, dynamisch mittels Formeln erzeugt oder Grafiken aus den Daten generiert werden. Um solche und andere Funktionen zu erhalten, erfordert die Speicherung besondere Aufmerksamkeit.
+
+
+\subparagraph{Langzeitformate} Für einfache Tabellen ohne interaktive Elemente wie Formeln oder für Tabellenkalkulationen bei denen es ausreicht die Ergebnisse der Formeln zu speichern, wird ein textbasiertes Format mit Trennzeichen für die Archivierung empfohlen. 
+
+Dazu eignet sich beispielsweise das CSV-Format, wobei als Trennzeichen ein Komma (\emph{,}) und als Textbegrenzungszeichen das Anführungszeichen (\emph{''}) verwendet werden sollte, um den Vorgaben von \href{https://tools.ietf.org/html/rfc4180}{RFC 4180} gerecht zu werden. Andere Trennzeichen und Textbegrenzungszeichen können in begründeten Ausnahmefällen ebenfalls eingesetzt werden und müssen entsprechend dokumentiert werden. Als Zeichenkodierung sollte UTF-8 ohne BOM verwendet werden.
+
+Ein alternatives textbasiertes Format für Tabellen ist das TSV-Format, das als Trennzeichen das Tabulator-Zeichen (U+0009) verwendet. Auch TSV"=Dateien sollten UTF-8 ohne BOM als Zeichenkodierung verwenden.
+
+Bei Dateien mit mehr als einem Arbeitsblatt (Tabellenkalkulationen), die als CSV- oder TSV-Datei gespeichert werden sollen, muss jedes Arbeitsblatt gesondert gespeichert werden. Dabei gilt für die Dateinamen der Arbeitsblätter, dass der Name des Arbeitsblattes an den Namen der Tabellenkalkulation, am besten durch ein Unterstrich ({\_}) getrennt, angefügt wird (z. B. Tabellenname{\_}Blatt1.csv, Tabellenname{\_}Blatt2.csv usw.).
+
+Tabellenkalkulationen, deren zusätzlichen Funktionalitäten erhalten bleiben sollen, werden am besten in einem offenen auf XML basierenden Format gespeichert, wie beispielsweise XLSX oder ODS. Ersteres ist das Standardformat, das in Microsoft Excel seit 2007 verwendet wird und auch von Microsoft entwickelt wurde. Letzteres ist das Format für Tabellenkalkulationen, welches in OpenOffice oder LibreOffice verwendet wird. ODS ist ein Teil vom OpenDocument Format (ODF) und wurde von einem technischen Komitee unter der Leitung der \emph{Organization for the Advancement of Structured Information Standards} (OASIS) entwickelt.
+
+Grafiken, die in Tabellenkalkulationen anhand der Daten erstellt wurden, müssen zusätzlich exportiert und gesondert in einem geeigneten Format gespeichert werden. Dies gilt ebenfalls für eingebettete Bilder oder andere Medien. Passende Formate sind beispielsweise in dem Abschnitt Rastergrafiken ab Seite \pageref{rastergrafiken} oder in dem Abschnitt Vektorgrafiken ab Seite \pageref{vektorgrafiken} zu finden.
+
+Tabellen können auch im XML-Format gespeichert werden. Es gibt eine ganze Reihe an DTDs oder XSDs, die hier als Grundlage dienen können, wie beispielsweise das Schema der TEI, das OASIS Exchange Table Model oder ISO 12083. Auch das Speichern von Tabellen im HTML-Format ist möglich. In jedem Fall muss die zugrundeliegende DTD oder XSD angegeben und gegebenenfalls mit archiviert werden. Die Dateien sollten UTF-8 ohne BOM als Zeichenkodierung verwenden.
+
+Wenn neben den eigentlichen Daten in den einzelnen Zellen auch das Aussehen der Tabelle archiviert werden soll, kann neben einer CSV-, TSV-, XLSX- oder ODS-Datei zusätzlich eine Version der Tabelle im PDF/A-Format gespeichert werden. Bei der Erstellung von Tabellen sollte aber darauf geachtet werden, dass Informationen nicht nur durch Formatierungsangaben, wie beispielsweise die Farbe von Zellen, vermittelt werden, da je nach gewähltem Format die Formatierungsangaben verloren gehen können.
+
+Hinweis: Obwohl Textverarbeitungsprogramme entsprechende Funktionen bieten, sollten Tabellen auch tatsächlich als Tabellen in einem der hier gelisteten Formate gespeichert werden.
+
+\begin{center}
+	\begin{tabular}{l p{0.2\textwidth} p{0.6\textwidth}}
+		\toprule
+		\multicolumn{2}{l}{Format} & Begründung \\ \midrule		
+		\multirow{5}{*}{\color{ForestGreen} \LARGE \checkmark} & CSV & Das textbasierte CSV-Format sollte mit einem Komma als Trennzeichen und mit Anführungszeichen als Textbegrenzungszeichen verwendet werden. Ausnahmen müssen dokumentiert werden. Die Zeichen sollten in UTF-8 ohne BOM kodiert sein.\\
+			& TSV & TSV (MIME-Type text/tab-separated-values) ist ein textbasiertes Format, welches das Tabulator-Zeichen (U+0009) als Trennzeichen verwendet. Die Zeichen sollten in UTF-8 ohne BOM kodiert sein.\\
+		  & ODS & ODS basiert auf XML und ist Teil vom OpenDocument Format. Eingebettete Bilder und Medien müssen gesondert gespeichert werden.\\
+		  & XLSX & XLSX ist das auf XML basierende Format von Microsoft. Eingebettete Bilder und Medien müssen gesondert gespeichert werden.\\ 
+			& XML, HTML & Tabellen im textbasierten XML- oder HTML-Format können ebenfalls archiviert werden. XML-Dateien benötigen zusätzlich eine DTD-Datei oder das XML Schema. Die Zeichen sollten in UTF-8 ohne BOM kodiert sein.\\ \cmidrule(r){1-3}
+		\multirow{2}{*}{$\color{BurntOrange} \thicksim$} & PDF/A & Wenn neben der Daten auch das Aussehen der Tabelle erhalten bleiben soll, eignet sich PDF/A am besten. Zusätzlich sollten die tabellarischen Daten in einem nachnutzbaren Format, wie etwa CSV, gespeichert werden.\\ 
+			& SXC & SXC ist ein Vorgängerformat von ODS, weshalb letzteres auch bevorzugt werden sollte.\\ \cmidrule(r){1-3}
+		\multirow{1}{*}{\LARGE \boldmath$\color{BrickRed} \times$}& XLS & Das XLS-Format von Microsoft eignet sich nicht zur Archivierung, da es proprietär ist und die Inhalte nicht textbasiert gespeichert werden.\\
+		\bottomrule
+		\bottomrule
+	\end{tabular}
+\end{center}
+
+\subparagraph{Dokumentation} Neben den allgemeinen minimalen Angaben zu Einzeldateien, wie sie in dem Abschnitt Metadaten in der Anwendung ab Seite \pageref{Metadaten-anwendung} gelistet sind, werden für Tabellen und Tabellenkalkulationen weitere Angaben benötigt.
+
+Um die Verständlichkeit einer Tabelle auch für Dritte zu gewährleisten, müssen Name und Zweck der jeweiligen Tabelle und der einzelnen Arbeitsblätter bekannt sein. Jede Spalte benötigt eine Überschrift, und zusätzlich müssen die verwendeten Formatvorgaben, Abkürzungen, Codes, Wertelisten und sonstige Terminologien dokumentiert werden. Um leere Zellen auch explizit als solche zu kennzeichnen, sollte ein vorher festgelegtes Zeichen (z.B. -) eingetragen und dokumentiert werden. Wenn Maßeinheiten nicht direkt aus der Tabelle ersichtlich sind, müssen diese ebenfalls gesondert dokumentiert werden.
+
+Um sicher zu gehen, dass die Tabelle auch vollständig vorliegt, sollten die Anzahl der Spalten, Zeilen und der Arbeitsblätter angegeben werden.
+
+Tabellen in textbasierten Formaten brauchen Angaben zu den verwendeten Trennzeichen, Textbegrenzungszeichen und der Zeichenkodierung. 
+
+Für Tabellenkalkulationen müssen bei Bedarf weitere Informationen zu Relationen, Formeln und Makros dokumentiert werden. Eingebettete Medien, wie etwa Bilder, sollten separat gespeichert und archiviert werden und in einer Liste zugehöriger Dateien aufgeführt werden. Dies gilt ebenfalls für Grafiken, die aus den Daten in der Tabellenkalkulation erzeugt wurden.
+
+\begin{center}
+	\begin{longtable}{L{0.3\textwidth} p{0.6\textwidth}}
+			\toprule 
+		Metadatum & Beschreibung \\
+		\midrule \endfirsthead
+		\multicolumn{2}{l}{\footnotesize Fortsetzung der vorhergehenden Seite}\\
+		\toprule
+		Metadatum & Beschreibung \\ \midrule \endhead
+		\bottomrule \multicolumn{2}{r}{{\footnotesize Fortsetzung auf der nächsten Seite}} \\
+		\endfoot
+		\bottomrule 
+		\endlastfoot
+		
+		Beschreibung der Tabelle oder des Arbeitsblattes & Welchen Zweck verfolgt die Tabelle oder das Arbeitsblatt?\\
+		Bezeichnung der Arbeitsblätter & Auflistung der Bezeichnungen der Arbeitsblätter.\\
+		Spaltenüberschrift & Jede Spalte einer Tabelle muss einen Namen haben.\\
+		Spaltenbeschreibung & Beschreibung und Auflistung der in der jeweiligen Spalte verwendeten Formatvorgaben, Abkürzungen, Codes, Wertelisten, Eingabekonventionen, Fachvokabulare, Zeichen für leere Zellen oder Maßeinheiten.\\
+		Anzahl Spalten & Wie viele Spalten enthält die Tabelle?\\		
+		Anzahl Zeilen & Wie viele Zeilen enthält die Tabelle?\\
+		Anzahl Arbeitsblätter & Anzahl der Arbeitsblätter in einer Tabellenkalkulation.\\
+		Trennzeichen & Angabe des verwendeten Trennzeichens bei textbasierten Speicherformaten wie CSV.\\
+		Textbegrenzungszeichen & Angabe des verwendeten Textbegrenzungszeichens bei textbasierten Speicherformaten wie CSV.\\
+		Zeichenkodierung & Angabe der verwendeten Zeichenkodierung bei textbasierten Speicherformaten wie CSV oder TSV.\\
+		Relationen & Welche Querverweise gibt es innerhalb der Tabellenkalkulation?\\
+		Formeln & Welche Formeln werden in der Tabellenkalkulation verwendet?\\
+		Makros & Welche Makros gibt es in der Tabellenkalkulation?\\
+		Abgeleitete Grafiken & Aus den Daten erzeugte Grafiken müssen zusätzlich separat gespeichert werden und in der Liste zugehöriger Dateien aufgenommen werden.\\
+		Sprache & In welchen Sprachen ist das Dokument verfasst? Sprachkennungen nach ISO 639 angeben.\\
+		Identifikator & Wenn das Dokument bereits veröffentlicht wurde und eine ISBN oder einen anderen persistenten Identifikator erhalten hat, sollte dieser angegeben werden.\\
+		Weitere Dateien & Liste abgeleiteter Grafiken und eingebetteter Medien, wie Bilder, die zusätzlich separat gespeichert wurden. Liegt eine Dokumentationsdatei für das Dokument vor, muss diese ebenfalls genannt werden.\\
+	  \bottomrule
+	\end{longtable}
+\end{center}
+
+Weitere Metadaten sind methodenabhängig und können in den jeweiligen Abschnitten nachgelesen werden.

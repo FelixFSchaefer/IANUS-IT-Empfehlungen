@@ -1,0 +1,500 @@
+%Um hyperref Warning: The PDF version number could not be set, abzuschalten
+\pdfminorversion=4\relax
+\pdfobjcompresslevel=0\relax
+
+\documentclass[a4paper]{report}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[ngerman]{babel}
+\usepackage[utf8x]{inputenc} 
+\usepackage[T1]{fontenc}
+\inputencoding{utf8}
+\makeatother
+\usepackage{lmodern}           
+
+%Bilder
+\usepackage{graphicx}
+%Nutzung: \includegraphics{eps; png; jpeg; gif; pdf}
+%Text um Bilder herum
+\usepackage{wrapfig}
+\usepackage{adjustbox} %Boxen anpassen; vor allem für wrapfigures in itemize (bsp: vektor)
+%Eigene Grafiken und Diagramme bauen
+\usepackage{tikz}
+\usetikzlibrary{positioning, matrix, arrows, shapes.geometric, fit, backgrounds, scopes}
+%Damit mit b platzierte Grafiken nicht unter der Fußnote stehen
+\usepackage[bottom]{footmisc}
+
+%Tabellenspezifisches
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{colortbl}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{longtable}
+
+%Diverse Symbole
+\usepackage{amssymb}
+\usepackage[nointegrals]{wasysym}
+%Ausschalten der Warnung:
+%Latex Font Warning: Font shape `U/wasy/b/n' in size <7> not available
+%(Font)              Font shape `U/wasy/m/n' tried instead on input line X
+\wasyfamily
+\DeclareFontShape{U}{wasy}{b}{n}{ <-10> ssub * wasy/m/n
+ <10> <10.95> <12> <14.4> <17.28> <20.74> <24.88>wasyb10 }{}
+
+\usepackage{ccicons}
+
+%Zur Anpassung der Titelformatierung
+\usepackage{titlesec}
+
+%Für syntax highlighting von Codeschnipseln (z.B. XML)
+\usepackage{listings}
+
+%Für Listeneinstellungen
+\usepackage{enumitem}
+
+
+\usepackage[hyphens]{url}
+%Pakete für PDF/A
+%\usepackage[a-1a]{pdfx}
+\usepackage[a-1b]{pdfx}
+%\hypersetup{pdfencoding=unicode}
+\input{glyphtounicode.tex}
+\input{glyphtounicode-cmr.tex}
+%\pdfglyphtounicode{CIRCLE}{0041} %0041=A
+\pdfgentounicode=1
+\usepackage[pdfa]{hyperref}
+\usepackage{bookmark}
+
+%\usepackage[acronym, toc, section, nonumberlist]{glossaries}
+%\makeglossaries
+
+\title{Kurzfassung der IT-Empfehlungen für den nachhaltigen Umgang mit digitalen Daten in den Altertumswissenschaften}
+%\author{XX \and Xy \and Z}
+\date{IANUS\\
+Version 1.0.0.0\\ 
+\today}
+
+%Auch subsubsections sollen ins Inhaltsverzeichnis
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+%Silbentrennung für das ganze Dokument (max. 300 Wörter!)
+%Für die einzelnen Dateien kann noch mal eine Liste angelegt werden
+\hyphenation{
+al-ter-tums-wis-sen-schaft-lich-er
+For-schungs-pro-jek-te
+Aus-zeich-nungs-spra-che
+Ge-ne-ra-tions-ver-lust
+Digi-ta-li-sa-te
+Digi-ta-li-sierung
+un-kom-pri-mier-te
+Da-tei-na-men
+Da-tei-na-mens-er-wei-te-rung
+PDF-Do-ku-men-ten
+}
+
+%compilieren des documentes mit nur einem der inkludierten files:
+%\includeonly{dateiformate}
+\begin{document}
+%\newcommand{Achtung}[1]{\parbox[c]{1.1\width}{#1}}
+
+%Für URL-Angaben in den Toollisten und den Quellangaben
+\newcommand{\urllist}[1]{\newline \hspace*{0.08cm} {\parbox[c]{0.98\textwidth}{\itshape \url{#1}}\\ \vspace*{0.15cm}}}
+
+%Für Abstand nach Quelle ohne URL in Quellangaben
+%XXXHängender Absatz besser?
+\newcommand{\abstand}{\\ \vspace*{0.15cm}}
+
+%IANUS-Farben
+\definecolor{ianusGrau}{cmyk}{0.07, 0, 0, 0.25}
+\definecolor{ianusBlau}{cmyk}{0.851, 0.561, 0, 0.42}
+
+\definecolor{ianusBlauHell}{cmyk}{0.851, 0.561, 0, 0.0}
+
+%Kommando für Text in ianusBlau
+\newcommand{\tib}[1]{{\color{ianusBlau}#1}}
+
+%kurzes Kommando für vertikale Tabellenstreifen in ianusGrau
+\newcommand{\tbg}{{\color{ianusGrau}\vrule}}
+
+%Rotierter Text in Tabellen
+\newcommand{\rot}[1]{\makebox[1em][l]{\rotatebox{45}{#1}}}
+
+%Spalten bestimmter breite mit automatischen Textumbruch und links, zentriert oder rechts aligned
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+%Formatierung der Überschriften
+\newcommand{\hsp}{\hspace{20pt}}
+%\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{ianusGrau}{|}\hsp}{0pt}{\Huge\bfseries}
+\titleformat{\chapter}[hang]{\huge\sffamily\color{ianusBlau}}{\thechapter\hspace{5pt}\textcolor{ianusGrau}{\bfseries |}\hspace{20pt}}{0pt}{\huge\sffamily\color{ianusBlau}}
+\titlespacing*{\chapter}{0pt}{-\topskip}{8pt}
+
+\titleformat*{\section}{\Large\sffamily\color{ianusBlau}}
+\titlespacing*{\section} {0pt}{3.5ex plus 1ex minus .2ex}{0.8ex plus .2ex}
+\titleformat*{\subsection}{\large\sffamily\color{ianusBlau}}
+\titlespacing*{\subsection} {0pt}{3.25ex plus 1ex minus .2ex}{0.7ex plus .2ex}
+\titleformat*{\subsubsection}{\sffamily\color{ianusBlau}}
+\titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{0.6ex plus .2ex}
+\titleformat{\paragraph}[hang]{\bfseries\sffamily\color{ianusBlau}}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph} {0pt}{3.25ex plus 1ex minus .2ex}{0.6ex plus .2ex}
+\titleformat*{\subparagraph}{\bfseries\color{ianusBlau}}
+
+%Überschrift in den Quellangaben
+\newcommand{\quelltyp}[1]{\vspace*{0.2cm} {\bfseries\sffamily\color{ianusBlau} #1}\linebreak}
+
+%Anpassung der Listenformatierung
+\renewcommand{\labelitemi}{{\color{ianusGrau}{\bfseries -}}}
+\renewcommand{\labelitemii}{{\color{ianusGrau}{\bfseries -}}}
+\renewcommand{\labelitemiii}{{\color{ianusGrau}{\bfseries -}}}
+
+\setlist[itemize]{leftmargin=\parindent} %Einzug
+%\setlist[itemize,2]{leftmargin=0} %Einzug, zweite Listenebene
+\setlist[itemize]{itemsep=0.2\itemsep} %Abstand zwischen items
+\setlist[itemize,2]{topsep=-3pt} %Abstand oben für zweite Listenebene
+
+%Anpassung der Angaben in Bildern (und Tabellen)
+\renewcommand{\figurename}{Abb.}
+%\renewcaptionname{ngerman}{\tablename}{Tab.}
+
+%Kommando zur Angabe der Autoren
+\newcommand{\abschnittsautor}[1]{\vspace{-1mm}{\footnotesize \itshape #1 \vspace{0.3cm}\newline}}
+
+
+%\maketitle
+\hypersetup{pageanchor=false}
+\include{deckblatt}
+\newpage
+\include{metadatenblatt}
+\hypersetup{pageanchor=true}
+\tableofcontents
+%\newpage
+
+\definecolor{eclipseGreen}{RGB}{63,127,95}
+%Einstellungen für Code-Blocks mit listings;
+%Ab hier überall gültig
+\lstset{
+  basicstyle=\ttfamily\small,
+  columns=fullflexible,
+  showstringspaces=false,
+	tabsize=2,
+	linewidth=0.58\linewidth}
+\lstdefinelanguage{XML}
+{ morestring=[b]",
+  morestring=[s]{>}{<},
+  stringstyle=\color{black},
+  identifierstyle=\color{ianusBlau},
+  keywordstyle=\color{ianusGrau},
+  morekeywords={typ, einheit, count, link, name, creationTime, version, encoding, path, creationDate}}
+\lstdefinelanguage{HTML}
+{ morecomment=[s]{<!--}{-->},
+	commentstyle=\color{eclipseGreen},
+  stringstyle=\color{black},
+  identifierstyle=\color{ianusBlau},
+  keywordstyle=\color{ianusGrau}
+	}
+\lstdefinelanguage{SQL}	
+{	morecomment=[s]{/*}{*/},
+	morecomment=[l]{--},
+	commentstyle=\color{eclipseGreen},
+	stringstyle=\color{black},
+  %identifierstyle=\color{ianusBlau}%,
+  keywordstyle=\color{ianusBlau},
+	morekeywords={CREATE, TABLE, NOT NULL, SELECT, FROM, WHERE, UPDATE, SET, USER, PASSWORD}
+	}
+
+%Damit Sonderzeichen in den listings auch richtig gesetzt werden
+\lstset{literate=
+  {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+  {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+  {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+  {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+  {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+  {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+  {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+  {Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+  {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+  {ű}{{\H{u}}}1 {Ű}{{\H{U}}}1 {ő}{{\H{o}}}1 {Ő}{{\H{O}}}1
+  {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+  {€}{{\euro}}1 {£}{{\pounds}}1 {«}{{\guillemotleft}}1
+  {»}{{\guillemotright}}1 {ñ}{{\~n}}1 {Ñ}{{\~N}}1 {¿}{{?`}}1
+}	
+
+%Einleitung
+\chapter{Einleitung}
+\abschnittsautor{E. Schneidenbach, F. Schäfer, M. Trognitz}
+Die Anwendung von Informationstechnologien und digitaler Methoden für die Durchführung archäologischer und altertumswissenschaftlicher Forschungsprojekte wird  immer geläufiger und selbstverständlicher. Die von IANUS zusammengestellten IT-Empfehlungen sollen einen ersten Überblick über den nachhaltigen Umgang mit digitalen Forschungsdaten bieten und als Leitfaden dienen, um fachspezifische Mindeststandards im Bereich des Forschungsdatenmanagements zu etablieren. Eine konsequente Berücksichtigung dieser Empfehlungen trägt maßgeblich dazu bei, dass Forschungsdaten von Dritten, die nicht bei deren Erstellung und Verarbeitung beteiligt waren, heute und in Zukunft verstanden und nachgenutzt werden können. 
+
+Das vorliegende Dokument stellt die Kurzversion der online verfügbaren IT-Empfehlungen für den nachhaltigen Umgang mit digitalen Daten in den Altertumswissenschaften (doi:\href{http://dx.doi.org/10.13149/000.111000-a}{10.13149/000.111000-a}) dar und konzentriert sich auf folgende Themen:
+\begin{itemize}
+	\item Eine Übersicht der zentralen Aspekte im Datenmanagement
+	\item Hinweise zur Dokumentation, Verwaltung und Sicherung von Daten
+	\item Geeignete Langzeitformate und Metadaten für einzelne Dateitypen
+\end{itemize}
+
+Weitere Inhalte sind in der Online-Version zu finden:
+\begin{itemize}
+	\item Ergänzende Hintergrundinformationen und praktische Tipps
+	\item Hinweise zum Umgang mit in den Altertumswissenschaften angewandten digitalen Dokumentations- und Forschungsmethoden
+	\item Archivierung von Forschungsdaten bei IANUS
+	\item Glossar
+\end{itemize}
+
+Als allgemeine Empfehlungen lassen sich folgende Punkte zusammenfassen:
+\begin{itemize}
+	\item Bei der Verarbeitung von Forschungsdaten ist deren Lebenszyklus zu beachten. Dieser umfasst die Erstellung, Verarbeitung, Analyse, Archivierung, den Zugang und die Nachnutzung. Diese Phasen sollten so früh wie möglich berücksichtigt werden und durch ein detailliertes, nachvollziehbares und gut strukturiertes Datenmanagement unterstützt werden. Hierfür ist eine solide Planung sowie eine konsequente Umsetzung erforderlich, die auch kontinuierliche Überprüfungen und eventuelle Anpassungen in der Praxis beinhaltet.
+	\item Daten sollten während und nach der Erzeugung strukturiert und umfassend dokumentiert werden.
+	\item Es sollten offen dokumentierte, nicht-proprietäre und weit verbreitete Dateiformate bevorzugt werden.
+	\item Bei der Organisation von Dateien und Ordnern sollten möglichst einfache, klare und allen Akteuren bekannte Strategien vereinbart werden.
+	\item Bei der Datensicherung sollten eindeutige Zuständigkeiten und Arbeitsabläufe definiert werden. 
+\end{itemize}
+
+
+%Projektphasen
+\chapter{Projektphasen}
+\abschnittsautor{S. Jahn, F. Schäfer, M. Trognitz}
+	\label{projektphasen}
+
+Im Umgang mit digitalen Daten gelten für jede Phase eines Forschungsprojektes unterschiedliche Anforderungen und Bedingungen. Da Forschungsdaten einem Lebenszyklus unterliegen, haben Entscheidungen und Arbeitsschritte, die in einer bestimmten Phase getroffen werden, auch Auswirkungen auf die anderen Phase des Datenkreislaufs. Bereits bei Entwurf und Planung eines neuen Forschungsprojektes muss überlegt werden, welche Informationen bereits digital existieren, welche Arten von Dateien neu erzeugt werden müssen, welche Informationstechnologien zum Einsatz kommen sollen und wie das Management der Forschungsdaten gestaltet sein wird. 
+
+Insofern gilt es einige Aspekte so früh wie möglich, häufig noch vor der Erstellung der ersten Datei, zu adressieren:
+\begin{itemize}
+\item Informationen über existierende Standards und Richtlinien einholen
+\item Entscheidungen über die zu verwendenden Dateiformate und Softwareprogramme fällen
+\item Verantwortliche für das Datenmanagement bestimmen
+\item Kriterien für die laufende Dokumentation entwickeln
+\item Konventionen für die Ablage, Benennung und Versionierung von Dateien festlegen
+\item Strategien zur Speicherung und Sicherung definieren
+\item Geeignete Infrastrukturen für die Archivierung auswählen und kontaktieren
+\end{itemize}
+
+Diese und weitere Fragen zur Vorbereitung, Durchführung und Nachbereitung eines Projektes werden im Folgenden anhand eines sogenannten Datenmanagementplans thematisiert. Der Datenmanagementplan bildet einen wichtigen Baustein zur Festlegung der Arbeitsabläufe im Umgang mit Forschungsdaten und für eine Kostenkalkulation.
+
+Je mehr und je früher in den Einzelentscheidungen die Nachnutzung der Daten durch Dritte auch über die Lebensdauer eines Projektes hinaus berücksichtigt wird und die Langzeitarchivierung als kontinuierliche Maßnahme und nicht als letzter Schritt eines bereits abgeschlossenen Projektes begriffen wird, umso leichter gelingt es, einmal erhobene Daten auch für die Zukunft zu erhalten. Die Archivierung der Daten nach Abschluss eines Projektes wird erleichtert, wenn schon während der Durchführung eines Projektes auf die konsequente Erfüllung der im Datenmanagementplan genannten Aufgaben geachtet wird.
+
+Vor oder kurz nach Beginn des Projektes erstellte und kommunizierte Richtlinien, ermöglichen es allen Projektmitarbeitern diese auch einzuhalten. Auf diese Weise wird die Handhabung der Projektdaten erheblich erleichtert, da geregelte Ordnerstrukturen und vorgegebene Namenskonventionen das Auffinden der Daten vereinfachen, die parallele Dokumentation das Verstehen und die Nachnutzung ermöglicht und Sicherungskopien das Risiko eines Datenverlustes reduzieren.
+
+\newpage
+\section{Datenmanagement}\label{datenmanagement}
+	\abschnittsautor{M. Trognitz, D. Hagmann, J. Räther, S. Jahn}
+	\input{../projektphasen/datenmanagement}
+	
+	\begin{flushleft}
+		Das vollständige Kapitel finden Sie auf: \urllist{https://ianus-fdz.de/it-empfehlungen/datenmanagement}
+		\label{lebenszyklus}
+		Den Lebensdatenzyklus von Forschungsdaten finden Sie auf: \urllist{https://ianus-fdz.de/it-empfehlungen/lebenszyklus}
+	\end{flushleft}
+
+\newpage
+\section{Dokumentation}\label{Metadaten-allgemein}
+	\abschnittsautor{S. Jahn}
+	Neben technischen Aspekten ist eine vollständige Dokumentation das wichtigste Kriterium für die Archivierung und Nachnutzbarkeit von Daten. Damit Forschungsdaten von Dritten gefunden und sinnvoll verwertet werden können, müssen sie verständlich und strukturiert beschrieben werden. Ohne zusätzliche Informationen sind die meisten digitalen Dateien, die in einem Forschungsprojekt entstehen, für die Wissenschaft verloren und der Aufwand einer langfristigen Datenkuratierung ist vergeblich. Die Dokumentation und Beschreibung von Daten ist als ein kontinuierlicher Prozess zu begreifen, der in allen Phasen eines Datenlebenszyklus adressiert werden sollte.
+	
+	Metadaten können sich auf folgende Aspekte beziehen:
+	\begin{itemize}
+		\item Deskriptive Angaben
+		\item Strukturelle Angaben
+		\item Administrativ-rechtliche Angaben
+		\item Administrativ-erhaltungsbezogene Angaben
+		\item Technische Angaben
+	\end{itemize}
+	
+	Um Metadaten eindeutig zu vergeben und eine maschinelle Verarbeitung zu ermöglichen, sollten kontrollierte Vokabulare in Form von einfachen Wertelisten oder strukturierten Thesauri verwendet werden. Auch sollten standardisierte und etablierte Metadatenschemata, wie beispielsweise Dublin Core benutzt werden.
+	
+	Die Speicherung der Metadaten kann teilweise innerhalb der Datei selbst erfolgen, wobei die Speicherung der Informationen in einer eigenen Datei, wie etwa einer Fotoliste, empfohlen wird.
+	
+	\input{../projektphasen/dokumentation-praxis}
+	\begin{flushleft}
+		Das vollständige Kapitel finden Sie auf: \urllist{https://ianus-fdz.de/it-empfehlungen/dokumentation}
+		\label{archivierungIANUS}
+		Hinweise zur Archivierung bei IANUS finden Sie auf: \urllist{https://ianus-fdz.de/it-empfehlungen/archivierung}
+		\label{Metadaten-ListeLDA}
+		Die Liste der Vorgaben der Landesdenkmalämter finden Sie auf: \urllist{https://www.ianus-fdz.de/it-empfehlungen/metadaten-quellen\#grabungsdokumentation_richtlinien}
+		\label{dateibenennung}
+		Empfehlungen zur Dateibenennung finden Sie auf: \urllist{https://www.ianus-fdz.de/it-empfehlungen/dateibenennung}
+	\end{flushleft}
+
+
+\newpage
+\section{Dateiverwaltung}\label{dateiverwaltung}
+	\abschnittsautor{M. Trognitz}
+	\input{../projektphasen/dateiverwaltung}
+	\begin{flushleft}
+		Das vollständige Kapitel finden Sie auf: \urllist{https://ianus-fdz.de/it-empfehlungen/dateiverwaltung}
+	\end{flushleft}
+
+\newpage
+\section{Dateispeicherung und -sicherung}\label{dateispeicherung}
+	\abschnittsautor{M. Trognitz, R. Komp, R. Förtsch}
+	\input{../projektphasen/dateispeicherung-einleitung}
+	\begin{flushleft}
+		Das vollständige Kapitel finden Sie auf: \urllist{https://ianus-fdz.de/it-empfehlungen/dateispeicherung}
+	\end{flushleft}
+	
+%Dateiformate
+\chapter{Dateiformate}
+	\abschnittsautor{F. Schäfer}
+	\label{dateiformate}
+Im Folgenden werden konkrete technische Hinweise und Hintergrundinformationen zu den Dateiformaten gegeben, die nach heutigem Wissen für die Langzeitarchivierung geeignet sind. Des Weiteren werden die minimalen Anforderungen an die technische wie inhaltliche Dokumentation von einzelnen Dateiformaten genannt, damit diese nicht nur heute, sondern auch in Zukunft von Dritten verstanden und nachgenutzt werden können.
+
+Es geht hier nur um die Dateiformate an sich, ihre Entstehungsweise wird dabei nicht berücksichtigt. Abhängig von der jeweiligen Generierung und Verwendung sind gegebenfalls zusätzliche methodische und fachspezifische Metadaten erforderlich. Diese werden in dem Kapitel Forschungsmethoden auf \href{https://www.ianus-fdz.de/it-empfehlungen/forschungsmethoden}{www.ianus-fdz.de/it-empfehlungen/forschungsmethoden} beschrieben.
+
+Bereits die Auswahl der verwendeten Software beeinflusst das Dateiformat und dessen Nachhaltigkeit. Daher sollte bei der Entscheidung für oder gegen eine bestimmte Software darauf geachtet werden, dass Dateiformate unterstützt werden, die möglichst folgende Eigenschaften aufweisen:
+\begin{itemize}
+	\item Weit verbreitet und standardisiert
+	\item Nicht proprietär, also nicht von einer Anwendung oder einem Hersteller abhängig und mit unterschiedlichen Programmen verwendbar
+	\item Offen dokumentiert mit frei verfügbaren technischen Spezifikationen
+	\item Verlustfreie oder keine Kompression
+	\item Einfach dekodierbar oder sogar unmittelbar lesbar, also nicht durch Kodierung versteckt
+\end{itemize} 
+
+Werden während eines Arbeitsprozesses andere als die hier empfohlenen Dateiformate erzeugt oder verwendet, sollte darauf geachtet werden, dass diese leicht und mit möglichst geringem Verlust an Informationen und Funktion in eines der in den folgenden Kapiteln aufgeführten Langzeitformate überführt werden können. 
+
+In den Übersichtstabellen mit den Formaten für bestimmte Dateitypen sind die präferierten Formate mit einem grünen Haken, die noch akzeptablen mit einer gelben Tilde und für die Langzeitarchivierung ungeeignete Formate mit einem roten Kreuz gekennzeichnet.
+
+\newpage
+\section{PDF-Dokumente}
+\label{pdf-dokumente}
+\abschnittsautor{S. Jahn; Mit Unterstützung von: D. von Seggern}
+	\input{../dateiformate/pdf-dokumente-uebersicht}
+	\begin{flushleft}
+		Das vollständige Kapitel finden Sie auf: \urllist{https://ianus-fdz.de/it-empfehlungen/pdf-dokumente}
+	\end{flushleft}
+
+\newpage		
+\section{Textdokumente}\label{textdokumente}
+\abschnittsautor{M. Trognitz}
+	\input{../dateiformate/textdokumente-uebersicht}	
+	\begin{flushleft}
+		Das vollständige Kapitel finden Sie auf: \urllist{https://ianus-fdz.de/it-empfehlungen/textdokumente}
+	\end{flushleft}
+
+\newpage
+\section{Bilder -- Rastergrafiken}\label{rastergrafiken}
+\abschnittsautor{M. Trognitz, P. Grunwald}
+	\input{../dateiformate/rastergrafiken-uebersicht}
+	\begin{flushleft}
+		Das vollständige Kapitel finden Sie auf: \urllist{https://ianus-fdz.de/it-empfehlungen/rastergrafiken}
+	\end{flushleft}
+
+\newpage
+\section{Bilder -- Vektorgrafiken und CAD-Daten}\label{vektorgrafiken}
+\abschnittsautor{M. Trognitz, I. Schwarzbach, F. Martin}	
+	\input{../dateiformate/vektorgrafiken-uebersicht}
+	\begin{flushleft}
+		Das vollständige Kapitel finden Sie auf: \urllist{https://ianus-fdz.de/it-empfehlungen/vektorgrafiken}
+		\label{GIS}
+		Verweis GIS: \urllist{https://ianus-fdz.de/it-empfehlungen/node/70}
+	\end{flushleft}
+
+\newpage	
+\section{Tabellen}\label{tabellen}
+\abschnittsautor{M. Trognitz}
+	\input{../dateiformate/tabellen-uebersicht}
+	\begin{flushleft}
+		Das vollständige Kapitel finden Sie auf: \urllist{https://ianus-fdz.de/it-empfehlungen/tabellen}
+	\end{flushleft}
+
+\newpage
+\section{Datenbanken}\label{Datenbanken}\label{datenbanken}
+\abschnittsautor{P. Gerth, F. Schäfer}
+	\input{../dateiformate/datenbanken-uebersicht}
+	\begin{flushleft}
+		Das vollständige Kapitel finden Sie auf: \urllist{https://ianus-fdz.de/it-empfehlungen/datenbanken}
+	\end{flushleft}
+
+%\newpage
+%\section{GIS}\label{GIS}
+%\abschnittsautor{K. Rassman}
+%Bitte beachten Sie, dass die Inhalte dieses Abschnittes den Inhalten des IT-Leitfadens des DAIs von 2011 entsprechen. Eine aktuellere Empfehlung können Sie den Guides to Good Practice des ADS entnehmen: \urllist{http://guides.archaeologydataservice.ac.uk/g2gp/Gis_Toc}
+%\begin{center}
+%\tib{\rule{0.9\textwidth}{0.2mm}}\vspace{3mm}
+%\end{center}
+
+%Für die Langzeitarchivierung von GIS-Daten ist derzeit noch kein allgemeingültiger Standard etabliert, weswegen auf die Vorgaben zu den in das GIS importierten Daten (z.B. Luftbilder, Geländemodell etc.) verwiesen wird. Es sollen jedoch möglichst keine programminternen Formate, die nicht von anderen GIS Systemen importiert werden können, genutzt werden. Bevorzugt werden sollen:
+%\begin{itemize}
+	%\item Vektordaten als Esri Shapefile (shp + shx + dbf)
+	%\item Rasterdaten als GeoTiff
+%\end{itemize}
+%
+%Die Haltung von Geodaten sollte vorzugsweise in Geodatenbanken erfolgen. Falls dies nicht möglich ist, müssen die Metadaten ausgefüllt werden. Folgende Informationen sind in der Geodatenbank / den Metadaten bereitzustellen:
+%\begin{itemize}
+	%\item Datenquelle (z.B. SRTM, Tachymeter)
+	%\item Verarbeitung: Programm, Algorithmus, Parameter (z.B. QGIS , r.shaded.relief, altitude, azimuth etc.)
+	%\item Projektion (WGS 1984, EPSG: 4326)
+	%\item Datenqualität (Auflösung 90m, Ungenauigkeit)
+	%\item Information, was mit den Layern ausgedrückt wird, da es nicht immer aus dem Dateinamen hervorgeht (z.B. Höhenmodell)
+%\end{itemize}
+
+\newpage
+\section{Video}\label{video}
+\abschnittsautor{M. Trognitz; Mit Unterstützung von: H. Lewetz}
+	\input{../dateiformate/video-uebersicht}
+	\begin{flushleft}
+		Das vollständige Kapitel finden Sie auf: \urllist{https://ianus-fdz.de/it-empfehlungen/video}
+	\end{flushleft}
+
+\newpage
+\section{Audio}\label{audio}
+\abschnittsautor{M. Trognitz; Mit Unterstützung von: S. Rohde-Enslin, A. Romeyke}
+	\input{../dateiformate/audio-uebersicht}
+	\begin{flushleft}
+		Das vollständige Kapitel finden Sie auf: \urllist{https://ianus-fdz.de/it-empfehlungen/audio}
+	\end{flushleft}
+
+\newpage
+\section{3D und Virtual Reality}\label{3D}
+\abschnittsautor{M. Trognitz; Mit Unterstützung von: D. Lengyel, K. Niven, V. Gilissen}
+	\input{../dateiformate/3d-uebersicht}
+	\begin{flushleft}
+		Das vollständige Kapitel finden Sie auf: \urllist{https://ianus-fdz.de/it-empfehlungen/3d}
+		\label{tab:3Deigenschaften}
+		\label{3d:vertiefung}
+    Verweis 3D und Virtual Reality -- Vertiefung: \urllist{https://ianus-fdz.de/it-empfehlungen/3d?qt-3d_und_virtual_reality=1}
+		Verweis 3D und Virtual Reality -- Vertiefung, Speicherung der verschiedenen Eigenschaften: \urllist{https://ianus-fdz.de/it-empfehlungen/3d?qt-3d_und_virtual_reality=1\#3d_tab-speichereigenschaften}
+	\end{flushleft}
+	
+
+%\section{Präsentationen}
+
+\newpage
+\section{Webseiten}
+\abschnittsautor{D. Hagmann}
+	\input{../dateiformate/webseiten-uebersicht}
+	\begin{flushleft}
+		Das vollständige Kapitel finden Sie auf: \urllist{https://ianus-fdz.de/it-empfehlungen/webseiten}
+	\end{flushleft}
+	
+%\section{Eigene Programme und Skripte}
+
+
+%Forschungsmethoden
+\chapter{Weitere Informationen}
+	\abschnittsautor{M. Trognitz}\vspace{-0.5cm}
+	\label{methoden}
+	\section{Forschungsmethoden}
+Die Ergebnisse aus verschiedenen in den Altertumswissenschaften angewandten Methoden setzen sich oft aus mehreren verschiedenen Dateien unterschiedlicher Formate zusammen. Dadurch gehen die Ansprüche an die Dokumentation und die erforderlichen Metadaten zu den einzelnen Dateiformaten über die des Kapitels zu Dateiformaten hinaus und unterscheiden sich von Methode zu Methode.
+
+Zu folgenden Methoden finden Sie weitere Informationen auf: \url{https://ianus-fdz.de/it-empfehlungen/forschungsmethoden}
+
+Geodäsie · Georeferenzierung · Oberflächen- (DOM) und Geländemodellierung (DGM) · Reflectance Transformation Imaging (RTI) · Satellitenmessungen
+
+Die vorhandenen Inhalte decken nur einen kleinen Teil der angewandten Forschungsmethoden in den Archäologien und Altertumswissenschaften ab. Weitere Inhalte sind geplant, wobei dafür auch Autoren gesucht werden. Die folgende Auflistung soll einen Eindruck der möglichen Inhalte vermitteln, wobei weitere Vorschläge und Ergänzungen willkommen sind.
+
+3D-Scanning · Anthropologie · Archäobotanik · Archäometrie · Archäozoologie · Ausgrabung · Bauforschung · Datierungsmethoden · Geoarchäologie · Numismatik · Oberflächenbegehung (Survey) · Textanalyse
+
+Bis wir Ihnen ausführlichere Hinweise zur Verfügung stellen können, können Sie sich auf den Seiten des \href{http://guides.archaeologydataservice.ac.uk/g2gp}{Archaeology Data Service informieren}, wo insbesondere folgende Inhalte zu Forschungsmethoden zur Verfügung stehen.
+
+Dendrochronolgie · Fernerkundung · GIS · Geophysik · Laserscanning · Photogrammetrie · UAV Survey · Unterwassersurvey
+
+
+\section{Weitere Verweise}
+Weitere Informationen zur Relevanz und Kuratierung von digitalen Forschungsdaten in den Altertumswissenschaften sind:
+\begin{itemize}
+	\item Archaeology Data Service, Guides to Good Practice: \urllist{http://guides.archaeologydataservice.ac.uk/g2gp} \vspace{-0.5cm}
+	\item Verband der Landesarchäologen, Ratgeber-Archivierung: \urllist{http://www.landesarchaeologen.de/fileadmin/Dokumente/Dokumente_Kommissionen/Dokumente_Archaeologie-Informationssysteme/Dokumente_AIS_Archivierung/Ratgeber_Archivierung_V1.0.pdf}
+\end{itemize}
+
+\end{document}

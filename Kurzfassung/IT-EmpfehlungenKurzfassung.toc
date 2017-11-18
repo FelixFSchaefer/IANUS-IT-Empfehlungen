@@ -1,0 +1,50 @@
+\select@language {ngerman}
+\contentsline {chapter}{\numberline {1}Einleitung}{3}{chapter.1}
+\contentsline {chapter}{\numberline {2}Projektphasen}{4}{chapter.2}
+\contentsline {section}{\numberline {2.1}Datenmanagement}{5}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}\IeC {\"U}bersicht der Aufgaben in den Projektphasen}{5}{subsection.2.1.1}
+\contentsline {section}{\numberline {2.2}Dokumentation}{7}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Metadaten in der Anwendung}{7}{subsection.2.2.1}
+\contentsline {paragraph}{Projektbezogene Metadaten}{7}{paragraph*.4}
+\contentsline {paragraph}{Dateibezogene Metadaten}{10}{paragraph*.5}
+\contentsline {paragraph}{Methodenbezogene Metadaten}{11}{paragraph*.6}
+\contentsline {subsection}{\numberline {2.2.2}Grabungsdokumentation}{12}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Dateiverwaltung}{16}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Dateiablage}{16}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Empfehlungen f\IeC {\"u}r eine Ordnerstruktur}{17}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Dateispeicherung und -sicherung}{19}{section.2.4}
+\contentsline {chapter}{\numberline {3}Dateiformate}{20}{chapter.3}
+\contentsline {section}{\numberline {3.1}PDF-Dokumente}{21}{section.3.1}
+\contentsline {subparagraph}{Langzeitformate}{21}{subparagraph*.7}
+\contentsline {subparagraph}{Dokumentation}{22}{subparagraph*.8}
+\contentsline {section}{\numberline {3.2}Textdokumente}{23}{section.3.2}
+\contentsline {subparagraph}{Langzeitformate}{23}{subparagraph*.9}
+\contentsline {subparagraph}{Dokumentation}{25}{subparagraph*.10}
+\contentsline {section}{\numberline {3.3}Bilder -- Rastergrafiken}{27}{section.3.3}
+\contentsline {subparagraph}{Langzeitformate}{27}{subparagraph*.11}
+\contentsline {subparagraph}{Dokumentation}{28}{subparagraph*.12}
+\contentsline {section}{\numberline {3.4}Bilder -- Vektorgrafiken und CAD-Daten}{30}{section.3.4}
+\contentsline {subparagraph}{Langzeitformate}{30}{subparagraph*.13}
+\contentsline {subparagraph}{Dokumentation}{33}{subparagraph*.14}
+\contentsline {section}{\numberline {3.5}Tabellen}{35}{section.3.5}
+\contentsline {subparagraph}{Langzeitformate}{35}{subparagraph*.15}
+\contentsline {subparagraph}{Dokumentation}{37}{subparagraph*.16}
+\contentsline {section}{\numberline {3.6}Datenbanken}{39}{section.3.6}
+\contentsline {paragraph}{\IeC {\"U}bersicht}{39}{paragraph*.17}
+\contentsline {subparagraph}{Langzeitformate}{39}{subparagraph*.18}
+\contentsline {subparagraph}{Dokumentation}{43}{subparagraph*.19}
+\contentsline {section}{\numberline {3.7}Video}{46}{section.3.7}
+\contentsline {subparagraph}{Langzeitformate}{46}{subparagraph*.20}
+\contentsline {subparagraph}{Dokumentation}{50}{subparagraph*.21}
+\contentsline {section}{\numberline {3.8}Audio}{52}{section.3.8}
+\contentsline {subparagraph}{Langzeitformate}{52}{subparagraph*.22}
+\contentsline {subparagraph}{Dokumentation}{55}{subparagraph*.23}
+\contentsline {section}{\numberline {3.9}3D und Virtual Reality}{56}{section.3.9}
+\contentsline {subparagraph}{Langzeitformate}{56}{subparagraph*.24}
+\contentsline {subparagraph}{Dokumentation}{59}{subparagraph*.25}
+\contentsline {section}{\numberline {3.10}Webseiten}{61}{section.3.10}
+\contentsline {subparagraph}{Langzeitformate}{61}{subparagraph*.26}
+\contentsline {subparagraph}{Dokumentation}{65}{subparagraph*.27}
+\contentsline {chapter}{\numberline {4}Weitere Informationen}{67}{chapter.4}
+\contentsline {section}{\numberline {4.1}Forschungsmethoden}{67}{section.4.1}
+\contentsline {section}{\numberline {4.2}Weitere Verweise}{67}{section.4.2}
